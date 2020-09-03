@@ -6,3 +6,13 @@
   $rem: $px-val/16;
   @return #{$rem}rem;
 }
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function px-to-rem($px-val) {
+  $rem: $px-val/16;
+  @return #{$rem}rem;
+}
+
