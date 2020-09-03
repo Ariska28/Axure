@@ -2,12 +2,7 @@
   padding: 50px 0 0;
   overflow: visible;
 
-  &__title {
-    margin: 0 0 80px;
-    text-align: center;
-    font-size: 44px;
-    font-family: $secFontName, Arial, sans-serif;
-  }
+
 
   &__main-list {
     position: relative;
@@ -19,7 +14,7 @@
     img {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: 100px;
     }
 
     &--no-padding {
@@ -38,15 +33,7 @@
     }
   }
 
-  @media (max-width: $tabletUpLim) {
-    &__main-list {
-      column-count: 2;
 
-      img {
-        left: calc(50% - 187px);
-      }
-    }
-  }
   @media (max-width: $mobUpLim) {
     &__main-list {
       column-count: 1;

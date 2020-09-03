@@ -5968,11 +5968,6 @@ body {
 .b-action-event {
   padding: 50px 0 0;
   overflow: visible; }
-  .b-action-event__title {
-    margin: 0 0 80px;
-    text-align: center;
-    font-size: 44px;
-    font-family: "Univia Pro", Arial, sans-serif; }
   .b-action-event__main-list {
     position: relative;
     -webkit-column-count: 3;
@@ -5984,7 +5979,7 @@ body {
     .b-action-event__main-list img {
       position: absolute;
       bottom: 0;
-      right: 0; }
+      right: 100px; }
     .b-action-event__main-list--no-padding {
       padding-bottom: 40px; }
   .b-action-event__secondary-list {
@@ -5994,13 +5989,6 @@ body {
     margin-bottom: 50px; }
     .b-action-event__secondary-list-title {
       font-weight: bold; }
-  @media (max-width: 960px) {
-    .b-action-event__main-list {
-      -webkit-column-count: 2;
-         -moz-column-count: 2;
-              column-count: 2; }
-      .b-action-event__main-list img {
-        left: calc(50% - 187px); } }
   @media (max-width: 767px) {
     .b-action-event__main-list {
       -webkit-column-count: 1;
