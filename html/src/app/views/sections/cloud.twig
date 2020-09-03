@@ -1,0 +1,21 @@
+<section class="section s-features {% if reverse %} s-features--reverse{% endif %} {% if background %} s-features--background {% endif %}{{ customClass }}">
+    <div class="s-features__container">
+        <div class="s-features__content">
+            <h2 class="s-features__content-title s-features__content-title--gray el-title">{{ title }}</h2>
+            {% if text %}
+            <div class="s-features__content-text el-description">
+                <p>{{ text }}</p>
+            </div>
+            {% endif %}
+             
+            {% if list|length > 0 %}
+            <div class="s-features__content-list">
+            </div>
+            {% endif %}
+        </div>
+        <div class="s-features__media ">
+            <img class="s-features__media-img" src="{{ img.src }}" {{ img.src2x ? ('srcset="' ~ img.src2x ~ ' 2x"') }}
+                alt="{{ img.alt }}">
+        </div>
+    </div>
+</section>

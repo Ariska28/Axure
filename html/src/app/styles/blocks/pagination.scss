@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > .btn {
+    line-height: 1;
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  &__pages { // now only some default styles; can be changed
+    @include listUnstyled;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px;
+  }
+}

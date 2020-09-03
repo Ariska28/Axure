@@ -1,0 +1,139 @@
+{% extends 'layout/base.twig' %}
+
+{% block header %}
+	{% include 'components/header.twig' with {
+        'isLight': true,
+    } %}
+{% endblock %}
+
+{% block body %}
+	{% include 'sections/hero.twig' with {
+    title: ' Learn how Axure enables Enterprise UX',
+    description: 'We understand needs are different. You have tougher security requirements, larger teams using
+        various tools, and more stakeholders signing off throughout a project. Axure offers one of the most robust
+        prototyping platforms on the market, and we’ve built it to fit the needs of your enterprise.',
+    button: {
+        text: 'Get Started',
+        link: '#'
+    },
+    image: { src: 'images/hero.png', alt: '' },
+    trusted: {
+        label: ' Trusted by:',
+        list: [
+            { alt: '', src: 'images/microsoft.png'},
+            { alt: '', src: 'images/epic.png'},
+            { alt: '', src: 'images/amazon.png'},
+            { alt: '', src: 'images/slack.png'},
+            { alt: '', src: 'images/target.png' }
+        ]
+    }
+    } %}
+
+
+	{% include 'sections/features.twig' with {
+    refreshStyle:'true',
+    paddingMedium:'true',
+    background: 'true',
+    title: 'Trusted, Powerful Prototyping',
+    text: 'For over 18 years, enterprise teams have relied on Axure RP to quickly create rich, functional prototypes to truly explore ideas and test the user experience before any code is written. Axure RP9 is the nmost powerful and flexible prototyping by over 90% of the Fortune 100 companies.',
+    img: {
+        src: 'images/screen.jpg',
+    }
+    } %}
+
+
+	{% include 'sections/features.twig' with {
+    refreshStyle:'true',
+    paddingMedium:'true',
+    reverse: 'true',
+    title: 'Managed & On-Pre
+     Hosting',
+    text: 'For over 18 years, enterprise teams have reliend on Axure RP to quickly create rich, functional prototypes to truly explore ideas and test the user experience before any code is written. Axure RP9 is the nmost powerful and flexible prototyping by over 90% of the Fortune 100 companies. <br>
+    - User Management <br>
+    - Single Sign-On <br>
+    - Hosted or On-Premises  ',
+    img: {
+        src: 'images/sizebackground-1.png',
+    }
+    } %}
+
+
+	{% include 'sections/features.twig' with {
+    refreshStyle:'true',
+    paddingMedium:'true',
+    background: 'true',
+    title: 'UX and UI in one place',
+    text: 'For over 18 years, enterprise teams have reliend on Axure RP to quickly create rich, functional prototypes to truly explore ideas and test the user experience before any code is written. Axure RP9 is the nmost powerful and flexible prototyping by over 90% of the Fortune 100 companies.',
+    img: {
+        src: 'images/cloud-2.png',
+    }
+    } %}
+
+
+	{% include 'sections/cards.twig' with {
+    title: 'Made for Enterprise',
+       list: [
+           {
+               imgSrc: 'images/collaborate.svg',
+               title: 'Collaborate',
+               text: 'Create Team Projects so multiple users can make diagrams and build prototypes in a single Axure RP file at the same time.
+               <ul>
+                <li>Fill out and dijfvd dfu</li>
+                <li>Rewuuis hsjfdv jdgfj voi</li>
+                <li>ghesfhdskc</li>
+                <li>ghesfhdskc</li>
+               </ul>'
+           },
+           {
+               imgSrc: 'images/streamline.svg',
+               title: 'Document',
+               text: 'Present a complete picture including documentation, prototypes, and visual design with automated redlines and code export.',
+           },
+           {
+               imgSrc: 'images/temp_np-devices.svg',
+               title: 'Integrate',
+               text: 'Integrate artboards from Adobe XD and Sketch to add interactions and gather feedback on top of your screens.
+               <ul>
+                <li>ghesfhdskc</li>
+                <li>ghesfhdskc</li>
+                <li>ghesfhdskc</li>
+                <li>ghesfhdskc</li>
+               </ul>',
+           },
+           {
+               imgSrc: 'images/streamline.svg',
+               title: 'Streamline',
+               text: 'Get notifications about the latest changes and discussions by email, Slack, or Microsoft Teams.',
+               
+           },
+       ]
+    } %}
+
+
+	{% include 'sections/launch.twig' with {
+    title: 'Start Innovating with Axure Today',
+    subtitle: 'Axure for Enterprise is designed for you, comibing the benefits of our leading UX platform, Axure RP and Axure Cloud, with your security requirements',
+    list: [
+        {
+            text: 'Axure Cloud for Business is privately hosted on private servers',
+            icon: 'check',
+        },
+        {
+            text: 'Also available On-Prem at your location for extra security',
+            icon: 'check',
+        },
+        {
+            text: 'Design, document, and collaborate while maintaining compliance',
+            icon: 'check',
+        },
+    ],
+}
+%}
+{% endblock %}
+
+
+{% block footer %}
+	{% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

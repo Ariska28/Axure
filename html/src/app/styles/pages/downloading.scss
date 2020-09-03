@@ -1,0 +1,44 @@
+.downloading-page {
+  padding: 60px 0 105px;
+  color: #2f2f2f;
+  text-align: center;
+  background-color: $c-white-smoke;
+
+  &__title {
+    margin: 0 0 20px;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: $secFF;
+  }
+
+  &__sub-title {
+    margin-bottom: 25px;
+    font-size: 34px;
+    line-height: 46px;
+  }
+  &__tip {
+    font-size: 20px;
+    line-height: 27px;
+
+    a {
+      color: inherit;
+      transition: color 0.2s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $mainCol;
+      }
+    }
+  }
+
+  @media (max-width: $mobUpLim) {
+    &__title {
+      font-size: 54px;
+    }
+
+    &__sub-title {
+      font-size: 28px;
+    }
+  }
+}

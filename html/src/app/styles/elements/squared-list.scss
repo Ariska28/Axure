@@ -1,0 +1,33 @@
+.squared-list {
+  @include listUnstyled;
+  &__item {
+    padding-bottom: 2em;
+    padding-left: 1em;
+    position: relative;
+
+    font-family: $mainFF;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.45;
+    color: $mainTextCol;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.48em;
+      width: 0.45em;
+      height: 0.45em;
+
+      background-color: $c-aqua;
+    }
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    &__item {
+      font-size: 14px;
+    }
+  }
+}

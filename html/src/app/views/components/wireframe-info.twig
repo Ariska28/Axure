@@ -1,0 +1,13 @@
+<section class="wireframe-info">
+        <div class="container">
+            <div class="wireframe-info__items">
+                {% for item in infoList %}
+                    <div class="wireframe-info__item">
+                        <img class="wireframe-info__item-icon" src="{{ item.icon }}"/>
+                        <div class="wireframe-info__item-title">{{ item.title }}</div>
+                        <div class="wireframe-info__item-text">{{ item.text }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>

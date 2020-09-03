@@ -1,0 +1,30 @@
+.select2-cloud-price {
+  .select2-selection__rendered,
+  .select2-results__option {
+    font-size: 22px;
+    font-weight: normal;
+
+    @include media-breakpoint-down(xsm) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+  }
+}
+
+.select2-cloud-period {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+
+  @include media-breakpoint-down(xsm) {
+    font-size: 12px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 10px;
+  }
+}

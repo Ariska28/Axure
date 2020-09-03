@@ -1,0 +1,165 @@
+.b-faq {
+  background-color: $c-white-smoke-light;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  &.no-icons {
+    svg {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1.34em;
+    font-family: $secFF;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.14;
+    text-align: center;
+    color: $c-greyish-brown;
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    padding-top: 45px;
+    &__title {
+      font-size: 44px;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    &__title {
+      font-size: 36px;
+    }
+  }
+}
+
+.faqs {
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__l {
+      width: 42.8%;
+    }
+
+    &__r {
+      width: 42.8%;
+    }
+  }
+
+}
+.faq {
+  color: $mainTextCol;
+
+  &__q {
+    @include fontSizeResponsive($fs-text-big);
+    font-family: $secFF;
+    font-weight: 500;
+    line-height: 1.333;
+
+    .icon-question {
+      transform: translateY(0.05em);
+      width: 0.833em;
+      height: 0.833em;
+      fill: $pea-green;
+    }
+  }
+
+  &__a {
+    @include fontSizeResponsive($fs-text-regular);
+    margin-bottom: 2em;
+    font-family: $mainFF;
+    line-height: 1.778;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      &:hover {
+        color: $mainCol;
+      }
+    }
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+
+
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+
+
+  }
+}
+
+
+//
+//.faqs {
+//  @include listUnstyled;
+//  color: $mainTextCol;
+//
+//  &__q {
+//    font-family: $secFF;
+//    font-size: 18px;
+//    font-weight: 500;
+//    line-height: 1.333;
+//
+//    .icon-question {
+//      transform: translateY(0.05em);
+//      width: 0.833em;
+//      height: 0.833em;
+//      fill: $pea-green;
+//    }
+//  }
+//
+//  &__a {
+//    margin-bottom: 2em;
+//    font-family: $mainFF;
+//    font-size: 14px;
+//    line-height: 1.778;
+//
+//    p {
+//      margin-top: 0;
+//      margin-bottom: 1em;
+//      &:last-child {
+//        margin-bottom: 0;
+//      }
+//    }
+//  }
+//
+//  // desktop
+//  @media (min-width: ($tabletUpLim + 1)) {
+//    &__q {
+//      font-size: 24px;
+//    }
+//
+//    &__a {
+//      font-size: 18px;
+//    }
+//  }
+//
+//  // tablet
+//  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+//    &__q {
+//      font-size: 20px;
+//    }
+//
+//    &__a {
+//      font-size: 16px;
+//    }
+//  }
+//}
+

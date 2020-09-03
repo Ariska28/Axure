@@ -1,0 +1,73 @@
+.hero-edu {
+  @include splitterWidthChange(58.56%);
+  background-color: $c-dusky-blue;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.521em;
+    font-family: $secFF;
+    @include fontSizeResponsive((
+     xs: 28px,
+     md: 38px,
+     lg: 48px
+    ));
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.15;
+    color: $light;
+  }
+
+  &__text {;
+    font-family: $mainFF;
+    @include fontSizeResponsive((
+      xs: 16px,
+      md: 18px,
+      lg: 20px
+    ));
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: $light;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .splitter__main {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      padding-right: 13.12%;
+    }
+
+    .splitter__sec {
+      padding-top: 57px;
+      padding-bottom: 60px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__title {
+      margin-bottom: 1em;
+      max-width: 400px;
+      @include marginLRA;
+    }
+
+    &__text {
+      max-width: 400px;
+      @include marginLRA;
+    }
+
+    .splitter__main {
+      text-align: center;
+      order: 5;
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+
+    .splitter__sec {
+      order: 10;
+      padding-bottom: 30px;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

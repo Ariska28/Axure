@@ -1,0 +1,18 @@
+.el-description {
+  @include fontSizeResponsive($fs-text-section);
+  font-family: $mainFF;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  a:not(.btn){
+    color: inherit;
+    &:hover {
+      color: $mainCol;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    line-height: 1.5;
+  }
+}

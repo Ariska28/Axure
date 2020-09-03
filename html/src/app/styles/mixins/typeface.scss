@@ -1,0 +1,46 @@
+@mixin fontSizeResponsive($fontSizeList){
+  @if (type-of($fontSizeList) == 'map') {
+    @each $breakpoint in map-keys($fontSizeList) {
+      @include media-breakpoint-up($breakpoint) {
+        font-size: map-get($fontSizeList, $breakpoint);
+      }
+    }
+  } @else {
+    font-size: $fontSizeList;
+  }
+}
+
+@function getFontSizeSpecial($list, $key: xs) {
+  @if (type-of($list) == 'map') {
+    @if map-has-key($list, $key) {
+      @return map-get($list, $key);
+    }
+  }
+  @return $list;
+}
+
+@mixin title-section() {
+  @include fontSizeResponsive($fs-title);
+  font-family: $secFF;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.07;
+
+  @include media-breakpoint-down(md){
+    font-weight: normal;
+    line-height: 1.25;
+  }
+}
+
+@mixin text-section() {
+  @include fontSizeResponsive($fs-text-section);
+  font-family: $mainFF;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+
+  @include media-breakpoint-down(md){
+    line-height: 1.5;
+  }
+
+}

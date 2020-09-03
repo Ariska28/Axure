@@ -1,0 +1,13 @@
+<div class="b-col3">
+    {% if list|length > 0 %}
+        {% for item in list %}
+            <div class="b-col3__item">
+                <h2 class="b-col3__title">{{ item.title }}</h2>
+                <div class="b-col3__pic">
+                    <img src="{{ item.img.src }}" {{ item.img.src2x ? ('srcset="' ~ item.img.src2x ~ ' 2x"') }} alt="{{ item.img.alt }}">
+                </div>
+                <div class="b-col3__text">{{ item.text }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

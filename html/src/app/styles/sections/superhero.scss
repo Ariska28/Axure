@@ -1,0 +1,308 @@
+.s-superhero {
+  margin-top: -($header-height);
+  padding-top: $header-height;
+  overflow: hidden;
+  background-color: $c-blue-cerulean;
+  color: $light;
+
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 7.81%;
+    padding-bottom: 3.125rem;
+    // padding-top: 150px;
+  }
+
+  &__content {
+    flex: 0 0 100%;
+    padding-right: 1.6%;
+  }
+
+  &__title {
+    color: $light;
+    margin-bottom: 0.54em;
+    max-width: 12em;
+  }
+
+  &__subtitle {
+    max-width: 20.9em;
+    margin-bottom: 2.3em;
+
+    p:only-child {
+      margin: 0;
+    }
+  }
+
+  &__form {
+    margin-bottom: 3.25rem;
+
+    .nf-field-container {
+      margin: 0;
+    }
+
+    .nf-cell:first-child {
+      display: block;
+      width: 100% !important;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    input[type="email"].nf-element {
+      font-size: 1rem;
+      line-height: 1.6;
+      padding-left: 2.5%;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+
+      &::placeholer {
+        color: $warm-grey;
+      }
+    }
+
+    .nf-cell:last-child {
+      display: block;
+      padding: 0;
+      width: 100% !important;
+    }
+
+    input[type="button"].nf-element,
+    input[type="submit"].nf-element {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1rem;
+      line-height: 1.6;
+      background-color: $c-btn;
+      border: none;
+      color: $light;
+      transition: background-color 0.3s;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $hoverCol1;
+      }
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1rem;
+    padding-left: 2.5%;
+
+    &::placeholer {
+      color: $warm-grey;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: $c-btn;
+    border: none;
+    color: $light;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $hoverCol1;
+    }
+  }
+
+  &__customers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 0;
+    padding-left: 0;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4%;
+    }
+  }
+
+  &__media {
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 1.125rem;
+    max-width: 100%;
+    flex: 0 0 100%;
+    font-size: 0;
+    text-align: center;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    max-width: 100%;
+    font-size: $mainFontSize;
+    //position: relative;
+    //left: 50%;
+    //transform: translateX(-50%);
+    max-height: 680px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__container {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+
+    &__content {
+      //   padding-top: 9%;
+      padding-bottom: 10.5%;
+      flex: 0 0 44%;
+      min-width: 440px;
+    }
+
+    &__form {
+      display: flex;
+
+      nf-cells {
+        display: flex !important;
+      }
+
+      .nf-cell:first-child {
+        margin-bottom: 0;
+        // width: auto !important;
+      }
+
+      @supports (display: grid) {
+        .nf-cell:first-child {
+          margin-bottom: 0;
+          flex: 1 1 100%;
+          width: auto !important;
+        }
+      }
+
+      input[type="email"].nf-element {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        padding-left: 3.5%;
+        padding-top: 0.65em;
+        padding-bottom: 0.65em;
+      }
+
+      .nf-cell:last-child {
+        width: auto !important;
+        flex: 0 0 auto;
+        margin-left: 2%;
+      }
+
+      input[type="button"].nf-element,
+      input[type="submit"].nf-element {
+        padding: 0.7em 1.15em;
+        font-size: 1.25rem;
+        line-height: 1.6;
+      }
+    }
+
+    &__field {
+      font-size: 1.25rem;
+      flex: 1 1 100%;
+      width: auto !important;
+      padding-left: 3.5%;
+    }
+
+    &__btn {
+      flex: 1 1 100%;
+      width: auto !important;
+      flex: 0 0 auto;
+      margin-left: 2%;
+      padding: 0.7em 1.15em;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    &__customers {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      &-item {
+        display: block;
+        flex: auto;
+        padding: 3%;
+      }
+
+      &-logo {
+        max-width: 120px;
+      }
+    }
+
+    &__media {
+      align-self: flex-end;
+      padding: 0 2rem 0 0;
+      margin-bottom: 0;
+      flex: 0 0 56%;
+      min-width: 0;
+      //   margin-bottom: -70px;
+    }
+
+    &__img {
+      padding-left: 3%;
+      left: 0;
+      transform: none;
+      max-height: none;
+      max-width: none;
+      float: left;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__form {
+      input[type="email"].nf-element {
+        font-size: 1.25rem;
+        padding-top: 1.1em;
+        padding-bottom: 1.1em;
+        padding-left: 5.5%;
+      }
+
+      .nf-cell:last-child {
+        margin-left: 4%;
+      }
+
+      input[type="button"].nf-element,
+      input[type="submit"].nf-element {
+        padding: 1.15em 2.77em;
+        font-size: 1.25rem;
+        line-height: 1.6;
+      }
+    }
+
+    &__field {
+      font-size: 1.25rem;
+      padding-left: 5.5%;
+    }
+
+    &__btn {
+      margin-left: 4%;
+      padding: 1.15em 2.77em;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+  }
+}

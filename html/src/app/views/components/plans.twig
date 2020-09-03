@@ -1,0 +1,83 @@
+<section class="section b-plans">
+	<div class="container">
+		<h1 class="b-plans__title">{{ title }}</h1>
+		<p class="b-plans__text">{{ text }}</p>
+
+		<div class="b-plans__cards">
+			<div class="b-plans__switcher">
+				<button class="b-plans__switcher-btn js-switcher-btn isActive" type="button" data-plan="subscriptions">
+					Subscriptions
+				</button>
+				<button class="b-plans__switcher-btn js-switcher-btn" type="button" data-plan="perpetual">
+					Perpetual Licenses
+				</button>
+			</div>
+
+			<ul class="b-plans__list">
+
+				{% for item in plans_list %}
+					<li class="b-plans__item">
+						<h2 class="b-plans__item-title">
+							{{ item.title }}
+						</h2>
+
+						{% if item.price_monthly %}
+							<div class="b-plans__item-price js-price">
+								<span class="b-plans__item-exchange js-plan-item" data-subscriptions="{{ item.price_exchange }}" data-perpetual="{{ item.price_exchange }}">{{ item.price_exchange }}</span>
+								<span class="b-plans__item-value js-plan-item" data-subscriptions="{{ item.price_monthly }}" data-perpetual="{{ item.price_perpetual }}">{{ item.price_monthly }}</span>
+								<span class="b-plans__item-period js-plan-item" data-subscriptions="{{ item.period_monthly }}" data-perpetual="{{ item.period_perpetual }}">{{ item.period_monthly }}</span>
+							</div>
+						{% else %}
+							<div class="b-plans__item-contact js-price">
+								<span>
+									Contact us for pricing
+								</span>
+							</div>
+						{% endif %}
+
+						{% if item.desc %}
+							<strong class="b-plans__item-desc">
+								{{ item.desc }}
+							</strong>
+						{% endif %}
+
+						<ul class="b-plans__item-list">
+
+							{% for benefit in item.advantages_list %}
+								<li class="b-plans__item-benefit">
+
+									<span aria-hidden="true">
+										{% include 'svg_inline.twig' with {'name': 'ic-check'} %}
+									</span>
+									{{ benefit }}
+
+								</li>
+							{% endfor %}
+
+						</ul>
+
+						{% if item.link_attr == '' %}
+							<a class="b-plans__item-link js-plan-link {{ item.link_mod }}" data-subscriptions="{{ item.link_url }}" data-perpetual="{{ item.link_url_perpetual }}" href="{{ item.link_url }}">
+								{{ item.link_text }}
+							</a>
+						{% else %}
+							<button class="b-plans__item-link {{ item.link_mod }}" data-btn="form" type="button">
+								{{ item.link_text }}
+							</button>
+						{% endif %}
+
+						<small class="b-plans__item-small">
+							{{ item.small }}
+						</small>
+					</li>
+
+				{% endfor %}
+
+			</ul>
+		</div>
+	</div>
+
+	<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1440px" height="53.6px" viewbox="0 0 1440 53.6" enable-background="new 0 0 1440 53.6" preserveaspectratio="none" class="b-plans__mask">
+		<path d="M1440,53.6V0c0,0-152.8,13.4-318.5,26.8S777,53.6,725,53.6S491.8,40.2,323.5,26.8S0,0,0,0l0,53.6H1440z"/>
+	</svg>
+</section>

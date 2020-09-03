@@ -1,0 +1,19 @@
+.signature {
+  margin-top: 0;
+  padding-bottom: 0.2em;
+  transform: rotate(2deg);
+  font-family: $addFF1;
+  font-size: 31px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  color: inherit;
+
+  .wiw & {
+    margin-top: 0;
+  }
+
+  @include media-breakpoint-down(xsm) {
+    font-size: 24px;
+  }
+}

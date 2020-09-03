@@ -1,0 +1,72 @@
+.icon-list {
+  @include listUnstyled;
+  &__item {
+    padding-top: 1.1em;
+    padding-bottom: 1.05em;
+    padding-left: 2.9em;
+    //border-bottom: 1px solid rgba($warm-grey, 0.3);
+    position: relative;
+
+    font-family: $secFF;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 2.35;
+    line-height: 1.35;
+    color: $c-greyish-brown;
+
+    background-color: transparent;
+    background-size: 0 0;
+    background-position: 200% 200%;
+    background-repeat: no-repeat;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.7em;
+      height: 1.7em;
+
+      background-color: transparent;
+      background-image: inherit;
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 428px;
+      border-bottom: 1px solid rgba($warm-grey, 0.3);
+    }
+
+    &:nth-child(2) {
+      padding-top: 1.3em;
+      padding-bottom: 1.3em;
+    }
+    &:nth-child(3) {
+      padding-top: 1em;
+    }
+    &:first-child {
+      padding-top: 0.6em;
+    }
+    &:last-child {
+      //border-bottom: none;
+      &:after {
+        content: normal;
+      }
+    }
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    &__item {
+      font-size: 16px;
+    }
+  }
+}

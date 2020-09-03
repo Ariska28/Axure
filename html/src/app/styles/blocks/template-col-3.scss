@@ -1,0 +1,45 @@
+.template-col-3 {
+  background-color: $col4;
+  padding-top: 15px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.35em;
+    @include fontSizeResponsive($fs-title);
+    font-family: $secFF;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.5;
+    color: $mainTextCol;
+  }
+
+  &__text {
+    max-width: 750px;
+    margin-bottom: 50px;
+    font-family: $mainFF;
+    @include fontSizeResponsive((
+      xs: 14px,
+      md: 18px,
+      lg: 20px
+    ));
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: $mainTextCol;
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      @include linkColor;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+  };
+}

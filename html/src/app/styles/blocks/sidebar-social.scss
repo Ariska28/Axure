@@ -1,0 +1,24 @@
+.sidebar-social {
+  @include listUnstyled;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  li {
+    margin-right: 16px;
+    margin-bottom: 8px;
+  }
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    @include linkColor($mainTextCol);
+    padding: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    svg {
+      fill: currentColor;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

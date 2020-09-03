@@ -1,0 +1,153 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Blog Single Post
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isSec': true,
+        'isLight': true,
+    } %}
+{% endblock %}
+{% block body %}
+    {# blog articles preview list #}
+    <section class="b-single-post">
+        <div class="b-single-post__container">
+            <div class="b-single-post__header">
+                {# title #}
+                <h1 class="b-single-post__title">Et numquam incidunt voluptatem id itaque voluptatem.</h1>
+
+                {# author name, meta #}
+                <div class="b-single-post__meta">
+                    <div class="b-single-post__author">By <a href="#">Alex Edwards</a></div>
+                </div>
+
+                {# thumbnail #}
+                <div class="b-single-post__thumbnail">
+                    <img src="images/temp_blog-post.jpg" srcset="images/temp_blog-post@2x.jpg 2x" alt="">
+                </div>
+            </div>
+
+            <div class="b-single-post__body">
+                {# content #}
+                <div class="b-single-post__content wiw">
+
+                    <p>The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server—instead of on your computer’s local hard drive—to render the letterforms you see when you browse the web. In the world of Axure RP, the term has a second, related meaning: it’s a feature that allows you to use web fonts in your diagrams by configuring your Axure RP project file to point to the fonts’ hosted locations out there on the internet.</p>
+                    <p>Web-based font-hosting has been prevalent since about 2010. (The Axure RP feature has been around since version 7, released in 2013.) The year 2010 was a big one for web fonts in large part because it was when Google, in their inscrutable benevolence, debuted Google Fonts. Competitor Typekit had begun selling access to web fonts in 2009 (before being acquired by Adobe in 2011), but no one before Google had offered a high-quality library of web fonts that were free to use. (These days there are some pretty good free-to-use alternatives to Google Fonts, such as Brick.) Speculation has simmered over the years as to why Google maintains the service, but the Google Fonts site was given a Material Design makeover this past June, which I think we can take as a fairly positive sign of Google’s ongoing commitment to it.</p>
+                    <h2>Subhead Style</h2>
+                    <p>Using Google Fonts is the easiest way to implement web fonts in your Axure prototypes. Read on for a step-by-step walkthrough of how it works. (Also, if you prefer to learn by example, download this .rp file that’s already set up with links to three different Google Fonts web fonts.)</p>
+                    <img src="images/temp_blog-content.jpg" srcset="images/temp_blog-content@2x.jpg 2x" alt="">
+                    <p>1. Head over to fonts.google.com and browse or search for a font you’d like to use. If you want to follow along with the screenshots in this article, you can search for the “Raleway” font.</p>
+                    <p>2. Click a font name to go to its profile page. Once there, click the big red “plus” icon to select the font; you’ll then see a popup notification bar at the bottom of the window.</p>
+                    <p>3. Click the notification bar to expand it, and then click the “Download” icon in the top-right corner to download a zip archive of your selected fonts. Keep the Google Fonts webpage handy though, because we’ll need it again in a minute.</p>
+                    <p>4. Go ahead and install the font files you downloaded and then restart Axure RP if it was already running. You’ll now be able to use your new typeface to style text as you work on your diagrams. That’s half the battle! (If you’re not sure how to install fonts on your computer, try these articles for Windows users and Mac users.)</p>
+                    <p>5. Back on the Google Fonts webpage, highlight your font’s “embed URL”. You want just the piece inside the first set of quote marks, starting with “https” and ending with the font name, as shown below. Once you’ve got just that piece selected, copy it to your clipboard.</p>
+                    <p>6. Fire up Axure RP and open your project’s Generate HTML dialog (“Publish > Generate HTML Files…”), and then go to the “Web Fonts” tab. Add a new entry to the web fonts table using the green “plus” button, name it after the font you downloaded, and then paste the URL you copied into the “URL” field, as shown below.</p>
+                    <p>Click either “Close” or “Generate”, depending on whether you want to continue editing or generate your HTML output right away.</p>
+                    <p>The Google Fonts service is convenient to use, but of course it has its limitations—the main one being that it doesn’t offer every font under the sun. If you absolutely need to use a particular font in your project, and if it’s offered via another font hosting service or if you’re planning to self-host, the process of getting set up may present a few extra hurdles.</p>
+                </div>
+
+                {# sidebar #}
+                <div class="b-single-post__sidebar">
+                    <div class="b-single-post__sidebar-author">
+                        <div class="author">
+                            <div class="author__pic">
+                                <img src="images/temp_author.jpg" srcset="images/temp_author@2x.jpg 2x" alt="">
+                            </div>
+                            <div class="author__desc">Alex Edwards is a  Product Designer at Axure</div>
+                        </div>
+                    </div>
+                    <div class="b-single-post__sidebar-box">
+                        <h4 class="b-single-post__sidebar-title">Filed under</h4>
+                        {% include 'components/tags.twig' with {
+                            'list': [
+                                {
+                                    'href': '#',
+                                    'name': 'Inspiration',
+                                },
+                                {
+                                    'href': '#',
+                                    'name': 'Product News',
+                                },
+                            ],
+                            'isVertical': true,
+                        } %}
+                    </div>
+                    <div class="b-single-post__sidebar-box">
+                        <h4 class="b-single-post__sidebar-title">Share this</h4>
+                        {% include 'components/sidebar-social.twig' %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="b-single-post__footer">
+                <h3 class="b-single-post__footer-title">Related Posts</h3>
+                {# related posts #}
+                {% include 'components/blog-list.twig' with {
+                    'list': [
+                        {
+                            'href': '#',
+                            'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                            'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                            'img': {
+                                'src': 'images/temp_preview_1.jpg',
+                                'src2x': 'images/temp_preview_1@2x.jpg',
+                            },
+                            'meta': {
+                                'tags': [
+                                    {
+                                        'href': '',
+                                        'name': 'Product News',
+                                    },
+                                    {
+                                        'href': '',
+                                        'name': 'Featured',
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            'href': '#',
+                            'title': 'Dark mode has arrived in the axure rp 9 beta',
+                            'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                            'img': {
+                                'src': 'images/temp_preview_2.jpg',
+                                'src2x': 'images/temp_preview_2@2x.jpg',
+                            },
+                            'meta': {
+                                'tags': [
+                                    {
+                                        'href': '',
+                                        'name': 'Product News',
+                                    },
+                                ],
+                            },
+                        },
+                        {
+                            'href': '#',
+                            'title': 'Libero in saepe ut sunt magnam est error eius.',
+                            'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                            'img': {
+                                'src': 'images/temp_preview_3.jpg',
+                                'src2x': 'images/temp_preview_3@2x.jpg',
+                            },
+                            'meta': {
+                                'tags': [
+                                    {
+                                        'href': '',
+                                        'name': 'Inspiration',
+                                    },
+                                ],
+                            },
+                        },
+                    ],
+                } %}
+            </div>
+
+
+
+        </div>
+    </section>
+{% endblock %}
+
+

@@ -1,0 +1,21 @@
+{#
+    'title': string,
+    'list': array of previewItem from preview.twig,
+#}
+<div class="preview-list">
+    {% if title %}
+        <h2 class="preview-list__title">{{ title }}</h2>
+    {% endif %}
+
+    {% if list|length > 0 %}
+        <div class="b-list-col3">
+            <div class="b-list-col3__container">
+                {% for item in list %}
+                    <div class="b-list-col3__item">
+                        {% include 'preview.twig' with item %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</div>

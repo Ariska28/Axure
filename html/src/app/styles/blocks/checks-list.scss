@@ -1,0 +1,48 @@
+.check-list {
+  @include listUnstyled;
+  &__item {
+    padding-bottom: 1.3em;
+    padding-left: 1.65em;
+    position: relative;
+
+    font-family: $mainFF;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.24;
+    color: $mainTextCol;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .icon-check {
+      position: absolute;
+      left: 0;
+      top: 0.15em;
+      width: 0.93em;
+      height: 0.7em;
+      fill: $mainCol;
+    }
+
+    &_disable {
+      color: $c-light-grey-2;
+      .icon-check {
+        fill: transparent !important;
+      }
+    }
+
+    &_highlight {
+      .icon-check {
+        fill: $c-venice-blue;
+      }
+    }
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    &__item {
+      font-size: 16px;
+    }
+  }
+}

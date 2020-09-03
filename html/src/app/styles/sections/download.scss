@@ -1,0 +1,43 @@
+.s-download {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 3.125rem 0;
+
+  &--big {
+    padding-top: 19rem;
+    padding-bottom: 28.125rem;
+  }
+
+  &--hero {
+    display: flex;
+    align-items: center;
+    min-height: 68vh;
+  }
+
+  &__container {
+    @extend .container;
+  }
+
+  &__text {
+    font-family: $secFF;
+  }
+
+  &__btn {
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+
+  @include media-breakpoint-down(md) {
+    &--big {
+      padding: 3.125rem 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &--hero {
+      min-height: auto;
+    }
+  }
+}

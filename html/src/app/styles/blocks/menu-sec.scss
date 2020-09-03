@@ -1,0 +1,46 @@
+.sec-menu {
+  @include listUnstyled;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 11.8px 0;
+  &__item {
+    margin-left: 40px;
+    font-size: 14px;
+    color: $mainCol2;
+    &:first-child {
+      margin-left: 0;
+    }
+    &_label {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    @include link;
+    font-family: $secFF;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $mainCol2;
+
+    &.active {
+      color: $mainCol;
+    }
+  }
+
+  &__label {
+    @include label($bgCol: $col2);
+  }
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &__item {
+      margin-left: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+}

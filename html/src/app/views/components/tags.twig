@@ -1,0 +1,16 @@
+{#
+    list: [
+        {
+            'href': '',
+            'name': '',
+        },
+    ]
+#}
+
+<ul class="tags">
+    {% for item in list %}
+        <li class="tags__item">
+            <a href="{{ item.href }}">{{ item.name }}</a>
+        </li>
+    {% endfor %}
+</ul>

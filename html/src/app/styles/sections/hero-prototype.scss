@@ -1,0 +1,62 @@
+.s-hero-prototype {
+  background: linear-gradient(180.02deg, #282828 0.07%, #111a20 0.09%, #075988 30.7%, #05c2ff 112.63%, #342863 150.85%);
+  color: $light;
+  text-align: center;
+  @include fontSizeResponsive($fs-text-section);
+  font-family: $secFF;
+  padding-top: (62px + $header-height);
+  margin-top: -$header-height;
+  overflow: hidden;
+
+  &__container {
+    @extend .container;
+  }
+
+  h1 {
+    @include fontSizeResponsive($fs-super-hero);
+    font-family: $secFF;
+    font-style: normal;
+    line-height: 1;
+    font-weight: bold;
+    max-width: 10em;
+    margin: 0.12em auto 0.38em;
+  }
+
+  &__intro,
+  &__description {
+    max-width: 30em;
+    margin: 0 auto;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.4;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__intro {
+    @include fontSizeResponsive($fs-text-big);
+  }
+
+  &__description {
+    @include fontSizeResponsive($fs-text-section);
+  }
+
+
+  &__img {
+    background-size: 100% auto;
+    padding-bottom: 0;
+    padding-top: 46.5%;
+   // min-width: 800px;
+   // height: 400px;
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: -$header-height-mobile;
+    padding-top: (30px + $header-height-mobile);
+  }
+
+}

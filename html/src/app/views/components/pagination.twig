@@ -1,0 +1,15 @@
+<div class="pagination">
+    <a href="{{ previous.href }}" class="btn btn_transp btn_disabled">{{ previous.text }}</a>
+    {#
+    {% if pages|length > 0 %}
+        <ul class="pagination__pages">
+            {% for page in pages %}
+                <li>
+                    <a href="{{ page.link }}">{{ page.index }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    #}
+    <a href="{{ next.href }}" class="btn btn_transp">{{ next.text }}</a>
+</div>

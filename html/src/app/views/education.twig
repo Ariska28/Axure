@@ -1,0 +1,121 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section hero-edu">
+        <div class="container">
+            <div class="splitter">
+                <div class="splitter__main">
+                    <h1 class="hero-edu__title">Free Licenses<br> for Students<br> and Teachers</h1>
+                    <p class="hero-edu__text">More than 30,000 licenses have been provided to students, teachers, and classrooms around the world.</p>
+                </div>
+                <div class="splitter__sec">
+                    <img src="images/temp_hero-edu.png" srcset="images/temp_hero-edu@2x.png 2x" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="announce announce_var2">
+        <div class="container">
+            {% include 'components/b-col3.twig' with {
+                'list': [
+                    {
+                        'title': 'Submit your request',
+                        'text': '<p>If you\'re a student or teacher, submit your request below for a free educational license. The terms (not for commercial use) can be found here.</p><p>If you would like to know the status of your request, please email us at sales@axure.com. Please do not resubmit your request.</p>',
+                        'img': {
+                            'src': 'images/temp_edu_request-send.png',
+                            'src2x': 'images/temp_edu_request-send@2x.png',
+                            'alt': '',
+                        }
+                    },
+                    {
+                        'title': 'Download the Trial',
+                        'text': '<p>Give us a few days to respond to your request. In the meantime you can download and use the free 30-day trial.</p>',
+                        'img': {
+                            'src': 'images/temp_edu_trial-download.png',
+                            'src2x': 'images/temp_edu_trial-download@2x.png',
+                            'alt': '',
+                        }
+                    },
+                    {
+                        'title': 'Receive License info',
+                        'text': '<p>Teachers will receive a license key for their own computer and an additional classroom key to be used for campus computer labs. Activate Axure RP by following the perpetual license instructions here.<p/><p>Students will receive a one-year subscription license assigned to an Axure account created under the email address they provide below. Activate Axure RP by following the subscription instructions here.<p/>',
+                        'img': {
+                            'src': 'images/temp_edu_receive-license.png',
+                            'src2x': 'images/temp_edu_receive-license@2x.png',
+                            'alt': '',
+                        }
+                    },
+                ],
+            } %}
+        </div>
+    </section>
+
+    <section class="request-license">
+        <div class="container">
+            <h2 class="request-license__title">Request a free education license </h2>
+            {% include 'components/toggle-block.twig' with {
+                'blocks': [
+                    {
+                        'name': 'students',
+                        'title': 'For Students',
+                        'text': "<p>If you are enrolled in a degree program at an accredited high school, university, or community college, you are qualified to receive a free one-year subscription license for Axure RP Team. If you are still enrolled when the subscription expires, you may reapply for a new subscription. Eligibility info.</p>
+                                    <p>Submit your request with a file clearly showing proof of enrollment that includes your name and shows that you are currently enrolled. Example valid documents include: transcripts, current class schedule, letter from school administrator stating you are currently enrolled, student ID card with current validity, etc. If you aren't sure if you qualify, go ahead and submit an application and we'll let you know.</p>
+                                    <p>If you are enrolled in an extension/certificate program, your teacher can email sales@axure.com to request a temporary license key for you to use during the course</p>",
+                    },
+                    {
+                        'name': 'teachers',
+                        'title': 'For Teachers',
+                        'text': "<p>Submit your request with a file clearly showing proof of enrollment that includes your name and shows that you are currently enrolled. Example valid documents include: transcripts, current class schedule, letter from school administrator stating you are currently enrolled, student ID card with current validity, etc. If you aren't sure if you qualify, go ahead and submit an application and we'll let you know.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ipsam molestiae mollitia repellendus unde. Cum fugit illo magnam neque quibusdam. Eos fugit magnam nemo quod ratione voluptate voluptatum! Aspernatur, repellat!</p>",
+                    },
+                ]
+            } %}
+        </div>
+    </section>
+
+    {% include 'components/faqs.twig' with {
+        'title': 'Education License FAQs',
+        'list': [
+            {
+                'question': 'What is Perpetual vs. Subscription?',
+                'answer': '<p>Axure RP 8 perpetual licenses allow you to use Axure RP 8.0 and all 8.x updates for as long as you like without additional fees.</p><p>Axure RP subscription licenses allow you to use the latest version of Axure RP while you are subscribed. Subscriptions are available for monthly and yearly terms.</p>',
+            },
+            {
+                'question': 'How can I upgrade?',
+                'answer': '<p>For perpetual licenses, you can upgrade from Pro to Team through the customer portal for $400.</p><p>For subscription licenses, you can upgrade to Team and Enterprise at any time. The remaining value of your subscription will be applied to the upgrade cost.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Can I use Axure RP on more than one computer?',
+                'answer': '<p>Each license can be used by the named user on any number of computers including across PCs and Macs.</p>',
+            },
+            {
+                'right': true,
+                'question': '      Can I use earlier software versions?',
+                'answer': '<p>You can activate RP Pro 7 with RP Team 8 perpetual licenses and RP Standard 7 with RP Pro 8 licenses. Subscriptions only work with RP 8+.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Do you offer volume pricing?',
+                'answer': '<p>Site licenses are available for purchases of 20+ perpetual licenses. Please contact sales@axure.com for more information.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Where is your End User License Agreement?',
+                'answer': '<p>Axure RP is sold as a licensed product according to the terms and conditions of the <a href="#">EULA</a>.</p>',
+            },
+        ],
+    } %}
+
+
+{% endblock %}

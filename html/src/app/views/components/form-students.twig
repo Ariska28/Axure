@@ -1,0 +1,76 @@
+{% set form_name = 'signup' %}
+<div class="form-{{ form_name }}-box">
+    <h2 class="form-title">Student Sign up Form</h2>
+    <form action="" class="form-{{ form_name }}">
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'firstname',
+                'type': 'text',
+                'placeholder': '*First Name',
+                'isRequired': true,
+            } %}
+
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'lastname',
+                'type': 'text',
+                'placeholder': '*Last Name',
+                'isRequired': true,
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'email',
+                'type': 'email',
+                'placeholder': '*Email Address',
+                'isRequired': true,
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'email-confirm',
+                'type': 'email',
+                'placeholder': '*Confirm Email Address',
+                'isRequired': true,
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'school-name',
+                'type': 'email',
+                'placeholder': '*Name of School',
+                'isRequired': true,
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-input-field.twig' with {
+                'form_name': form_name,
+                'name': 'file-proof',
+                'type': 'file',
+                'isRequired': true,
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            {% include 'form-area-field.twig' with {
+                'form_name': form_name,
+                'name': 'comments',
+                'placeholder': 'Comments',
+            } %}
+        </div>
+
+        <div class="form-{{ form_name }}__row">
+            <div class="form-{{ form_name }}__field">
+                <input type="submit" class="btn" Value="Submit">
+            </div>
+        </div>
+    </form>
+</div>

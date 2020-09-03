@@ -1,0 +1,8 @@
+.blog-section {
+  background-color: $col4;
+  padding-bottom: 30px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+  };
+}

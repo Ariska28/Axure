@@ -1,0 +1,99 @@
+.form-signup {
+  $formSignupGapHor: 12px;
+  $formSignupGapVert: 28px;
+
+  &-box {
+    color: $mainTextCol;
+
+    .form-title {
+      padding: 0 12px;
+    }
+  }
+
+  &__row {
+    margin-left: - $formSignupGapHor;
+    margin-right: - $formSignupGapHor;
+    display: flex;
+    margin-bottom: $formSignupGapVert;
+  }
+
+  &__field {
+    padding: 0 $formSignupGapHor;
+    flex-grow: 1;
+
+    input,
+    textarea {
+      @include input-base;
+      border: 1px solid $warm-grey;
+      padding: 12px 14px;
+
+      font-family: $mainFF;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.78;
+      color: inherit;
+      @include placeholder($c-light-grey-2);
+    }
+
+    textarea {
+      resize: none;
+      min-height: 109px;
+      max-height: 200px;
+    }
+
+    input[type=submit] {
+      width: auto;
+      min-width: 264px;
+      background-color: $c-green-soft;
+      color: $light;
+      border-radius: 4px;
+      border-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: darken($c-green-soft, 10%);
+      }
+    }
+
+    &_required {
+
+    }
+
+    &-upload {
+      .btn {
+        border-radius: 6px;
+        border: solid 1px $warm-grey;
+        width: 100%;
+        max-width: 170px;
+
+        font-family: $secFF;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        text-align: center;
+        color: #303030;
+        background-color: #f2f2f2;
+        &:hover,
+        &:focus {
+          background-color: darken(#f2f2f2, 5%);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    &__row {
+      flex-wrap: wrap;
+    }
+
+    &__field {
+      width: 100%;
+
+      & + & {
+        margin-top: $formSignupGapVert;
+      }
+    }
+  }
+}

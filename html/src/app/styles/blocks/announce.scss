@@ -1,0 +1,59 @@
+.announce {
+  background-image: linear-gradient(to bottom, $c-white-smoke-light, $c-white-smoke);
+  padding: 0 0 30px;
+  margin-bottom: 28px;
+
+  &__post-text {
+    font-family: $mainFF;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    text-align: center;
+    color: $mainTextCol;
+    a {
+      color: inherit;
+      &:hover {
+        color: $mainCol;
+      }
+    }
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    padding: 83px 0 16px;
+    &__post-text {
+      font-size: 18px;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    &__post-text {
+      //font-size: 16px;
+    }
+  }
+
+  &_var2 {
+    padding-top: 30px;
+    margin-bottom: 0;
+    background: $col4;
+
+    .b-col3__item {
+      border-right-color: transparent;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 59px;
+      padding-bottom: 0;
+
+      .b-col3__pic {
+        text-align: center;
+        img {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

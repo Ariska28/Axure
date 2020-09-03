@@ -1,0 +1,126 @@
+@import './node_modules/select2/src/scss/core';
+
+//custom style for plugin:
+$select2ItemPadding: 18px;
+
+.select2-ic {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  color: currentColor;
+  margin-right: 10px;
+  transform: translateY(0.15em);
+  svg {
+    display: block;
+    color: inherit;
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.select2-dropdown {
+  .select2-ic {
+    //vertical-align: bottom;
+  }
+}
+
+
+.select2-container {
+  text-align: left;
+  max-width: 100%;
+  width: 100% !important;
+  body > & {
+    width: auto !important;
+  }
+}
+
+.select2-container {
+  height: 100%;
+}
+
+.selection {
+  height: 100%;
+}
+
+.select2-container .select2-selection--single {
+  padding-left: $select2ItemPadding;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 0;
+  padding-top: $select2ItemPadding;
+  padding-bottom: $select2ItemPadding;
+}
+
+.select2-selection__rendered,
+.select2-results__option {
+  font-family: $mainFF;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.52;
+  color: $mainTextCol;
+}
+
+.select2-results__option {
+  padding: $select2ItemPadding;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  //border-color: #888 transparent transparent transparent;
+  //border-style: solid;
+  //border-width: 5px 4px 0 4px;
+  //height: 0;
+  //left: 50%;
+  //margin-left: -4px;
+  //margin-top: -2px;
+  //position: absolute;
+  //top: 50%;
+  //width: 0;
+  border-color:  transparent $mainTextCol $mainTextCol transparent;
+  border-style: solid;
+  border-width: 0 2px 2px 0 !important;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: border-color $ttime2;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  //border-color: transparent transparent #888 transparent;
+  //border-width: 0 4px 5px 4px;
+  border-color: transparent;
+}
+
+// element highlight
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $c-white-smoke;
+  color: $mainTextCol;
+}
+
+// show all options without appearing scrollbar
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: none;
+}
+
+// wp adminbar specific
+//.admin-bar .select2-dropdown {
+//  margin-top: 32px !important;
+//}
+//
+//@media screen and (max-width: 782px) {
+//  .admin-bar .select2-dropdown {
+//    margin-top: 46px;
+//  }
+//}

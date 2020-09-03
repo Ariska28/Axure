@@ -1,0 +1,182 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section enterprise-hero">
+        <div class="container">
+
+            <h1>Good is no longer Good Enough</h1>
+
+            <div class="enterprise-hero__info">
+                <h2>The race to achieve digital mastery is on</h2>
+                <p>Axure is the only solution that provides the analysis, design, and prototyping capabilities to
+                    accelerate modern software projects and ensure amazing digital experiences.</p>
+            </div>
+            <div class="enterprise-hero__btns">
+                <a href="" class="btn btn--fade">Request Info</a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_enterprise-platform',
+        title: 'The Axure Enterprise Platform ',
+        text: 'Magnam perferendis quod ut quasi placeat molestiae aut iusto praesentium. Ut adipisci reiciendis est blanditiis. Ipsam enim ea non quam aspernatur fugit voluptatem voluptas.',
+        list_style: 'table',
+        list: [
+            {
+                title: 'Axure RP',
+                text:'Prototyping and documentation for PC and Mac'
+            },
+            {
+                title: 'Team Projects',
+                text:'Multiple users can work on single project at the same time'
+            },
+            {
+                title: 'Shared Libraries',
+                text:'Develop and distribute company interactive Assets'
+            },
+            {
+                title: 'Axure Cloud',
+                text:'Host, share and inspect projects online'
+            },
+            {
+                title: 'Axure Build',
+                text:'Build screen-based animation in the cloud'
+            },
+            {
+                title: 'Axure Inspect',
+                text:'Automatically hand off interactive assets to dev teams'
+            },
+        ],
+        img: {
+            src: 'images/axure-enterprise-platform.png',
+            src2x: 'images/axure-enterprise-platform@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        label: {
+            text: 'New',
+        },
+        class: 'b-img-txt_enterprise-cloud',
+        title: 'Axure Business Cloud',
+        text: 'Consectetur ullam ea voluptas molestiae et harum nihil. Maiores veniam voluptatem repellat. Magnam et sequi et quia. Itaque ut velit accusamus tempore esse aut doloremque blanditiis praesentium. Qui voluptatum at quia ducimus non cupiditate modi sit in.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-documentation.svg',
+                },
+                text:'User Management'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-documentation.svg',
+                },
+                text:'Single Sign On '
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-documentation.svg',
+                },
+                text:'SOC II Security'
+            },
+        ],
+        img: {
+            src: 'images/temp_streamline-cloud.png',
+            src2x: 'images/temp_streamline-cloud@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_enterprise-grade',
+        title: 'Enterprise-grade Security',
+        text: 'Thorough, easy-to-understand specifications enable developers to deliver products that match the designs. Publish Axure RP files to Axure Cloud and present a complete picture including documentation, prototypes, and visual design with automated redlines and code export.',
+        img: {
+            src: 'images/temp_streamline-cloud.png',
+            src2x: 'images/temp_streamline-cloud@2x.png',
+        }
+    } %}
+
+    <section class="section enterprise-started">
+        <div class="enterprise-started__container">
+            <div class="enterprise-started__farea">
+                <h2>Get started now</h2>
+                <p>Ad eveniet accusamus sequi voluptates velit dolores voluptatem. Ad dignissimos dolor.
+                    Sit ex provident quos harum et porro molestiae.
+                    Esse voluptatibus et excepturi rerum vitae consequatur id nesciunt.</p>
+
+                <form class="enterprise-started__form">
+                    <div class="enterprise-started__field">
+                        <input type="text" name="domain" placeholder="Company name or desired term">
+                        <span class="enterprise-started__field-after">.axure.cloud</span>
+                    </div>
+                    <button type="submit" class="btn">Check Business Cloud Domain</button>
+                </form>
+            </div>
+
+            <div class="enterprise-started__description">
+                <p>Every Axure Business Cloud account comes with a custom domain</p>
+                <br>
+                <p>Dolorum autem et accusantium veritatis delectus.</p>
+                <p>Sint cupiditate totam ab est.</p>
+                <p>Sed ex dolores quam ullam voluptas sed quisquam.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    {% include 'components/faqs.twig' with {
+        'title': 'Axure Enterprise FAQs',
+        'list': [
+            {
+                'question': 'What is Perpetual vs. Subscription?',
+                'answer': '<p>Axure RP 8 perpetual licenses allow you to use Axure RP 8.0 and all 8.x updates for as long as you like without additional fees.</p><p>Axure RP subscription licenses allow you to use the latest version of Axure RP while you are subscribed. Subscriptions are available for monthly and yearly terms.</p>',
+            },
+            {
+                'question': 'How can I upgrade?',
+                'answer': '<p>For perpetual licenses, you can upgrade from Pro to Team through the customer portal for $400.</p><p>For subscription licenses, you can upgrade to Team and Enterprise at any time. The remaining value of your subscription will be applied to the upgrade cost.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Can I use Axure RP on more than one computer?',
+                'answer': '<p>Each license can be used by the named user on any number of computers including across PCs and Macs.</p>',
+            },
+            {
+                'right': true,
+                'question': '      Can I use earlier software versions?',
+                'answer': '<p>You can activate RP Pro 7 with RP Team 8 perpetual licenses and RP Standard 7 with RP Pro 8 licenses. Subscriptions only work with RP 8+.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Do you offer volume pricing?',
+                'answer': '<p>Site licenses are available for purchases of 20+ perpetual licenses. Please contact sales@axure.com for more information.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Where is your End User License Agreement?',
+                'answer': '<p>Axure RP is sold as a licensed product according to the terms and conditions of the <a href="#">EULA</a>.</p>',
+            },
+        ],
+    } %}
+
+{% endblock %}
+
+
+
+{% block footer %}
+    {% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

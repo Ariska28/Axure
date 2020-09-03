@@ -1,0 +1,27 @@
+.free-price {
+  font-family: $mainFF;
+  @include fontSizeResponsive((
+    xs: 48px,
+    md: 56px,
+    lg: 72px,
+  ));
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.04;
+  text-align: center;
+  color: $dark;
+
+  &__truly {
+    display: block;
+    font-size: 18px;
+    @include fontSizeResponsive((
+      xs: 14px,
+      md: 16px,
+      lg: 18px,
+    ));
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $mainTextCol;
+  }
+}

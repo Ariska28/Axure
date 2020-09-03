@@ -1,0 +1,140 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section wireframe-hero">
+        <div class="container">
+            <div class="splitter">
+                <div class="splitter__main">
+                    <h1 class="wireframe-hero__title">A complete wireframe solution that grows with your project</h1>
+                    <p class="wireframe-hero__text">
+                        Axure RP 9 is a complete solution for both Mac and PC that gives you everything you need to create flow diagrams, data flows, visual diagrams, wireframes and more.
+                    </p>
+                    <p class="wireframe-hero__text">
+                        Quickly create impactful wireframes that inform and bring clarity to your project. Start at any fidelity; from simple grey boxes to more complex UI designs. From there, quickly evolve wireframes all the way up to pixel-perfect prototypes– all in one tool. 
+                    </p>
+                    <a class="wireframe-hero__btn" href="/download.html">Download Free 30-day Demo</a>
+                </div>
+                <div class="splitter__sec">
+                    <div class="splitter__pic">
+                        <img src="images/wireframe-hero.png" srcset="images/wireframe-hero@2x.png 2x" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_low-high',
+        title: 'From low to high fidelity and anywhere in between',
+        text: 'From quick, low fidelity prototypes, all the way up to pixel perfect simulations, Axure RP is the most complete prototyping tool on the market today. Get started quickly by dragging UI components from the library and adding interactions. When you need more polished designs, use our advanced drawing tools or import designs from Sketch. In Axure, any element on the screen can be used to create  advanced interactions.',
+        img: {
+            src: 'images/wireframe-libraries.png',
+            src2x: 'images/wireframe-libraries@2x.png',
+        }
+    } %}
+
+    {% include 'components/wireframe-info.twig' with {
+        infoList: [
+            {
+                icon: '../images/fill-1-copy.svg',
+                title: 'Share and gather feedback',
+                text: ' Easily share your wireframes and documentation via a password-protected link or create a workspace to collaborate with your team. Users can comment on-screen directly on wireframe elements, a great way to gather feedback. Comments can be replied to, or marked as resolved to help facilitate collaborative workflows.'
+            },
+            {
+                icon: '../images/np-users-943303-ee-1686.svg',
+                title: 'Work together with team projects',
+                text: 'Work together in the same wireframe project, from the next desk over or across the world.  Teams can work together on the same document without fear of accidentally overwriting work. Invite new team members to your workspace to add supporting documents or prototypes to help support your wireframing process.'
+            }
+        ]
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_wireframe-take',
+        title: 'Wireframe quicker, work smarter',
+        text: 'Simply drag and drop from pattern libraries or design UI elements using hotkeys right on the canvas. Create visual styles and reusable UI patterns that can be accessed across the entire organization. And if needed, a robust community of 3rd party Axure wireframe libraries are available online.',
+        img: {
+            src: 'images/temp_prototyping.png',
+            src2x: 'images/temp_prototyping@2x.png',
+        }
+    } %}
+
+    <section class="section prototype-form">
+        <div class="container">
+            <img src="../images/group-15.png" alt="" class="prototype-form__trial-image">
+            <h1>“Almost limitless possibilities for creating complex prototypes, and great for basic wireframes too.”</h1>
+        
+            <div class="prototype-form__person">
+                <img src="../images/oval.png" alt="" class="prototype-form__person-icon"> 
+                <div class="prototype-form__person-name">STU M.</div>
+                <div class="prototype-form__person-position">Design Director</div>
+            </div>
+
+            <div class="prototype-form__form">
+            </div>
+
+            <div class="prototype-form__info">
+                <p>* If you enter an email address, you will receive Axure tutorials and news via email.
+                    <br/>
+                    You can unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/trust-block.twig' with {
+        'title': 'Trusted by:',
+        'trust_list': [
+            {
+                'src': 'images/trust_amazon.png',
+                'src2x': 'images/trust_amazon@2x.png',
+                'alt': 'Amazon'
+            },
+            {
+                'src': 'images/trust_epicgames.png',
+                'src2x': 'images/trust_epicgames@2x.png',
+                'alt': 'Epic Games'
+            },
+            {
+                'src': 'images/trust_slack.png',
+                'src2x': 'images/trust_slack@2x.png',
+                'alt': 'Slack'
+            },
+            {
+                'src': 'images/trust_saleforce.png',
+                'src2x': 'images/trust_saleforce@2x.png',
+                'alt': 'SaleForce'
+            },
+            {
+                'src': 'images/trust_verizon.png',
+                'src2x': 'images/trust_verizon@2x.png',
+                'alt': 'Verizon'
+            },
+            {
+                'src': 'images/trust_target.png',
+                'src2x': 'images/trust_target@2x.png',
+                'alt': 'Target'
+            },
+            {
+                'src': 'images/trust_ms.png',
+                'src2x': 'images/trust_ms@2x.png',
+                'alt': 'Microsoft'
+            },
+        ],
+    } %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

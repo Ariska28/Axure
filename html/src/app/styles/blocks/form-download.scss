@@ -1,0 +1,84 @@
+.form-download-box {
+  //width: 457.2px;
+  //height: 498.3px;
+  padding: 33px 33px 5px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0 rgba($c-grey-black-2, 0.5);
+  background-color: $light;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.687em;
+    font-family: $secFF;
+    font-size: 41.2px;
+    font-weight: 500;
+    font-style: normal;
+    //line-height: 1.81;
+    //text-align: center;
+    color: $mainCol2;
+    .icon-download {
+      width: 33px;
+      height: 33px;
+      fill: $pea-green;
+    }
+  }
+}
+
+.form-download {
+  input {
+    @include input-base;
+    font-family: $secFF;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.25;
+    color: $mainTextCol;
+    @include placeholder($warm-grey);
+
+    padding: 27px 18px;
+    border-radius: 3px;
+    border: solid 1px $warm-grey;
+  }
+
+  &__info {
+    margin-top: -10px;
+    margin-bottom: 14px;
+
+    p {
+      margin-bottom: 26px;
+      color: $c-gray-warm;
+      font-weight: normal;
+      line-height: 1.36;
+      font-size: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      @include linkColor;
+      text-decoration: underline;
+      &:hover {
+        color: inherit;
+       text-decoration: none;
+      }
+    }
+  }
+
+  &_vert {
+    .form-download__field {
+      margin-bottom: 28px;
+    }
+
+    .btn_download {
+      width: 100%;
+      padding-top: 23px;
+      padding-bottom: 21px;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+}
+

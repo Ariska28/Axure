@@ -1,0 +1,44 @@
+{# isSec: boolean, determine the presence of submenu to display it on tablet & mobile #}
+<nav class="main-menu-box">
+    <ul class="main-menu">
+
+        <li class="main-menu__item">
+            <a href="#" class="main-menu__link active">Tour</a>
+        </li>
+
+        <li class="main-menu__item">
+            <a href="enterprise.html" class="main-menu__link item-pink">Enterprise</a>
+        </li>
+
+        <li class="main-menu__item">
+            <a href="buy.html" class="main-menu__link">Pricing</a>
+        </li>
+
+        {# for example purposes only one item with submenu logic #}
+        <li class="main-menu__item{{ isSec ? ' main-menu__item_sub main-menu__item_sub-js' }}">
+            <a href="#" class="main-menu__link">Support</a>
+
+            {% if isSec %}
+                <ul class="submenu"> {# add class .submenu_open #}
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Reference</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Widget Libraries</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Trainers</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">Community</a>
+                    </li>
+                </ul>
+            {% endif %}
+        </li>
+
+        <li class="main-menu__item main-menu__item_social">
+            {% include 'header-social.twig' %}
+        </li>
+
+    </ul>
+</nav>

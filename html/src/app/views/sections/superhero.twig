@@ -1,0 +1,37 @@
+<section class="s-superhero">
+    <div class="s-superhero__container">
+        <div class="s-superhero__content">
+            <h1 class="s-superhero__title el-title">
+                {{ title }}
+            </h1>
+            <div class="s-superhero__subtitle el-description">
+                <p>
+                    {{ subtitle }}
+                </p>
+            </div>
+            
+            <form action="#" class="s-superhero__form">
+                <input type="text" class="s-superhero__field" placeholder="{{ placeholder }}">
+                <button class="s-superhero__btn">
+                    {{ btn }}
+                </button>
+            </form>
+           
+            <!-- Ninja form -->
+            <div class="s-superhero__form"></div>
+            <!-- End Ninja form -->
+
+            <ul class="s-superhero__customers">
+                {% for item in customers %}
+                <li class="s-superhero__customers-item">
+                    <img src="{{ item.logo }}" alt="{{ item.company }}" class="s-superhero__customers-logo">
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="s-superhero__media">
+            <img src="{{ imgSrc }}" alt="" class="s-superhero__img">
+        </div>
+    </div>
+</section>

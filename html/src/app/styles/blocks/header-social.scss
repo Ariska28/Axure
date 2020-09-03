@@ -1,0 +1,25 @@
+.header-social {
+  @include listUnstyled;
+  display: flex;
+  align-items: center;
+  li {
+    margin-right: 54px;
+  }
+  &__link {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    @include linkColor($c-light-grey);
+    padding: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    svg {
+      fill: currentColor;
+      opacity: 0.8;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+

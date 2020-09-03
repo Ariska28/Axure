@@ -1,0 +1,36 @@
+.author {
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 42px;
+    height: 4px;
+    margin-top: 13px;
+    background-color: darken($aqua-blue, 6%);
+    transform: skew(-35deg);
+  }
+
+  &__pic {
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 28px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc {
+    max-width: 203px;
+    font-family: $mainFF;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: $mainTextCol;
+  }
+}

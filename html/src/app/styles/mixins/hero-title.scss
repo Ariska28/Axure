@@ -1,0 +1,8 @@
+@mixin heroTitleFont {
+  font-family: $secFF;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.15;
+  @include fontSizeResponsive($fs-title-hero);
+}
+

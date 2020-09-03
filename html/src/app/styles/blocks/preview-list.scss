@@ -1,0 +1,22 @@
+.preview-list {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.929em;
+    font-family: $secFF;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.68;
+    color: $c-matterhorn-grey;
+  }
+
+  &+& {
+    margin-top: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 20px;
+    }
+  }
+}

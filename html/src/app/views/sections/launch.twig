@@ -1,0 +1,38 @@
+<section class="s-launch">
+    <div class="s-launch__container">
+        <div class="s-launch__content">
+            {% if title %}
+            <h2 class="s-launch__title el-title">
+                {{ title }}
+            </h2>
+            {% endif %}
+
+            <div class="s-launch__text el-description">
+                {% if subtitle %}
+                <p>
+                    {{ subtitle }}
+                </p>
+                {% endif %}
+
+                {% if list %}
+                <ul>
+                    {% for item in list %}
+                    <li>
+                        {{ item.text }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+
+        </div>
+        <div action="#" class="s-launch__apply">
+            <select id="nf-field-138" name="nf-field-138" aria-invalid="false" aria-describedby="nf-error-138"
+                class="ninja-forms-field nf-element" aria-labelledby="nf-label-field-138">
+                <option value="Interested in" selected="selected">Interested in:</option>
+                <option value="Interested one">Interested one</option>
+                <option value="Interested two">Interested two</option>
+            </select>
+        </div>
+    </div>
+</section>

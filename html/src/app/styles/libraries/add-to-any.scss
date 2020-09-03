@@ -1,0 +1,24 @@
+/**
+ * Related to AddToAny wordpress Plugin
+ */
+
+.b-single-post__sidebar {
+  .addtoany_list {
+    margin-left: -8px;
+  }
+
+  .addtoany_list a,
+  .widget .addtoany_list a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .addtoany_list a span {
+    transition: background-color $ttime1;
+  }
+
+  .addtoany_list a:hover span {
+    opacity: 1;
+    background-color: $mainCol !important;
+  }
+}

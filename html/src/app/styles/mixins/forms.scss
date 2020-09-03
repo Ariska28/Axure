@@ -1,0 +1,109 @@
+@mixin placeholder($color: $dark) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: 0.99;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    //   font-size: 13px;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 0.99;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    //  font-size: 13px;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 0.99;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    // font-size: 13px;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    opacity: 0.99;
+    -ms-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    //   font-size: 13px;
+  }
+
+  &::-ms-input-placeholder {
+    color: $color;
+    opacity: 0.99;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+    transform: scale(0.8);
+    transform-origin: left center;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: $color;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+  }
+  &:focus::-moz-placeholder {
+    color: $color;
+    opacity: 0;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+  }
+  &:focus:-moz-placeholder {
+    color: $color;
+    opacity: 0;
+    -moz-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+  }
+  &:focus:-ms-input-placeholder {
+    color: $color;
+    opacity: 0;
+    -ms-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
+  }
+}
+
+
+@mixin input-webkit-autofill($bg-color: $light, $text-color: $mainTextCol) {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover {
+    background-color: rgba($bg-color, 0);
+    -webkit-box-shadow: 0 0 0 1000px rgba($bg-color, 0) inset;
+    -webkit-text-fill-color: $text-color;
+    transition: background-color 50000s ease-in-out 0s;
+  }
+
+  &:-webkit-autofill:active,
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: $text-color;
+    -webkit-box-shadow: 0 0 0 1000px rgba($bg-color, 0) inset;
+    transition: background-color 50000s ease-in-out 0s;
+  }
+
+}
+
+@mixin input-base {
+  box-shadow: none;
+  display: block;
+  width: 100%;
+  color: inherit;
+  border-style: solid;
+
+  &[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &[readonly] {
+    background: rgba($dark, 0.12);
+    opacity: 0.7;
+    cursor: text!important;
+  }
+}

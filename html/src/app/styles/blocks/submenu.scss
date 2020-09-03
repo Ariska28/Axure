@@ -1,0 +1,32 @@
+.submenu {
+  @include listUnstyled;
+  padding-left: 40px;
+  display: none;
+  transition: padding $ttime1*0.5;
+
+  &__item {
+    padding: 10px 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include linkColor($light);
+    font-family: $secFF;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.17;
+
+    &.active {
+      color: $mainCol;
+    }
+  }
+
+  &_open {
+    padding-top: 10px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}

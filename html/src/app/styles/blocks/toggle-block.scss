@@ -1,0 +1,70 @@
+.toggle-block {
+  position: relative;
+  overflow: hidden;
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__btn {
+    padding-right: 20px;
+    padding-bottom: 4px;
+    margin-right: 10.56%;
+    font-family: $secFF;
+    font-size: 18px;
+    @include fontSizeResponsive($fs-text-regular);
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $mainCol2;
+    border-bottom: 4px solid rgba($mainCol2, 0.3);
+    cursor: pointer;
+    transition: color $ttime1, border-color $ttime1;
+
+    &_active {
+      color: $mainCol;
+      border-bottom-color: $mainCol;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    //&:not(:first-child) {
+    //  display: none;
+    //}
+  }
+
+  &__col1 {
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-family: $mainFF;
+    @include fontSizeResponsive($fs-text-regular);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    color: $mainTextCol;
+  }
+
+  &__col2 {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-wrap: nowrap;
+
+    &__col1 {
+      width: 50%;
+      padding-right: 7.76%;
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
+
+    &__col2 {
+      width: 50%;
+    }
+  }
+}

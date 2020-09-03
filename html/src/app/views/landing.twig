@@ -1,0 +1,113 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false,
+        'extraClass': 'header_landing',
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section hero-landing">
+        <div class="container">
+            <div class="splitter">
+                <div class="splitter__main">
+                    <h1 class="hero-landing__title">Powerful UI Prototyping Tool </h1>
+                    <p class="hero-landing__text">Axure RP puts the power of wireframing and prototyping into the hands of UI designers, product managers, and business analysts. Before a single line of code is written, a user interface can be prototyped and presented visually.</p>
+                </div>
+                <div class="splitter__sec">
+                    {% include 'components/download-form-vert.twig' %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="announce">
+        <div class="container">
+            {% include 'components/b-col3.twig' with {
+                'list': [
+                    {
+                        'title': 'UI Layout and Documentation',
+                        'text': 'Create wireframes, visual diagrams, user interfaces, flows and more. Quickly drag and drop UI elements from built-in or custom pattern libraries to create your concept. Then, style it with fills, gradients, line styles, and text formatting.',
+                        'img': {
+                            'src': 'images/temp_announce_ui-layout-docs.jpg',
+                            'src2x': 'images/temp_announce_ui-layout-docs@2x.jpg',
+                            'alt': '',
+                        }
+                    },
+                    {
+                        'title': 'Powerful prototypes, without coding',
+                        'text': 'Create simple click-through diagrams or highly functional, rich UI prototypes with conditional logic, dynamic content, animations, math functions, and data-driven interactions without writing a single line of code.
+',
+                        'img': {
+                            'src': 'images/temp_announce_proto-coding-less.jpg',
+                            'src2x': 'images/temp_announce_proto-coding-less@2x.jpg',
+                            'alt': '',
+                        }
+                    },
+                    {
+                        'title': 'Team collaboration through the cloud',
+                        'text': 'Create simple click-through diagrams or highly functional, rich UI prototypes with conditional logic, dynamic content, animations, math functions, and data-driven interactions without writing a single line of code.',
+                        'img': {
+                            'src': 'images/temp_announce_cloud-collaboration.jpg',
+                            'src2x': 'images/temp_announce_cloud-collaboration@2x.jpg',
+                            'alt': '',
+                        }
+                    },
+                ],
+            } %}
+
+            <div class="announce__post-text">
+                Download the demo to try Axure RP free for 30 days, or see our <a href="buy.html">pricing page</a> for purchase options
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/trust-block.twig' with {
+        'title': 'Trusted by:',
+        'trust_list': [
+            {
+                'src': 'images/trust_amazon.png',
+                'src2x': 'images/trust_amazon@2x.png',
+                'alt': 'Amazon'
+            },
+            {
+                'src': 'images/trust_epicgames.png',
+                'src2x': 'images/trust_epicgames@2x.png',
+                'alt': 'Epic Games'
+            },
+            {
+                'src': 'images/trust_slack.png',
+                'src2x': 'images/trust_slack@2x.png',
+                'alt': 'Slack'
+            },
+            {
+                'src': 'images/trust_saleforce.png',
+                'src2x': 'images/trust_saleforce@2x.png',
+                'alt': 'SaleForce'
+            },
+            {
+                'src': 'images/trust_verizon.png',
+                'src2x': 'images/trust_verizon@2x.png',
+                'alt': 'Verizon'
+            },
+            {
+                'src': 'images/trust_target.png',
+                'src2x': 'images/trust_target@2x.png',
+                'alt': 'Target'
+            },
+            {
+                'src': 'images/trust_ms.png',
+                'src2x': 'images/trust_ms@2x.png',
+                'alt': 'Microsoft'
+            },
+        ],
+    } %}
+
+{% endblock %}
+
+{%  block footer %}
+{% endblock %}

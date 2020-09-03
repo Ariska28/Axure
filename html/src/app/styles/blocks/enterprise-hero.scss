@@ -1,0 +1,82 @@
+.enterprise-hero {
+  background: $c-dark-indigo;
+  color: $light;
+  text-align: center;
+  font-size: 18px;
+  padding-top: (62px + $header-height);
+  padding-bottom: 57px;
+  font-family: $secFF;
+  font-weight: bold;
+  margin-top: - $header-height;
+
+  h1 {
+    @include fontSizeResponsive($fs-super-hero);
+    font-family: $secFF;
+    font-style: normal;
+    line-height: 1;
+    font-weight: normal;
+    max-width: 8.39em;
+    margin: 0.12em auto 0.38em;
+  }
+
+  &__info {
+    max-width: 690px;
+    margin: 0 auto;
+    font-weight: normal;
+    h2 {
+      @include fontSizeResponsive((xs: 24px, md: 32px, lg: 37px));
+      font-family: $secFF;
+      font-weight: normal;
+      padding: 0 2%;
+    }
+
+    p {
+      padding-left: 61px;
+      padding-right: 61px;
+      @include fontSizeResponsive((xs: 16px, md: 18px, lg: 20px));
+      line-height: (32/20);
+    }
+
+  }
+
+  &__btns {
+    margin-top: 50px;
+    .btn {
+      @include fontSizeResponsive((lg: 18px));
+      background: transparent;
+      border: 1px solid $warm-grey;
+      color: #e2e2e2;
+      font-size: 16px;
+      line-height: (28/18);
+      padding: 10px 24px;
+      text-align: center;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      width: 321px;
+      max-width: 100%;
+      &:hover {
+        background: #BEB6F0;
+        color: $dark;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    margin-top: - $header-height-mobile;
+    padding-top: (30px + $header-height-mobile);
+    padding-bottom: 30px;
+
+    &__btns {
+      margin-top: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(xsm){
+    &__info {
+      p {
+        padding: 0;
+      }
+    }
+  }
+
+}

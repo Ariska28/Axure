@@ -1,0 +1,146 @@
+.hero-company {
+  display: flex;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.458em;
+    font-family: $secFF;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.11;
+    color: $c-greyish-brown;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: $mainFF;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.45;
+    color: $mainTextCol;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-right: -100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__shifter {
+    width: 100%;
+    padding-left: 51.28%;
+    margin-top: 130px;
+    margin-bottom: 130px;
+  }
+
+  &__bg {
+    font-size: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    img {
+      font-size: $mainFontSize;
+      min-width: 100%;
+      min-height: 100%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__title {
+      font-size: calc(58px + 14 * ((100vw - #{map-get($grid-breakpoints, 'lg')}) / (#{strip-unit(map-get($grid-breakpoints, 'xl') - map-get($grid-breakpoints, 'lg'))} )));
+    }
+
+    &__text {
+      font-size: 22px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__title {
+      font-size: 72px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: calc(42px + 18 * ((100vw - #{map-get($grid-breakpoints, 'md')}) / (1440 - #{strip-unit(map-get($grid-breakpoints, 'md'))} )));
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    position: relative;
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100%;
+      align-items: center;
+    }
+
+    &__content {
+      margin-right: 0;
+    }
+
+    &__shifter {
+      text-align: center;
+      padding-left: 0;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    &__bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(5px);
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba($light, 0.1);
+        background-image: linear-gradient(to right, rgba($light, 0.7), rgba($light, 0.6) 50%, rgba($light, 0));
+      }
+    }
+  }
+}

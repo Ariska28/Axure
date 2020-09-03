@@ -1,0 +1,26 @@
+.info-link-box {
+  margin: 47px auto 25px;
+  max-width: 965px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $mainFF;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    text-align: center;
+    color: $c-nero-black;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $mainCol;
+    }
+    &:focus {
+      color: $mainCol;
+    }
+  }
+}

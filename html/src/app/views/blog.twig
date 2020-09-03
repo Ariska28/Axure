@@ -1,0 +1,212 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Blog
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isSec': true,
+        'isLight': true,
+    } %}
+{% endblock %}
+{% block body %}
+    {# blog articles preview list #}
+    <section class="blog-section">
+        <div class="container">
+            {% include 'components/blog-list.twig' with {
+                'title': 'Axure Blog',
+                'list': [
+                    {
+                        'href': '#',
+                        'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_1.jpg',
+                            'src2x': 'images/temp_preview_1@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                                {
+                                    'href': '',
+                                    'name': 'Featured',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Dark mode has arrived in the axure rp 9 beta',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_2.jpg',
+                            'src2x': 'images/temp_preview_2@2x.jpg',
+                        },
+                            'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Libero in saepe ut sunt magnam est error eius.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_3.jpg',
+                            'src2x': 'images/temp_preview_3@2x.jpg',
+                        },
+                            'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Inspiration',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_4.jpg',
+                            'src2x': 'images/temp_preview_4@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                                {
+                                    'href': '',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_1.jpg',
+                            'src2x': 'images/temp_preview_1@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                                {
+                                    'href': '',
+                                    'name': 'Featured',
+                                },
+                            ],
+                        },
+                    },
+
+
+
+
+                    {
+                        'href': '#',
+                        'title': 'Dark mode has arrived in the axure rp 9 beta',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_2.jpg',
+                            'src2x': 'images/temp_preview_2@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Libero in saepe ut sunt magnam est error eius.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_3.jpg',
+                            'src2x': 'images/temp_preview_3@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Inspiration',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_1.jpg',
+                            'src2x': 'images/temp_preview_1@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                                {
+                                    'href': '',
+                                    'name': 'Featured',
+                                },
+                            ],
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Et suscipit enim possimus rerum aliquam quo dicta ut dolorem.',
+                        'text': 'The term “web fonts”, in the general sense, refers to the web development technique of using font files hosted on a remote server',
+                        'img': {
+                            'src': 'images/temp_preview_1.jpg',
+                            'src2x': 'images/temp_preview_1@2x.jpg',
+                        },
+                        'meta': {
+                            'tags': [
+                                {
+                                    'href': '',
+                                    'name': 'Product News',
+                                },
+                                {
+                                    'href': '',
+                                    'name': 'Featured',
+                                },
+                            ],
+                        },
+                    },
+                ],
+            } %}
+
+            {% include 'components/pagination.twig' with {
+                'previous': {
+                    'href': '',
+                    'text': 'Previous Posts',
+                },
+                'next': {
+                    'href': '',
+                    'text': 'Next Posts',
+                },
+            } %}
+        </div>
+    </section>
+{% endblock %}
+
+

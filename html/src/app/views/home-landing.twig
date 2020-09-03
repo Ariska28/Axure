@@ -1,0 +1,177 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+Axure
+{% endblock %}
+{% block header %}
+{% include 'components/header.twig' with {
+        'isSec': false,
+    } %}
+{% endblock %}
+
+{% block body %}
+
+{% include 'sections/superhero.twig' with {
+        imgSrc: 'images/welcome-hero.jpg',
+        title: 'Create an Experience with Axure RP',
+        subtitle: 'Powerful & flexible UX solution for you to truly explore and innovate, all in one platform',
+        placeholder: 'Enter Your Email',
+        btn: 'Try Free',
+        customers: [
+            {
+                company: 'amazon',
+                logo: 'images/amazon-logo.svg', 
+            },
+            {
+                company: 'salesforce',
+                logo: 'images/salesforce-logo.svg', 
+            },
+            {
+                company: 'target',
+                logo: 'images/target-logo.svg', 
+            },
+            {
+                company: 'tiktok',
+                logo: 'images/tiktok-logo.svg', 
+            },
+            {
+                company: 'bbc',
+                logo: 'images/bbc-logo.svg', 
+            },
+        ]
+    } %}
+
+{% include 'sections/features.twig' with {
+        reverse: 'true',
+        title: 'Advanced prototyping capabilities to create rich, interactive designs',
+        text: 'Axure RP is designed to help you create life-like experiences. Design simple, click-through diagrams or highly functional, rich prototypes without writing a single line of code. <br> <br> Create your prototypes as powerful as the experience.',
+        img: {
+            src: 'images/advanced-prototyping.png',
+        },
+        link: {
+            href: '#',
+            text: 'Download Your Free Trial'
+        }
+    } %}
+
+{% include 'sections/tiles.twig' with {
+        title: 'All-In-One UX Platform',
+        list: [
+            {
+                imgSrc: 'images/collaborate.svg',
+                title: 'Collaborate',
+                text: 'Create Team Projects so multiple users can make diagrams and build prototypes in a single Axure RP file at the same time.'
+            },
+            {
+                imgSrc: 'images/documents.svg',
+                title: 'Document',
+                text: 'Present a complete picture including documentation, prototypes, and visual design with automated redlines and code export.'
+            },
+            {
+                imgSrc: 'images/integrate.svg',
+                title: 'Integrate',
+                text: 'Integrate artboards from Adobe XD and Sketch to add interactions and gather feedback on top of your screens.'
+            },
+            {
+                imgSrc: 'images/streamline.svg',
+                title: 'Streamline',
+                text: 'Get notifications about the latest changes and discussions by email, Slack, or Microsoft Teams.'
+            },
+        ],
+        link: {
+            href: '#',
+            text: 'START FREE'
+        }
+    } %}
+
+{% include 'sections/features.twig' with {
+        reverse: 'true',
+        title: 'Quickly create flow diagrams and flowcharts',
+        text: 'Quickly drag and drop elements from built-in or custom flow librariers to create your diagrams. Then, style it with fills, gradients, line styles, and text formatting. ',
+        img: {
+            src: 'images/flow.png',
+        },
+        link: {
+            href: '#',
+            text: 'START FREE'
+        }
+    }
+%}
+
+{% include 'sections/features.twig' with {
+        reverse: false,
+        title: 'Bridge the gaps between design, development, and  customers',
+        text: 'Axure RP empowers the cross-functional collaboration needed to bridge the gap between design & development. <br> <br> Create rich, functional prototypes to test and validate.',
+        img: {
+            src: 'images/collaboration.jpg',
+        },
+        link: {
+            href: '#',
+            text: 'START FREE'
+        }
+    } %}
+
+{% include 'sections/tiles.twig' with {
+        title: 'Join the Axure Community',
+        list: [
+            {
+                title: 'Complex Use Cases ',
+                text: '<i>"Axure allows us to test everything, even the most complex use cases. Our prototypes look and act like the real thing" <br> <br> Julie <br> Managing Director, User Experience Lab </i>',
+            },
+            {
+                title: 'So Hardcore',
+                text:  '<i>"Axure is so hardcore that I won’t take a job that won’t let me use it." <br> <br> JimJam </i>',
+            },
+            {
+                title: 'Interact with the Interface',
+                text: '<i>"Axure is the only prototyping tool that truly mimics a live interface. The user can interact with an interface that accurately represents the live version of the software." <br> <br> daveyates </i>',
+            },
+            {
+                title: 'Such a Lifesaver',
+                text: '<i>"Been fully digging into @axurerp for some prototyping and absolutely stoked with its conditional logic features! Such a life saver!!" <br> <br> Michael Szeto </i>',
+            },
+        ],
+    } %}
+
+{% include 'sections/download.twig' with {
+        customClass: 'big',
+        imgUrl: 'images/download-bg.jpg',
+        title: 'Download Axure RP and Start Innovating',
+        text: 'Free 30-Day Trial',
+        link: {
+            href: '#',
+            text: 'START FREE'
+        }
+    } %}
+
+{% include 'sections/launch.twig' with {
+    title: 'Start Innovating Axure for Enterprise',
+    subtitle: 'Axure for Enterprise is designed for you, comibing the benefits of our leading UX platform, Axure RP and Axure Cloud, with your security requirements',
+    list: [
+        {
+            text: 'Axure Cloud for Business is privately hosted on private servers',
+            icon: 'check',
+        },
+        {
+            text: 'Also available On-Prem at your location for extra security',
+            icon: 'check',
+        },
+        {
+            text: 'Design, document, and collaborate while maintaining compliance',
+            icon: 'check',
+        },
+        {
+            text: 'Includes user management, single sign on, and more',
+            icon: 'check',
+        },
+    ],
+}
+%}
+
+{% endblock %}
+
+{% block footer %}
+{% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

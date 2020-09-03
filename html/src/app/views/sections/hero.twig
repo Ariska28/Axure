@@ -1,0 +1,45 @@
+<section class="s-hero">
+	<div class="s-hero__container">
+		<div class="s-hero-content">
+			{% if title %}
+			<h1 class="s-hero-content__headline">
+				{{title}}
+			</h1>
+			{% endif %}
+
+			{% if description %}
+			<p class="s-hero-content__description">
+				{{description}}
+			</p>
+			{% endif %}
+
+			{% if button %}
+			<a href='{{ button.link }}' class="s-hero-content__link">{{ button.text }}</a>
+			{% endif %}
+		</div>
+		<div class="s-hero-media" style="background-image: url({{ image.src }})">
+		</div>
+		{% if trusted %}
+		<div class="s-hero-links">
+			<div class="s-hero-links__label">
+				{{  trusted.label }}
+			</div>
+
+			<ul class="s-hero-links__list">
+				{% for item in trusted.list %}
+				<li class="s-hero-links__item">
+					{# there is not any links on the prod  #}
+					{% if item.link %}
+					<a href="{{ item.link }}">
+						<img src="{{item.url}}" alt="{{item.alt}}">
+					</a>
+					{% else %}
+					<img src="{{item.src}}" alt="{{item.alt}}">
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+	</div>
+</section>

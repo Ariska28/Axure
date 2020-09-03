@@ -1,0 +1,95 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section hero-company">
+        <div class="hero-company__content">
+            <div class="container">
+                <div class="hero-company__shifter">
+                    <h1 class="hero-company__title">Building great software is hard</h1>
+                    <div class="hero-company__text">
+                        <p>Software projects are complex by nature, and not only because of the intricate code they are built upon; designing interactive solutions that meet ambitious business goals and varying user demands, while fitting within a tight budget and timeline, is challenging to say the least. The problem is magnified when working on teams with a wide range of skill sets and different vocabularies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-company__bg">
+            <img src="images/temp_hero-company.jpg" srcset="images/temp_hero-company@2x.jpg 2x" alt="">
+        </div>
+    </section>
+
+    <section class="company-wiw">
+        <div class="container">
+            <div class="wiw">
+                {# content from WP WYSIWYG #}
+                <img class="alignleft" src="images/temp_content_company1.png" alt=""/>
+                <p>In 2002, we were working for a start-up in the Bay Area, and found ourselves repeatedly frustrated by limitations of the typical software development life cycle: product teams had difficulty evaluating their solutions before writing specifications, and developers didn't understand (or read) the specifications they were given. The results ranged from inefficiency to compromised products. Having worked as project managers and developers, we knew both sides of the experience—we lived the pain.</p>
+                <p>We started Axure to discover how to make software projects better. While others were coming up with extreme new approaches to shift responsibility in the development process, we believed the right people were doing the right job—they just needed better tools to do it. We decided to create a simple tool that would allow non-programmers to build interactive prototypes with documentation.</p>
+                <p>The product was called RP, for Rapid Prototyping. Its features allowed for a different approach to software projects:</p>
+
+                {# blockquote by shortcode #}
+                {#  centered by default
+                    requred class:
+                        .blockquote
+                    additional classes:
+                        .blockquote_alignright - align right
+                        .blockquote_alignleft - align left
+                #}
+                <div class="blockquote blockquote_alignright">
+                    <blockquote>
+                        <p>“We started Axure to discover how to make software projects better.”</p>
+                    </blockquote>
+                    <img src="images/temp_content_company2.jpg" alt=""/>
+                </div>
+
+                <ol>
+                    <li>Build a prototype to test solutions and gather feedback.</li>
+                    <li>Iterate until you reach the right solution.</li>
+                    <li>Present the prototype as part of the specification to align development.</li>
+                </ol>
+
+                <p>That was 16 years ago, and a lot has changed since then. Software has gone on to "eat the world", and the landscape has only gotten more complex. Teams are more diverse and the expectations for software and software projects are much higher. Axure RP has grown to include powerful new tools for rich interactivity and documentation, publishing and sharing, and team collaboration.</p>
+
+                {# default blockquote #}
+                <blockquote>
+                    <p>“We started Axure to discover how to make software projects better.”</p>
+                </blockquote>
+
+                <p>For all of the changes, however, our product and philosophy have remained essentially the same. Prototyping continues to be an effective cornerstone for solving many of the biggest challenges in software projects today. And we still love tackling those challenges—the same passion that drove us to create Axure RP is the same passion that fuels our desire to expand and improve upon it. The experience becomes very meta, really: a software company building and refining software to help other software companies build and refine software. Your problems are our problems, and we truly enjoy finding new solutions every day.</p>
+
+                {# example picture with caption #}
+                <div id="attachment_123" style="width: 494px" class="wp-caption alignleft">
+                    <img
+                            class=""
+                            src="images/temp_content_company.jpg"
+                            alt=""/>
+                    <noscript>
+                        <img
+                                class=""
+                                src="images/temp_content_company.jpg"
+                                alt=""/>
+                    </noscript>
+                    <p class="wp-caption-text">Caption text</p>
+                </div>
+
+                <p>As individuals, we take our work and our responsibility to customers very seriously. We do our best to keep an open and honest relationship with our clients, and they keep us vital and alive. After 16 years, we serve over 25,000 organizations, and our software is used by a vast majority of the Fortune 100. The people who use our products are driving our mission forward by keeping us on top of their evolving workflows.</p>
+                <p>The rise of UX and Design Thinking are the latest cultural tectonics of software development, and Axure RP has been a popular tool supporting these shifts. But our growth has been organic, and has occurred through a steady evolution guided by input and requests from our customers. We don't concern ourselves too much with short-term trends or chasing unicorns. We long ago left the Bay Area for America's Finest City—San Diego—and adopted a long-term view for our business. We make something we are proud of and remain humble enough to constantly improve upon it. Our customers are pushing the boundaries of what is possible in business and software, and we are there to support them. That's why we're here: to help solve the problems of problem solving, however they may manifest.</p>
+                <p>We have built an amazing team, and the way we work creates a balance that allows for exciting growth through thoughtful planning. As we eat a bowl of Phở to celebrate the release of Axure RP 8, we excitedly look forward to tackling the next set of challenges.</p>
+
+                {# signature with shortcode #}
+                <p class="signature">- Victor & Martin</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

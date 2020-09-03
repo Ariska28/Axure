@@ -1,0 +1,153 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+	Axure
+{% endblock %}
+{% block header %}
+	{% include 'components/header.twig' with {
+        'isSec': false,
+    } %}
+{% endblock %}
+
+{% block body %}
+	{% include 'sections/hero-prototype.twig' with {
+        'title': 'Prototype and Plan as a Team',
+        'intro': '<p>With Axure RP 9 Team, multiple people can create diagrams, build prototypes, and explore designs in a single Axure RP 9 file at the same time.
+                Co-authoring in Axure RP 9 Team gives you a simple and safe way to explore ideas and contribute when ready for more intentional collaboration.</p>',
+        'image': 'images/header-img.png'
+        }
+    %}
+
+
+	{% include 'sections/case.twig' with {
+        reverse: 'true',
+        title: 'Freedom to Innovate',
+        text: 'Check-out pages and other assets to make changes to them in Axure RP 9 Team. Checking-out a page lets your team know what you’re working on while giving you room to try new ideas privately.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-people.svg',
+                },
+                text:'Visibility into who is working on what'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-wifi.svg',
+                },
+                text:'Work offline after checking-out assets'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-devices.svg',
+                },
+                text:'Intelligent merging of styles and adaptive views'
+            },
+        ],
+        img: {
+            src: 'images/freedom.png',
+            src2x: 'images/freedom@2x.png',
+        }
+    } %}
+
+	{% include 'sections/case.twig' with {
+        title: 'Share When You’re Ready',
+        text: 'Once you’re ready to share, check-in your work and keep the collaboration flowing. Add check-in notes about what you changed & why you changed it.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/orders.svg',
+                },
+                text:'Check-In notes to keep track of changes'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-choices.svg',
+                },
+                text:'Review or restore past designs'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np_arrow.svg',
+                },
+                text:'Choose when to import your team’s latest updates'
+            },
+        ],
+        img: {
+            src: 'images/check-in-notes.png',
+            src2x: 'images/check-in-notes@2x.png',
+        }
+    } %}
+
+	{% include 'sections/case.twig' with {
+        reverse: 'true',
+        title: ' Managing the Collaboration',
+        text: 'With Axure RP 9 Team and Axure Cloud, everyone can keep up-to-date with the project. Whether you’re working side by side or time zones apart, you can operate as a team.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-summary.svg',
+                },
+                text:'Daily summary of activities'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-time.svg',
+                },
+                text:'Version history of all check-ins'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-security.svg',
+                },
+                text:'Axure Cloud options for your security needs'
+            },
+        ],
+        img: {
+            src: 'images/collaboration.png',
+            src2x: 'images/collaboration@2x.png',
+        }
+    } %}
+
+	{% include 'sections/case.twig' with {
+        title: 'Gather feedback, build consensus',
+        text: 'Share prototypes with anyone with live URL, or invite users to a private workspace to collaborate. Gather comments directly on screen with context. Integrate 3rd party testing services into your prototypes to get real-world feedback on proposed solutions.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                src: 'images/temp_np-layers.svg',
+            },
+                text:'Daily summary of activities'
+            },
+            {
+                icon: {
+                src: 'images/temp_np-choices.svg',
+            },
+                text:'Version history of all check-ins'
+            },
+            {
+                icon: {
+                src: 'images/temp_np-devices.svg',
+            },
+                text:'Axure Cloud options for your security needs'
+            },
+        ],
+        img: {
+            src: 'images/feedback@1x.png',
+            src2x: 'images/feedback@2x.png',
+        }
+    } %}
+
+
+	{% include 'sections/model.twig'  %}
+
+{% endblock %}
+
+{% block footer %}
+	{% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

@@ -1,0 +1,108 @@
+.preview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__pic {
+    height: 225px;
+    overflow: hidden;
+    //margin-bottom: 15px;
+    margin-bottom: 33px;
+
+    a {
+      display: block;
+      &:hover,
+      &:focus {
+        img {
+          transform: translateX(-50%) scale(1.1);
+        }
+      }
+    }
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform $ttime3;
+    }
+  }
+
+  &__meta {
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  &__header {
+  }
+
+  &__content {
+  }
+
+  &__btn-box {
+    margin-top: auto;
+    padding-top: 20px;
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    font-family: $mainFF;
+    @include fontSizeResponsive($fs-text-regular);
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    color: $mainTextCol;
+
+    a {
+      text-decoration: none;
+      @include linkColor;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-family: $mainFF;
+    @include fontSizeResponsive($fs-text-regular);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: $mainTextCol;
+  }
+
+  @at-root {
+    // context classes
+    .blog-section {
+      .preview__content {
+        //margin-top: auto; // use when on blog-section equal post excerption is using
+      }
+    }
+
+    .support-resources {}
+    .template-col-3 {}
+  }
+
+  @include media-breakpoint-down(md) {
+    &__btn-box {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    &__pic {
+      margin-bottom: 20px;
+    }
+
+    &__meta {
+      margin-top: -5px;
+    }
+  }
+}

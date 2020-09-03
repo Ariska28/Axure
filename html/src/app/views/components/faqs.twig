@@ -1,0 +1,46 @@
+<section class="b-faq {{ mod }}">
+    <div class="container">
+        <h3 class="b-faq__title">{{ title }}</h3>
+        <div class="b-faq__content">
+            {#<ul class="faqs">#}
+                {#{% for item in list %}#}
+                {#<li>#}
+                    {#<div class="faqs__q">#}
+                        {#{% include 'svg_inline.twig' with {'name': 'question'} %}#}
+                        {#{{ item.question }}#}
+                    {#</div>#}
+                    {#<div class="faqs__a">{{ item.answer }}</div>#}
+                {#</li>#}
+                {#{% endfor %}#}
+            {#</ul>#}
+
+
+            <div class="faqs">
+                <div class="faqs__l">
+                    {% for item in list %}
+                        {% if item.right != true %}
+                            <div class="faq">
+                                <div class="faq__q">
+                                    {% include 'svg_inline.twig' with {'name': 'question'} %}
+                                    {{ item.question }}
+                                </div>
+                                <div class="faq__a">{{ item.answer }}</div>
+                            </div>
+                        {%  endif %}
+                    {% endfor %}
+                </div>
+                <div class="faqs__r">
+                    {% for item in list %}
+                        {% if item.right == true %}
+                            <div class="faq__q">
+                                {% include 'svg_inline.twig' with {'name': 'question'} %}
+                                {{ item.question }}
+                            </div>
+                            <div class="faq__a">{{ item.answer }}</div>
+                        {%  endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

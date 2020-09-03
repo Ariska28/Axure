@@ -1,0 +1,49 @@
+{#
+    'href': '',
+    'title': '',
+    'text': '',
+    'img': {
+        'src': '',
+        'src2x': '',
+    },
+    'meta': {
+        'tags': [
+            {
+                'href': '',
+                'name': '',
+            },
+        ],
+    },
+    button: {
+        'modificator': '',
+        'title': '',
+    },
+#}
+<div class="preview">
+    <div class="preview__pic">
+        <a href="{{ href }}">
+            <img src="{{ img.src }}" {{ img.src2x ? ('srcset="' ~ img.src2x ~ ' 2x"') }} alt="{{ img.alt }}">
+        </a>
+    </div>
+
+    {% if meta %}
+        <div class="preview__meta">
+            {% if meta.tags|length > 0 %}
+                {% include 'tags.twig' with {'list': meta.tags} %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="preview__header">
+        <h4 class="preview__title"><a href="{{ href }}">{{ title }}</a></h4>
+    </div>
+
+    <div class="preview__content">
+        <p class="preview__text">{{ text }}</p>
+    </div>
+    {% if button %}
+        <div class="preview__btn-box">
+            <a href="{{ href }}" class="btn {{ button.modificator ?: 'btn_transp'}}">{{ button.title ?: 'Download' }}</a>
+        </div>
+    {% endif %}
+</div>

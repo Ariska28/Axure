@@ -1,0 +1,41 @@
+.form {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.893em;
+    font-family: $secFF;
+    font-size: 28px;
+    @include fontSizeResponsive((
+      xs: 20px,
+      md: 24px,
+      lg: 28px
+    ));
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.68;
+    color: inherit;
+  }
+
+  &_default {
+
+    input,
+    textarea {
+      @include input-base;
+      border: 1px solid $warm-grey;
+      padding: 12px 14px;
+
+      font-family: $mainFF;
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.78;
+      color: inherit;
+      @include placeholder($c-light-grey-2);
+    }
+
+    textarea {
+      resize: none;
+      min-height: 109px;
+      max-height: 200px;
+    }
+  }
+}

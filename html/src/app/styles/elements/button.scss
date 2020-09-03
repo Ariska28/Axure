@@ -1,0 +1,193 @@
+.btn {
+  @include btn;
+
+  &-flat {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    padding: 0.55em 1.35em;
+    font-size: 1.25rem;
+    font-family: $secFF;
+    // letter-spacing: 3px;
+    color: $light;
+    background-color: $c-btn;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $hoverCol1;
+    }
+  }
+
+  &-auth {
+    @include btn;
+    padding-top: 0.333em;
+    padding-bottom: 0.333em;
+    width: 172px;
+
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $light;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: color $ttime1, border-color $ttime1, background-color $ttime1;
+
+    &:hover,
+    &:focus {
+      color: $col2;
+      background-color: transparent;
+    }
+
+    &_border {
+      border-color: $warm-grey;
+      &:hover,
+      &:focus {
+        border-color: $c-aqua-marine;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .header_light & {
+        color: $c-grey-black;
+        &:hover,
+        &:focus {
+          color: $col2;
+        }
+
+        &_border {
+          color: $light;
+          border-color: transparent;
+          background-color: $c-blue-cerulean;
+          &:hover,
+          &:focus {
+            color: $light;
+            background-color: darken($c-blue-cerulean, 13%);
+          }
+        }
+      }
+    }
+
+    .menu-open & {
+      color: $light;
+      &_border {
+        border-color: $light;
+      }
+    }
+  }
+
+  &_download {
+    @include btn_pink;
+    .menu-open .main-menu & {
+      display: none;
+    }
+  }
+
+  &_transp {
+    @include btn;
+    padding: 12px 10px;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    background-color: transparent;
+    color: $mainCol2;
+    border-radius: 6px;
+    border: solid 1px $warm-grey;
+    transition: color $ttime1, background $ttime1 !important;
+    &:hover {
+      cursor: pointer;
+      background-color: $c-greyish;
+      color: $light !important;
+    }
+    &:focus {
+      outline: none;
+      background-color: $c-greyish;
+      color: $light !important;
+    }
+  }
+
+  &_transp-light {
+    @include btn;
+    padding: 12px 10px;
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 400;
+    background-color: transparent;
+    color: $light;
+    border: solid 1px $warm-grey;
+    transition: color $ttime1, background $ttime1;
+    &:hover {
+      cursor: pointer;
+      background-color: $c-lavender;
+      color: $dark;
+    }
+    &:focus {
+      outline: none;
+      background-color: $c-lavender;
+      color: $dark;
+    }
+  }
+
+  &_disabled {
+    opacity: 0.5;
+    background-color: $col4;
+    color: $dark;
+    // pointer-events: none; // use with js to prevent focus+enter
+
+    &:hover,
+    &:focus {
+      cursor: default;
+      background-color: $col4;
+      color: $dark;
+    }
+  }
+
+  &_sidebar {
+    width: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    margin-bottom: 11px;
+
+    border: solid 1px $warm-grey;
+    color: $c-grey-black-2;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: $c-white-smoke;
+      .wiw & {
+        color: $c-grey-black-2;
+      }
+    }
+
+    &-pink,
+    .wiw &-pink {
+      background-color: $mainCol;
+      color: $light;
+      border-color: transparent;
+
+      &:hover {
+        background-color: $hoverCol1;
+        color: $light;
+      }
+    }
+  }
+
+  &_input-long {
+    @include media-breakpoint-down(xsm) {
+      font-size: 28px !important;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 20px !important;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 18px !important;
+    }
+  }
+}

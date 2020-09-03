@@ -1,0 +1,13 @@
+.hero-support {
+  background-color: $col4;
+}
+
+.support-resources {
+  padding-top: 35px;
+  padding-bottom: 100px;
+  background-color: $col4;
+  @include media-breakpoint-down(xsm) {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}

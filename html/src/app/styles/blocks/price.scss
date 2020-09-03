@@ -1,0 +1,80 @@
+.price {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 15px;
+
+  &__currency {
+    font-family: $mainFF;
+    font-size: 72px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.04;
+    color: $dark;
+  }
+
+  &__value {
+    font-family: $mainFF;
+    font-size: 72px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.04;
+    color: $dark;
+  }
+
+  &__detail {
+    position: absolute;
+    left: calc(100% + 0.7em);
+    top: 0.9em;
+
+    font-family: $mainFF;
+    font-size: 10.8px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.25;
+    color: $dark;
+  }
+
+  &__quant {
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  &__period {
+    white-space: nowrap;
+    text-align: left;
+  }
+
+
+  // tablet + desktop
+  @media (min-width: ($mobUpLim + 1)) {
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+  }
+
+  // mobile
+  @media (max-width: $mobUpLim) {
+    &__currency {
+      font-size: 46px;
+    }
+    &__value {
+      font-size: 46px;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    &__currency {
+      font-size: 62px;
+    }
+    &__value {
+      font-size: 62px;
+    }
+  }
+}

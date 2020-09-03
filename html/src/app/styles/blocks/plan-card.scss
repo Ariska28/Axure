@@ -1,0 +1,132 @@
+.plan-card {
+  padding: 25px;
+  padding-top: 0;
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  max-width: 457.2px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 0 rgba($c-grey-black, 0.5);
+  background-color: $light;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.667em;
+    font-family: $secFF;
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.78;
+    text-align: center;
+    color: $c-grey-black;
+  }
+
+  &__features {
+    padding-bottom: 23.6px;
+  }
+
+  &__price-box {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  &__btn-box {
+  }
+
+  &__btn {
+    width: 100%;
+    font-family: $secFF;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.3;
+    text-align: center;
+    border-radius: 10.8px;
+    padding-top: 0.463em;
+    padding-bottom: 0.463em;
+  }
+
+  &__extra {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+
+    a {
+      font-family: $mainFF;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: normal;
+      @include linkColor($c-grey-black, $c-grey-black);
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+
+  &_monthly { // default state
+
+  }
+
+  &_perpetual {
+    .plan-card__btn {
+      background-color: $c-electric-purple;
+      &:hover {
+        background-color: darken($c-electric-purple, 9%);
+      }
+    }
+
+    .toggle__visual {
+      &:before {
+        background-color: $c-electric-purple;
+      }
+    }
+  }
+
+  // tablet + desktop
+  @media (min-width: ($mobUpLim + 1)) {
+    .hero-buy-cards & {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      &__features {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    padding: 25px 40px;
+    padding-top: 0;
+    &__title {
+      font-size: 42px;
+    }
+
+
+    &__btn {
+      font-size: 32.4px;
+    }
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+  }
+
+  // mobile
+  @media (max-width: $mobUpLim) {
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    &__title {
+      font-size: 36px;
+    }
+  }
+}

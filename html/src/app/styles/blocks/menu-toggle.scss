@@ -1,0 +1,170 @@
+// toggle element
+
+//// variant with pseudo elements
+//// looks like three horizontal line in default state
+//// and 45deg rotated cross in open state
+
+//.menu-toggle-box {
+//  display: none;
+//  font-size: 0;
+//
+//  // mobile + tablet
+//  @media (max-width: $tabletUpLim) {
+//    display: inline-block;
+//  }
+//}
+//
+//.menu-toggle {
+//  $elHeight: 1.4px;
+//  $elWidth: 21.5px;
+//  $elRadius: 0px;
+//  $elSpace: 6.5px;
+//  $elColor: $light;
+//
+//  display: inline-block;
+//  width: $elWidth;
+//  height: $elHeight * 3 + $elSpace * 2;
+//  position: relative;
+//  &__inner {
+//    display: inline-block;
+//    width: 100%;
+//    height: $elHeight;
+//    position: relative;
+//    top: 50%;
+//    transform: translateY(-50%);
+//    background-color: $elColor;
+//    border-radius: $elRadius;
+//    transition: background-color $ttime1;
+//    &:before,
+//    &:after {
+//      content: '';
+//      position: absolute;
+//      left: 0;
+//      width: 100%;
+//      height: 100%;
+//      opacity: 0;
+//      background-color: $elColor;
+//      transition: transform $ttime1, opacity $ttime1;
+//    }
+//  }
+//  &:before,
+//  &:after {
+//    content: '';
+//    position: absolute;
+//    left: 0;
+//    width: 100%;
+//    height: $elHeight;
+//    background-color: $elColor;
+//    border-radius: $elRadius;
+//    transition: opacity $ttime3,
+//                transform $ttime1,
+//                width $ttime1,
+//                top $ttime1,
+//                left $ttime1,
+//                bottom $ttime1,
+//                background-color $ttime1;
+//  }
+//  &:before {
+//    top: 0;
+//  }
+//  &:after {
+//    bottom: 0;
+//  }
+//  &.open {
+//    .menu-toggle__inner {
+//      background-color: transparent;
+//      &:before,
+//      &:after {
+//        background-color: $light !important;
+//        opacity: 1;
+//      }
+//      &:before {
+//        transform: rotate(-45deg);
+//      }
+//      &:after {
+//        transform: rotate(45deg);
+//      }
+//    }
+//    &:before,
+//    &:after {
+//      opacity: 0;
+//      width: 0;
+//      left: 50%;
+//      transform: rotate(45deg);
+//    }
+//    &:before {
+//      top: 50%;
+//    }
+//    &:after {
+//      bottom: 50%;
+//    }
+//  }
+//
+//  .header_light &,
+//  .is_stuck & {
+//    &__inner {
+//      background-color: $dark;
+//      &:before,
+//      &:after {
+//        background-color: $dark;
+//      }
+//    }
+//    &:before,
+//    &:after {
+//      background-color: $dark;
+//    }
+//    &.open {
+//      .menu-toggle__inner {
+//        background-color: transparent;
+//      }
+//    }
+//  }
+//}
+
+
+// variant with SVG
+.menu-toggle-box {
+  display: none;
+  font-size: 0;
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    display: inline-block;
+  }
+}
+
+.menu-toggle {
+  $width: 18.33px;
+  $height: 17.31px;
+
+  display: inline-block;
+  width: $width;
+  height: $height;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .icon-burger-btn {
+    stroke: $light;
+    .header_light & {
+      stroke: $mainTextCol;
+    }
+  }
+
+  .icon-close {
+    display: none;
+  }
+
+  &.open {
+    .icon-burger-btn {
+      display: none;
+    }
+
+    .icon-close {
+      display: block;
+      fill: $light;
+    }
+  }
+}

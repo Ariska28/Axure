@@ -1,0 +1,50 @@
+.b-list-col3 {
+  $gapMob: 26px;
+  $gapTab: $gapMob;
+  $gapDesk: 58px;
+
+  $colCountMob: 1;
+  $colCountTab: 2;
+  $colCountDesk: 3;
+
+  @mixin gridInit($colCount, $gap, $gapVert:$gap) {
+    &__container {
+      margin-left: -$gap/2;
+      margin-right: -$gap/2;
+      margin-bottom: -$gapVert;
+    }
+    &__item {
+      width: 100% / $colCount;
+      padding: 0 $gap/2;
+      margin-bottom: $gapVert;
+    }
+  }
+
+  // styles
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    @include gridInit($colCountDesk, $gapDesk);
+  }
+
+  // mobile
+  @media (max-width: $mobUpLim) {
+    @include gridInit($colCountMob, $gapMob);
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    @include gridInit($colCountTab, $gapTab);
+  }
+}

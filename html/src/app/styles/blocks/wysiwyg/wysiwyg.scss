@@ -1,0 +1,25 @@
+.wiw {
+  $wiwGap: 2.77em;
+
+  // default styles
+  //background-color: $c-white-smoke;
+  background-color: transparent;
+  //padding: 1em 0;
+  padding: 0;
+  font-family: $mainFF;
+  @include fontSizeResponsive($fs-text-regular);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.78;
+  color: $mainTextCol;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  @import 'default-wp-classes';
+  @import 'specific';
+}

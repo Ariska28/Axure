@@ -1,0 +1,111 @@
+.b-try {
+  background-color: $mainTextCol;
+  color: $c-light-grey;
+
+  &-content {
+    display: flex;
+    padding-top: 62px;
+    padding-bottom: 18px;
+  }
+
+  &__download {
+    .btn_download {
+      display: inline-flex;
+      font-size: 18px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.772em;
+    font-family: $secFF;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.07;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: $mainFF;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+  }
+
+  &__logo {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // reserved
+  //$parent: &;
+  //&_light {
+  //  #{$parent}__title {
+  //    color: ;
+  //    background-color: ;
+  // }
+  //}
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    &-content {
+      justify-content: space-between;
+    }
+
+    &__download {
+      width: 55%;
+
+    }
+
+    &__title {
+      font-size: 44px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__logo {
+      //margin-left: 18.5%;
+      margin-right: 7.2%;
+    }
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    &-content {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      flex-wrap: wrap;
+      max-width: 668px;
+      @include marginLRA;
+      text-align: center;
+    }
+
+    &__download {
+      width: 100%;
+      order: 2;
+    }
+
+    &__logo {
+      width: 100%;
+      order: 1;
+      margin-bottom: 35px;
+    }
+  }
+
+  // tablet
+  @media (min-width: ($mobUpLim + 1)) and (max-width: $tabletUpLim) {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

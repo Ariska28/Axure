@@ -1,0 +1,14 @@
+<div class="trust">
+    <div class="container">
+        <h2 class="trust__title">{{ title }}</h2>
+        <div class="trust__content">
+            <div class="trust-list">
+                {% for item in trust_list %}
+                    <div class="trust-list__item">
+                        <img src="{{ item.src }}" srcset="{{ item.src2x }} 2x" alt="{{ item.alt }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

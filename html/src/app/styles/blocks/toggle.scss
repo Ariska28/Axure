@@ -1,0 +1,54 @@
+.toggle {
+  $size: 17px;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $mainFF;
+  font-size: 9px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: normal;
+  color: $c-grey-black;
+  text-transform: uppercase;
+
+  &__l {
+    margin-right: 1.21em;
+  }
+
+  &__visual {
+    position: relative;
+    display: inline-block;
+    height: $size;
+    width: ($size * 2 + 1px);
+    border-radius: $size * 0.5;
+    background-color: $c-white-isabelline;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background: $mainCol;
+      transition: left $ttime1, color $ttime1;
+    }
+  }
+
+  &__r {
+    margin-left: 1.21em;
+  }
+
+  &_switched {
+    .toggle__visual {
+      &:before {
+        background-color: $c-purple-vivid;
+        left: calc(100% - #{$size});
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.blockquote {
+  clear: both;
+  font-family: $secFF;
+  font-size: 58px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: $mainTextCol;
+  margin: 0 0.862em 0.862em;
+  text-align: center;
+
+  blockquote,
+  .wiw & blockquote {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+      content: normal;
+    }
+
+    p {
+      margin-bottom: 0.862em;
+    }
+  }
+
+  &_alignright {
+    width: 480px;
+    float: right;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  &_alignleft {
+    width: 480px;
+    float: left;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 46px;
+  }
+
+  @include media-breakpoint-down(xsm) {
+    font-size: 34px;
+    max-width: 100%;
+    text-align: center;
+
+    &_alignright {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &_alignleft {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

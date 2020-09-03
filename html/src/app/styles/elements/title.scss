@@ -1,0 +1,17 @@
+.el-title {
+  @include fontSizeResponsive($fs-title);
+  font-family: $secFF;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.07;
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: $c-greyish-brown;
+
+
+
+  @include media-breakpoint-down(md){
+    font-weight: normal;
+    line-height: 1.25;
+  }
+}

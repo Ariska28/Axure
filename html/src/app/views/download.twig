@@ -1,0 +1,85 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section download-hero">
+        <div class="container">
+            <figure class="download-hero__icon">
+                <img src="images/download-hero-icon.png" alt="">
+            </figure>
+            <h1>Start your <br> Free 30-day trial </h1>
+
+            <div class="download-hero__form">
+                <form action="" >
+                    <div class="download-hero__form-row">
+                        <div class="download-hero__form-field download-hero__form-field--select">
+                            {% include 'components/select-el.twig' with {
+                                'list': [
+                                    {
+                                        'value': 'mac',
+                                        'title': 'Mac OS',
+                                    },
+                                    {
+                                        'value': 'pc',
+                                        'title': 'Windows',
+                                    },
+                                ],
+                            } %}
+                        </div>
+                        <div class="download-hero__form-field">
+                            <input type="text" name="email" placeholder="Email Addresss (optional)">
+                        </div>
+                        <button class="download-hero__form-btn" type="submit">Download Now</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="download-hero__info">
+                <p>* If you enter an email address, you will receive Axure tutorials and news via email.
+                    You can unsubscribe at any time.</p>
+                <p>Looking for an older version? See our <a href="">Release History</a>  page</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section download-featured">
+        <div class="download-featured__container">
+            <div class="download-featured__list">
+
+                <div class="download-featured__item download-featured__item--1">
+                    <div class="download-featured__item-icon">
+                        <img src="images/download-featured-icon-1.png" alt="">
+                    </div>
+                    <div class="download-featured__item-content">
+                        <h3>Download the Axure plugin for Sketch</h3>
+                        <p>Whether you’re creating diagrams, customer journeys, or product teardowns, Axure RP</p>
+                    </div>
+                </div>
+
+                <div class="download-featured__item download-featured__item--2">
+                    <div class="download-featured__item-icon">
+                        <img src="images/download-featured-icon-2.png" alt="">
+                    </div>
+                    <div class="download-featured__item-content">
+                        <h3>Do more with <br> Axure Cloud</h3>
+                        <p>Whether you’re creating diagrams, customer journeys, or product teardowns, Axure RP helps you document the issues</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+{% endblock %}

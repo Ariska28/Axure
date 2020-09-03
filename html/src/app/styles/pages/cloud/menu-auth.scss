@@ -1,0 +1,38 @@
+.menu-auth {
+  @include listUnstyled;
+  display: flex;
+
+  &__item {
+    margin-right: 13px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // mobile + tablet
+  @include media-breakpoint-down(md) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &-box {
+      height: 0;
+      overflow: hidden;
+      transition: width $ttime1;
+      .menu-open & {
+        order: 10;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    &__item {
+      margin-right: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .menu-open & {
+      text-align: center;
+    }
+  }
+}

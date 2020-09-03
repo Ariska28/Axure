@@ -1,0 +1,76 @@
+{#
+    reverse: boolean,
+    customClass: string ( css class name ),
+    title: string ( text ),
+    text: string ( text ),
+    label: string ( text ),
+    list_style: string ( icon || square || table )
+    list: [
+        {
+            icon: {
+                src: image ( url ),
+            },
+            text: string ( text ),
+            title: string ( text ),
+        },
+    ],
+    img: {
+        src: image ( url ),
+        src2x: retina image ( url ),
+        alt: string ( text ),
+    },
+#}
+
+<section class="section s-case {% if reverse %} s-case--reverse {% endif %}  {{ customClass }}">
+    <div class="s-case__container">
+        <div class="s-case__main">
+            {% if label %}
+            <div class="s-case__main-label label label--right-corner">{{ label.text }}</div>
+            {% endif %}
+            <h2 class="s-case__main-title el-title">{{ title }}</h2>
+            {% if text %}
+            <div class="s-case__main-text el-description">
+                <p>{{ text }}</p>
+            </div>
+            {% endif %}
+            {% if list|length > 0 %}
+            <div class="s-case__main-features">
+                {% if list_style == 'icon' %}
+                {# icon list #}
+                <ul class="icon-list">
+                    {% for item in list %}
+                    <li class="icon-list__item" style="background-image: url('{{ item.icon.src }}');">{{ item.text }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                {% if list_style == 'square' %}
+                {# list squared #}
+                <ul class="squared-list">
+                    {% for item in list %}
+                    <li class="squared-list__item">{{ item.text }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                {% if list_style == 'table' %}
+                <table class="list-tbl">
+                    {% for item in list %}
+                    <tr class="list-tbl__item">
+                        <td class="list-tbl__title">{{ item.title }}</td>
+                        <td class="list-tbl__content">{{ item.text }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="s-case__media">
+            <img class="s-case__media-img" src="{{ img.src }}" {{ img.src2x ? ('srcset="' ~ img.src2x ~ ' 2x"') }}
+                alt="{{ img.alt }}">
+        </div>
+    </div>
+</section>
+    

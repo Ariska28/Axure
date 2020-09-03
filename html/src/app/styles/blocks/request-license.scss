@@ -1,0 +1,21 @@
+.request-license {
+  padding-top: 61px;
+  padding-bottom: 94px;
+  background-color: $c-white-smoke;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1.7em;
+    font-family: $secFF;
+    @include fontSizeResponsive($fs-title);
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.27;
+    color: $c-black-greyish;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+}

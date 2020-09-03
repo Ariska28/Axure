@@ -1,0 +1,267 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section prototype-hero">
+        <div class="container">
+
+            <h1>The total<br> prototyping package</h1>
+
+            <div class="prototype-hero__info">
+                <p>Axure RP 9 is all new and completely redesigned to help deliver the most powerful prototypes ever.</p>
+            </div>
+
+            <div class="prototype-hero__image" style="background-image: url('../images/wireframe-hero.png')"></div>
+
+        </div>
+    </section>
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_low-high',
+        title: 'From low to high fidelity and anywhere in between',
+        text: 'From quick, low fidelity prototypes, all the way up to pixel perfect simulations, Axure RP is the most complete prototyping tool on the market today. Get started quickly by dragging UI components from the library and adding interactions. When you need more polished designs, use our advanced drawing tools or import designs from Sketch. In Axure, any element on the screen can be used to create  advanced interactions.',
+        img: {
+            src: 'images/bitmap.png',
+            src2x: 'images/bitmap@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_prototyping',
+        title: 'Powerful Prototypes need powerful Interactions',
+        text: 'Don’t just settle for click-based prototypes. Axure comes packed with 20+ Triggers and 30+ Actions, plus conditional logic. The possibilities are unlimited.  With math functions and global variables, data-driven prototypes can be created, all without a single line of code. Every widget has common interactions a single click away, helping you get started quickly.',
+        img: {
+            src: 'images/temp_prototyping.png',
+            src2x: 'images/temp_prototyping@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_explain',
+        title: 'Don’t just explain it, show it.',
+        text: 'Build prototypes that feel real. With Axure RP, you can create prototypes that respond and act like working products, all without code. Run prototypes on a device with our Android or iOS apps. Validate product with users before engaging dev teams. Discover product problems before they become problems in the market.',
+       
+        img: {
+            src: 'images/group-30.png',
+            src2x: 'images/group-30@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_feedback',
+        title: 'Gather feedback, build consensus',
+        text: 'Share prototypes with anyone with live URL, or invite users to a private workspace to collaborate. Gather comments directly on screen with context. Integrate 3rd party testing services into your prototypes to get real-world feedback on proposed solutions.',
+        
+        img: {
+            src: 'images/group-5.png',
+            src2x: 'images/group-5@2x.png',
+        }
+    } %}
+
+    {% include 'components/event-action-list.twig' with {
+        withImage: true,
+        title: 'Interaction Events',
+        list: [
+            {
+                title: 'Page and Master Events',
+                values: [
+                    'PageLoad',
+                    'WindowResize',
+                    'WindowScroll',
+                    'WindowScrollUp',
+                    'WindowScrollDown',
+                    'PageClick',
+                    'PageDoubleClick',
+                    'PageContextMenu',
+                    'PageMouseMove',
+                    'PageKeyDown',
+                    'PageKeyUp',
+                    'AdaptiveViewChange'
+                ]
+            },
+            {
+                title: 'All Widgets',
+                values: [
+                    'Click',
+                    'MouseEnter',
+                    'MouseOut',
+                    'DoubleClick',
+                    'ContextMenu',
+                    'MouseDown',
+                    'NouseUp',
+                    'MouseMove',
+                    'MouseHover',
+                    'LongClick',
+                    'KeyDown',
+                    'KeyUp',
+                    'Move',
+                    'Rotate',
+                    'Resize',
+                    'Show',
+                    'Hide',
+                    'Focus',
+                    'LostFocus',
+                    'Load',
+                    'SelectedChange',
+                    'Selected',
+                    'UnSelected'
+                ]
+            },
+            {
+                title: 'Droplists and List Boxes',
+                values: [
+                    'SelectionChange'
+                ]
+            },
+            {
+                title: 'Text Fields and Text Areas',
+                values: [
+                    'TextChange'
+                ]
+            },
+            {
+                title: 'Dynamic Panels',
+                values: [
+                    'PanelStateChange',
+                    'DragStart',
+                    'Drag',
+                    'DragDrop',
+                    'SwipeLeft',
+                    'SwipeRight',
+                    'SwipeUp',
+                    'SwipeDown',
+                    'Scroll',
+                    'ScrollUp',
+                    'ScrollDown'
+                ]
+            },
+            {
+                title: 'Repeaters',
+                values: [
+                    'ItemLoad',
+                    'ItemResize'
+                ]
+            },
+        ]
+    } %}
+
+    {% include 'components/event-action-list.twig' with {
+        title: 'Prototype Actions',
+        modify: 'b-action-event__main-list--no-padding',
+        list: [
+            {
+                title: 'Link Actions',
+                values: [
+                    'Open Link',
+                    'Current Window',
+                    'New Window/Tab',
+                    'Popup Window',
+                    'Parent Window',
+                    'Close Window',
+                    {
+                        title: 'Open Link in Frame',
+                        values: ['Inline Frame','Parent Frame']
+                    },
+                    'Scroll to Widget'
+                ]
+            },
+            {
+                title: 'Widgets',
+                values: [
+                    'Show',
+                    'Hide',
+                    'Set Panel State',
+                    'Set Text',
+                    'Set Image',
+                    'Set Selected',
+                    'Set Selected List Option',
+                    'Enable',
+                    'Disable',
+                    'Move',
+                    'Rotate',
+                    'Set Size',
+                    'Bring to Front/Back',
+                    'Set Opacity',
+                    'Focus',
+                    'Expand/Collapse Tree Node',
+                ]
+            },
+            {
+                title: 'Variables',
+                values: [
+                    'Set Variable Value'
+                ]
+            },
+            {
+                title: 'Repeaters',
+                values: [
+                    'Add Sort',
+                    'Remove Sort',
+                    'Add Filter',
+                    'Remove Filter',
+                    'Set Current Page',
+                    'Set Items per Page'
+                ]
+            },
+            {
+                title: 'Datasets',
+                values: [
+                    'Add Rows',
+                    'Mark Rows',
+                    'Unmark Rows',
+                    'Update Rows',
+                    'Delete Rows'
+                ]
+            },
+            {
+                title: 'Miscellaneous',
+                values: [
+                    'Set Adaptive View',
+                    'Wait',
+                    'Other',
+                    'Fire Event',
+                    'Raise Event'
+                ]
+            },
+        ]
+    } %}
+
+    <section class="section prototype-form">
+        <div class="container">
+            <h1>“Almost limitless possibilities for creating complex prototypes, and great for basic wireframes too.”</h1>
+        
+            <div class="prototype-form__person">
+                <img src="../images/oval.png" alt="" class="prototype-form__person-icon"> 
+                <div class="prototype-form__person-name">STU M.</div>
+                <div class="prototype-form__person-position">Design Director</div>
+            </div>
+
+            <div class="prototype-form__form">
+            </div>
+
+            <img src="../images/group-15.png" alt="" class="prototype-form__trial-image">
+
+            <div class="prototype-form__info">
+                <p>* If you enter an email address, you will receive Axure tutorials and news via email.
+                    <br/>
+                    You can unsubscribe at any time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

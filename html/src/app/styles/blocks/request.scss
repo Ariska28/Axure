@@ -1,0 +1,21 @@
+.request-box {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .btn {
+    line-height: 1.05;
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .btn {
+      min-width: 357px;
+    }
+  }
+}

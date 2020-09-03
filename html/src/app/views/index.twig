@@ -1,0 +1,215 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isSec': false,
+    } %}
+{% endblock %}
+{% block body %}
+    {% include 'layout/home/hero.twig' %}
+    {% include 'components/trust-block.twig' with {
+        'title': 'Trusted by 87% of the Fortune 100  to improve the way they design digital products.',
+        'trust_list': [
+            {
+                'src': 'images/trust_amazon.png',
+                'src2x': 'images/trust_amazon@2x.png',
+                'alt': 'Amazon'
+            },
+            {
+                'src': 'images/trust_epicgames.png',
+                'src2x': 'images/trust_epicgames@2x.png',
+                'alt': 'Epic Games'
+            },
+            {
+                'src': 'images/trust_slack.png',
+                'src2x': 'images/trust_slack@2x.png',
+                'alt': 'Slack'
+            },
+            {
+                'src': 'images/trust_saleforce.png',
+                'src2x': 'images/trust_saleforce@2x.png',
+                'alt': 'SaleForce'
+            },
+            {
+                'src': 'images/trust_verizon.png',
+                'src2x': 'images/trust_verizon@2x.png',
+                'alt': 'Verizon'
+            },
+            {
+                'src': 'images/trust_target.png',
+                'src2x': 'images/trust_target@2x.png',
+                'alt': 'Target'
+            },
+            {
+                'src': 'images/trust_ms.png',
+                'src2x': 'images/trust_ms@2x.png',
+                'alt': 'Microsoft'
+            },
+        ],
+    } %}
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_well-defined-problems',
+        title: 'Breakthrough solutions start with well-defined problems.',
+        text: 'Whether you’re creating diagrams, customer journeys, or product teardowns, Axure RP helps you document the issues and get everyone on the same page.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-connector.svg',
+                },
+                text:'Connector Mode'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-corners.svg',
+                },
+                text:'Preserve Conners on Images'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-flow.svg',
+                },
+                text:'Flow Shapes Libarary'
+            },
+        ],
+        img: {
+            src: 'images/temp_well-defined-problems.png',
+            src2x: 'images/temp_well-defined-problems@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_prototyping',
+        title: 'Powerful prototyping that fits any project',
+        text: 'Using a prototype to test a design and validate it with others is invaluable for making better design decisions. Axure RP lets you quickly make rich, functional prototypes so you can make informed choices even on your most urgent projects.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-layers.svg',
+                },
+                text:'Dynamic Content'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-choices.svg',
+                },
+                text:'Conditional Logic'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-devices.svg',
+                },
+                text:'Adaptive Views'
+            },
+        ],
+        img: {
+            src: 'images/temp_prototyping.png',
+            src2x: 'images/temp_prototyping@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_blend',
+        title: 'A beautiful blend of analysis and design',
+        text: 'The best experiences are created when thoughtful problem-solving and attentive design come together. Axure RP combines powerful design tools, SVG import, and Sketch integration with world-class prototyping so you can amaze stakeholders and customers.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                    src: 'images/temp_np-diamond.svg',
+                },
+                text:'Build Interactions from Sketch assets'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-svg.svg',
+                },
+                text:'SVG Import'
+            },
+            {
+                icon: {
+                    src: 'images/temp_np-animation.svg',
+                },
+                text:'Animation Effects'
+            },
+        ],
+        img: {
+            src: 'images/temp_blend.png',
+            src2x: 'images/temp_blend@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        class: 'b-img-txt_dev-bridge',
+        title: 'Bridge the gap with development',
+        text: 'Thorough, easy-to-understand specifications enable developers to deliver products that match the designs. Publish Axure RP files to Axure Cloud and present a complete picture including documentation, prototypes, and visual design with automated redlines and code export.',
+        list_style: 'icon',
+        list: [
+            {
+                icon: {
+                src: 'images/temp_np-documentation.svg',
+            },
+                text:'Complete Documentation'
+            },
+            {
+                icon: {
+                src: 'images/temp_np-dimensions.svg',
+            },
+                text:'Automated Redlines'
+            },
+            {
+                icon: {
+                src: 'images/temp_np-css.svg',
+            },
+                text:'Code Export'
+            },
+        ],
+        img: {
+            src: 'images/temp_dev-bridge.png',
+            src2x: 'images/temp_dev-bridge@2x.png',
+        }
+    } %}
+
+    {% include 'components/img-text-block.twig' with {
+        label: {
+            text: 'New',
+        },
+        class: 'b-img-txt_streamline',
+        title: 'Streamline your product design workflow with Axure Cloud',
+        list_style: 'square',
+        list: [
+            {
+                text:'Easily share Axure RP prototypes and Sketch artboards and gather feedback on top of your screens.
+    Inspect layout, get code snippets, and download assets.'
+            },
+            {
+                text:'Get notifications about the latest changes and discussions by email, Slack, or Microsoft Teams.'
+            },
+            {
+                text:'Create Team projects so multiple users can make diagrams, build prototypes, and explore designs in a single Axure RP file at the same time.'
+            },
+            {
+                text:'Quickly turn static images into interactive prototypes in Axure Cloud.'
+            },
+        ],
+        img: {
+            src: 'images/temp_streamline-cloud.png',
+            src2x: 'images/temp_streamline-cloud@2x.png',
+        }
+    } %}
+
+    {% include 'components/section-testimonial.twig'  %}
+
+    {% include 'components/try-block.twig'  %}
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'components/footer.twig' with {
+        'footer_dark': true,
+    } %}
+{% endblock %}

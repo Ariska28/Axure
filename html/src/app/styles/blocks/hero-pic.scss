@@ -1,0 +1,139 @@
+.hero-pic {
+  display: flex;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.333em;
+    font-family: $secFF;
+    font-size: 42px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.11;
+    color: $light;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: $mainFF;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.45;
+    color: $light;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-right: -100%;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__shifter {
+    width: 100%;
+    max-width: 654px;
+    margin-top: 183px;
+    margin-bottom: 93px;
+    margin-left: -94px;
+    padding: 20px 10px 40px 94px;
+    background-color: rgba($dark, 0.6);
+  }
+
+  &__bg {
+    font-size: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    img {
+      font-size: $mainFontSize;
+      min-width: 100%;
+      min-height: 100%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+
+    &__title {
+      font-size: calc(58px + 14 * ((100vw - #{map-get($grid-breakpoints, 'lg')}) / (#{strip-unit(map-get($grid-breakpoints, 'xl') - map-get($grid-breakpoints, 'lg'))} )));
+    }
+
+    &__text {
+      font-size: 22px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__title {
+      font-size: 72px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: calc(42px + 18 * ((100vw - #{map-get($grid-breakpoints, 'md')}) / (1440 - #{strip-unit(map-get($grid-breakpoints, 'md'))} )));
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    position: relative;
+
+    &__title {
+      font-size: 42px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100%;
+      align-items: center;
+    }
+
+    &__content {
+      margin-right: 0;
+    }
+
+    &__shifter {
+      padding-left: 10px;
+      margin-left: 0;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    &__bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        //filter: blur(5px);
+      }
+    }
+  }
+}

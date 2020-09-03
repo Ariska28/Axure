@@ -1,0 +1,130 @@
+.download-hero {
+  $downloadElsHeight: 78px;
+
+  background-image: linear-gradient(to bottom, $c-black-onyx, #026D96);
+  text-align: center;
+  font-size: 18px;
+  padding-top: (62px + $header-height);
+  padding-bottom: 8px;
+  font-family: $secFF;
+  font-weight: bold;
+  margin-top: - $header-height;
+
+  h1 {
+    @include heroTitleFont;
+    max-width: 8.39em;
+    margin: 0.2em auto 0.417em;
+    color: $c-white-isabelline;
+  }
+
+
+  &__icon {
+    display: block;
+    padding: 0;
+    margin: 0;
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 124px;
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    margin-top: 70px;
+    margin-bottom: 16px;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      clear: both;
+    }
+    
+    &-row {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-field {
+      //flex: 1;
+      //margin-right: 17px;
+      //max-width: 459px;
+      //&--select {
+      //  flex: 0;
+      //  min-width: 300px;
+      //}
+
+      input {
+        height: $downloadElsHeight !important;
+        @include input-base;
+        padding: 26px 33px;
+        border: 1px solid $warm-grey;
+        border-radius: 3px;
+        font-family: $secFF;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.25;
+        color: $mainTextCol;
+        @include placeholder($warm-grey-two);
+      }
+
+      .select2-container {
+        height: $downloadElsHeight;
+      }
+    }
+
+    &-btn {
+      @include btn();
+      height: $downloadElsHeight !important;
+      width: 100% !important;
+      font-size: 32px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: normal;
+    }
+
+    @include media-breakpoint-down(md) {
+      //display: none;
+      &-row {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      &-field {
+        min-width: 100%;
+        height: 80px;
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+      &-btn {
+        max-width: 312px;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      &-btn {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 710px;
+    margin: 0 auto;
+    p {
+      color: $c-gray-warm;
+      line-height: #{(28 / 18)};
+      margin-bottom: 26px;
+      font-weight: normal;
+      @include fontSizeResponsive($fs-text-regular);
+    }
+    a {
+      color: inherit;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

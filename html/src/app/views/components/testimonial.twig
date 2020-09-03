@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="testimonial">
+        <blockquote class="testimonial__text">{{ text }}</blockquote>
+
+        <div class="testimonial-author">
+            <div class="testimonial-author__text">
+                <span class="testimonial-author__name">{{ author.name }}</span>
+                <span class="testimonial-author__position">{{ author.position }}</span>
+            </div>
+
+            <div class="testimonial-author__logo">
+                <img src="{{ logo.src }}" {{ logo.src2x ? ('srcset="' ~ logo.src2x ~ ' 2x"') }} alt="{{ logo.alt }}">
+            </div>
+
+            <div class="testimonial-author__pic">
+                <img src="{{ img.src }}" {{ img.src2x ? ('srcset="' ~ img.src2x ~ ' 2x"') }} alt="{{ img.alt }}">
+            </div>
+        </div>
+    </div>
+</div>

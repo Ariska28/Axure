@@ -1,0 +1,183 @@
+$mainWidth: 1250px;
+$mainGap: 47px;
+$mainGapTab: 16px;
+
+$containerWidth: 1344px;
+
+$mobMinWidth: 320px;
+
+$mainFontName: 'Nunito Sans';
+$mainFF: $mainFontName, Arial, sans-serif;
+$secFontName: 'Univia Pro';
+$secFF: $secFontName, Arial, sans-serif;
+$mainFontSize: 16px;
+
+$addFontName1: 'Daniel';
+$addFF1: $addFontName1, $mainFontName, Arial, sans-serif;
+
+$decFontName: 'Montserrat';
+$decFF: $decFontName, $mainFontName, Arial, sans-serif;
+
+$fontPath: '../fonts/';
+$secFontPrefix: 'univiapro-';
+$secFontPostfix: '-webfont';
+
+$mainCol: #f9007a;
+$mainCol2: #3d3d3d;
+$mainTextCol: #4d4d4d;
+
+$hoverCol1: #cd0165;
+
+// additional colors
+$light: #fff;
+$dark: #000;
+
+
+
+$col1: #3d3d3d;
+$col2: #009cd9;
+$warm-grey: #979797;
+$col4: #f9f9f9;
+$almost-black: #050e11;
+$vivid-purple: #7e00e8;
+$pea-green: #74bb11;
+$warm-grey-two: #999999;
+$pinkish-grey: #c3c3c3;
+$c-greyish-brown: #3f3e3e;
+$c-aqua: #16eede;
+$c-light-grey: #dfdfdf;
+$c-light-grey-2: #d1d1d1;
+$c-light-grey-3: #d8d8d8;
+$c-light-grey-4: #F7F7F7;
+$c-grey-black: #232323;
+$c-grey-black-2: #282828;
+$c-grey-black-3:#3F3F3F;
+$c-nero-black: #1e1e1e;
+$c-venice-blue: #075885;
+$c-electric-purple: #a600f9;
+$c-gainsboro-white: #e1e1e1;
+$c-greyish: #a8a8a8;
+$c-mossy-green: #499127;
+$c-matterhorn-grey: #524f4f;
+$c-green-seaweed: #1bd17b;
+$c-sun-yellow: #f9d923;
+$aqua-blue: #00eee9;
+$cool-blue: #4aa4c9;
+$c-lavender: #beb6f0;
+$c-dark-blue: #15164a;
+$c-pumpkin-orange: #ff7817;
+$c-rajah-orange: #fc9e5a;
+$c-blurple-blue: #3237ca;
+$c-dark-blue2: #1c1d35;
+$c-light-mustard: #fbc95e;
+$c-dusky-blue: #425185;
+$c-aqua-marine: #46dee2;
+
+
+$c-black-onyx: #050e11;
+$c-black-greyish: #3f3e3e;
+$c-black-brown: #4a4a4a;
+
+$c-gray-warm: #999999;
+
+$c-dark-gray: #605f5f;
+
+$c-white-smoke: #f3f3f3;
+$c-white-smoke-light: #f8f8f8;
+$c-white-isabelline: #efefef;
+
+$c-green-soft: #7bd089;
+$c-green-tea: #6bb077;
+
+$c-blue-cerulean: #009cd9;
+
+$c-purple-vivid: #7e00e8;
+$c-purple-cornflower: #725cfb;
+$c-blueberry: #3d2e9a;
+$c-blueberry-two: #353799;
+
+$c-dark-indigo: #1c1069;
+
+$c-btn: #EE1686;
+$c-dark-btn:#1F1F1F;
+$c-check: #008FE0;
+
+$separatorCol: $mainCol2;
+
+$bs-tile: 3px 4px 11px rgba(154, 150, 150, 0.25);
+
+//$overlayBgc: transparentize($mainCol2, 0.5);
+
+// duration times
+$ttime1: 0.2s;
+$ttime2: 0.25s;
+$ttime3: 0.3s;
+
+// breakpoints
+$mobUpLim: 767px;
+$mobDownLim: 0px;
+$tabletUpLim: 960px;
+
+// specific breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  xsm: 360px,
+  md: $mobUpLim + 1,
+  lg: $tabletUpLim + 1,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$header-height: 85px;
+$header-height-mobile: 41px;
+$headerStuckShadow: 0px 4px 6px rgba($c-gainsboro-white, 0.5);
+
+$header-height-lv2: 79px; // temporary solution, current state: no mobile design, unknown behavior
+
+//font sizes:
+$fs-super-hero: (
+    xs: 48px,
+    md: 72px,
+    lg: 110px
+);
+
+$fs-title-hero: (
+    xs: 42px,
+    md: 60px,
+    lg: 72px
+);
+
+$fs-title-newhero: (
+    xs: 40px,
+    md: 54px,
+    lg: 64px
+);
+
+$fs-title: (
+    xs: 32px,
+    md: 36px,
+    lg: 44px
+);
+
+$fs-subtitle: (
+    xs: 24px,
+    lg: 32px
+);
+
+$fs-text-regular: (
+    xs: px-to-rem(14),
+    md: px-to-rem(16),
+    lg: px-to-rem(18)
+);
+
+$fs-text-section: (
+    xs: px-to-rem(16),
+    md: px-to-rem(18),
+    lg: px-to-rem(20)
+);
+
+$fs-text-big: (
+    xs: 18px,
+    md: 20px,
+    lg: 24px
+);

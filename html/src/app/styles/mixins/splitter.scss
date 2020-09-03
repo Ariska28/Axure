@@ -1,0 +1,38 @@
+@mixin splitterWidthChange($mainWidth: 50%) {
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    .splitter__main {
+      width: $mainWidth;
+    }
+    .splitter__sec {
+      width: 100% - $mainWidth;
+    }
+  }
+}
+
+@mixin splitterMobTabPaddings {
+  .splitter__main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .splitter__sec {
+    padding-top: 30px;
+  }
+}
+
+@mixin splitterDeskInverse {
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    .splitter__pic {
+      img {
+        float: right;
+      }
+    }
+    .splitter__main {
+      order: 10;
+    }
+    .splitter__sec {
+      order: 5;
+    }
+  }
+}

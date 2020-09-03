@@ -1,0 +1,77 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  font-family: $secFF;
+  font-weight: 600;
+  color: $mainTextCol;
+  &+p {
+    margin-top: 0;
+  }
+}
+
+p {
+  //margin: 2.77em 0;
+  margin: 1.6em 0;
+}
+
+a {
+  @include linkColor;
+}
+
+ul, ol {
+  font-weight: bold;
+}
+
+blockquote {
+  font-family: $secFF;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.31;
+
+  margin: $wiwGap $wiwGap $wiwGap 0;
+  padding: 0 0 0 1.656em;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7%;
+    width: 6px;
+    height: 88%;
+    background-color: $c-sun-yellow;
+  }
+
+  p {
+    margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-down(xsm) {
+    margin: $wiwGap $wiwGap/2 $wiwGap 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+>*:first-child {
+  margin-top: 0;
+}

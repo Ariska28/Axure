@@ -1,0 +1,26 @@
+{#
+    'title': '',
+    'intro': '',
+    'description': '',
+    'image': ''
+#}
+
+<section class="s-hero-prototype">
+    <div class="s-hero-prototype__container">
+        <h1>{{ title }}</h1>
+
+        {% if intro %}
+            <div class="s-hero-prototype__intro">
+               {{ intro }}
+            </div>
+        {% endif %}
+
+        {% if description %}
+            <div class="s-hero-prototype__description">
+               {{ description }}
+            </div>
+        {% endif %}
+
+        <div class="s-hero-prototype__img" style="background-image: url({{ image }})" role="presentation"></div>
+    </div>
+</section>

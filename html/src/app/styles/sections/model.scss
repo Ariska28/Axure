@@ -1,0 +1,121 @@
+.s-model {
+  padding: 50px 0 100px;
+  text-align: center;
+  overflow: hidden;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__title {
+    font-family: $secFontName;
+    margin: 54px auto 0;
+    max-width: 830px;
+    font-size: 39px;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 35px 0;
+
+    &-icon {
+      width: 81px;
+      height: 81px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-name {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-family: $secFontName;
+      //text-transform: uppercase;
+    }
+
+    &-position {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__info {
+    text-align: center;
+    max-width: 39em;
+    margin: 0 auto 2rem;
+    color: $warm-grey-two;
+    line-height: normal;
+    font-weight: normal;
+    @include fontSizeResponsive($fs-text-regular);
+
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    &-container {
+
+    }
+
+    &-decor {
+      position: relative;
+      pointer-events: none;
+      z-index: -1;
+      margin-top: 0;
+      img {
+        display: block;
+        margin: 0 auto 30px;
+        max-width: 100%;
+      }
+
+    }
+
+  }
+
+  @include media-breakpoint-up(md) {
+    &__person {
+      flex-direction: row;
+      &-icon {
+        margin-right: 20px;
+      }
+      &-name {
+        margin-right: 20px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__form {
+      &-decor {
+        position: absolute;
+        top: 100%;
+        right: -32px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &__form {
+      &-decor {
+        right: -70px;
+        margin-top: -30px;
+      }
+    }
+  }
+
+}

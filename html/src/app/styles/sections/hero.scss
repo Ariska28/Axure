@@ -1,0 +1,141 @@
+.s-hero {
+  padding: 40px 0;
+  &__container {
+    position: relative;
+    @include container;
+  }
+  &-media {
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 50%;
+    transform: translateX(50%);
+    top: 0;
+    background-size: 100%;
+  }
+
+  &-content {
+    padding-top: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__headline {
+      text-align: center;
+      @include fontSizeResponsive($fs-title-newhero);
+      font-family: $secFontName;
+      margin-bottom: 52px;
+      color: $c-grey-black-3;
+    }
+
+    &__description {
+      text-align: center;
+      @include fontSizeResponsive($fs-text-big);
+      margin-bottom: 66px;
+      line-height: 1.4;
+    }
+
+    &__link {
+      @include btn;
+      display: inline-block;
+      background-color: $c-dark-btn;
+      color: $light;
+      text-decoration: none;
+      width: 100%;
+      @include fontSizeResponsive($fs-subtitle);
+      border-radius: 2px;
+    }
+  }
+
+  &-links {
+    margin-top: 90px;
+
+    &__label {
+      color: $warm-grey;
+      @include fontSizeResponsive($fs-text-big);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      width: 100%;
+    }
+
+    &__item {
+      & a {
+        display: block;
+      }
+      & img {
+        max-width: 100%;
+      }
+      width: 49%;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      text-align: center;
+    }
+  }
+
+  @include media-breakpoint-up(xsm) {
+    &-content {
+      &__link {
+        width: auto;
+        min-width: 329px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-media {
+      right: 0%;
+      width: 45%;
+      transform: translateX(0%);
+    }
+    &-content {
+      display: block;
+    }
+    &-content {
+      padding-top: 0;
+      width: 55%;
+      &__headline {
+        text-align: left;
+      }
+
+      &__description {
+        text-align: left;
+      }
+    }
+
+    &-links {
+      &__label {
+        text-align: left;
+      }
+      &__list {
+        justify-content: flex-start;
+        margin-bottom: 0;
+      }
+
+      &__item {
+        width: auto;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-right: 6%;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    &-media {
+      width: 55%;
+      right: -10%;
+    }
+  }
+}

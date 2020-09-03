@@ -1,0 +1,63 @@
+@mixin btn{
+  @include linkReset;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: $secFF;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: $mainCol;
+  color: $light;
+  border-radius: 12px;
+  border: none;
+  transition: color $ttime1, background $ttime1;
+  &:hover{
+    cursor: pointer;
+    background-color: $hoverCol1;
+  }
+  &:active{
+
+  }
+  &:focus{
+    outline: none;
+    background-color: $hoverCol1;
+  }
+}
+
+@mixin btn_pink {
+  color: $light !important;
+  background-color: $mainCol;
+  &:hover{
+    color: $light !important;
+    background-color: $hoverCol1;
+  }
+  &:focus{
+    color: $light !important;
+    background-color: $hoverCol1;
+  }
+}
+
+@mixin btn-clean {
+  background: transparent;
+  border: 1px solid;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  font-size: inherit;
+  color: inherit;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:focus:active,
+  &:active {
+    outline: none;
+  }
+}

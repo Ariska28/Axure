@@ -1,0 +1,17 @@
+@mixin container($width: $mainWidth) {
+  max-width: $width + 2 * $mainGap;
+  padding: 0 $mainGap;
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $tabletUpLim) {
+    padding-left: $mainGapTab;
+    padding-right: $mainGapTab;
+  }
+
+}
+
+@mixin contentCentered($width: $mainWidth + 2 * $mainGap) {
+  max-width: $width;
+  margin: 0 auto;
+}

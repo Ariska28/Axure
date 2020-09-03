@@ -1,0 +1,10 @@
+<div class="menu-toggle-box">
+    <a href="#" class="menu-toggle js-menu-toggle"> {# add .open #}
+        {# variant with pseudo elements #}
+        {#<i class="menu-toggle__inner">Menu toggle</i>#}
+
+        {# variant with svg #}
+        {% include 'svg_inline.twig' with {'name': 'burger-btn'} %}
+        {% include 'svg_inline.twig' with {'name': 'close'} %}
+    </a>
+</div>

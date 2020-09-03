@@ -1,0 +1,27 @@
+<section class="section b-action-event">
+    <div class="container">
+        <h2 class="b-action-event__title">{{ title }}</h2>
+        <ul class="b-action-event__main-list {{ modify }}">
+            {% if withImage %}
+                <img src="../../images/group-16.png">
+            {% endif %}
+            {% for item in list %}
+               <ul class="b-action-event__secondary-list">
+                    <div class="b-action-event__secondary-list-title">{{ item.title }}</div>
+                    {% for listValue in item.values %}
+                        {% if listValue is iterable %}
+                            <div class="b-action-event__secondary-list-value">{{ listValue.title }}</div>
+                            <ul class="b-action-event__secondary-list" style='margin-bottom: 0;'>
+                                {% for item in listValue.values %}
+                                    <li class="b-action-event__secondary-list-value">{{ item }}</li>     
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <li class="b-action-event__secondary-list-value">{{ listValue }}</li>                            
+                        {% endif %}
+                    {% endfor %}
+               </ul>                 
+            {% endfor %}
+        </ul>
+    </div>
+</section>

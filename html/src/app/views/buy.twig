@@ -1,0 +1,115 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+
+    <section class="section hero-buy">
+        <div class="container">
+            <h1 class="hero-buy__title">Purchase Axure RP</h1>
+            <p class="hero-buy__text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. </p>
+
+            {%  include 'layout/buy/cards.twig' %}
+        </div>
+
+        <svg version="1.1"
+             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px" width="1440px" height="53.6px" viewBox="0 0 1440 53.6" enable-background="new 0 0 1440 53.6"
+             preserveAspectRatio="none" class="hero-buy__mask">
+            <path d="M1440,53.6V0c0,0-152.8,13.4-318.5,26.8S777,53.6,725,53.6S491.8,40.2,323.5,26.8S0,0,0,0l0,53.6H1440z"/>
+        </svg>
+    </section>
+
+    <section class="info-link-box">
+        <p>Looking for Enterprise options? Check out our <a href="#">Enterprise</a> page.</p>
+        <p>Need more info on <a href="#">Axure Cloud</a>?</p>
+    </section>
+
+    {% include 'components/trust-block.twig' with {
+        'title': 'Trusted by:',
+        'trust_list': [
+            {
+                'src': 'images/trust_amazon.png',
+                'src2x': 'images/trust_amazon@2x.png',
+                'alt': 'Amazon'
+            },
+            {
+                'src': 'images/trust_epicgames.png',
+                'src2x': 'images/trust_epicgames@2x.png',
+                'alt': 'Epic Games'
+            },
+            {
+                'src': 'images/trust_slack.png',
+                'src2x': 'images/trust_slack@2x.png',
+                'alt': 'Slack'
+            },
+            {
+                'src': 'images/trust_saleforce.png',
+                'src2x': 'images/trust_saleforce@2x.png',
+                'alt': 'SaleForce'
+            },
+            {
+                'src': 'images/trust_verizon.png',
+                'src2x': 'images/trust_verizon@2x.png',
+                'alt': 'Verizon'
+            },
+            {
+                'src': 'images/trust_target.png',
+                'src2x': 'images/trust_target@2x.png',
+                'alt': 'Target'
+            },
+            {
+                'src': 'images/trust_ms.png',
+                'src2x': 'images/trust_ms@2x.png',
+                'alt': 'Microsoft'
+            },
+        ],
+    } %}
+
+
+    {% include 'components/education-discounts.twig' %}
+
+    {% include 'components/orders.twig' %}
+
+    {% include 'components/faqs.twig' with {
+        'title': 'Licsense FAQs',
+        'list': [
+            {
+                'question': 'What is Perpetual vs. Subscription?',
+                'answer': '<p>Axure RP 8 perpetual licenses allow you to use Axure RP 8.0 and all 8.x updates for as long as you like without additional fees.</p><p>Axure RP subscription licenses allow you to use the latest version of Axure RP while you are subscribed. Subscriptions are available for monthly and yearly terms.</p>',
+            },
+            {
+                'question': 'How can I upgrade?',
+                'answer': '<p>For perpetual licenses, you can upgrade from Pro to Team through the customer portal for $400.</p><p>For subscription licenses, you can upgrade to Team and Enterprise at any time. The remaining value of your subscription will be applied to the upgrade cost.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Can I use Axure RP on more than one computer?',
+                'answer': '<p>Each license can be used by the named user on any number of computers including across PCs and Macs.</p>',
+            },
+            {
+                'right': true,
+                'question': '      Can I use earlier software versions?',
+                'answer': '<p>You can activate RP Pro 7 with RP Team 8 perpetual licenses and RP Standard 7 with RP Pro 8 licenses. Subscriptions only work with RP 8+.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Do you offer volume pricing?',
+                'answer': '<p>Site licenses are available for purchases of 20+ perpetual licenses. Please contact sales@axure.com for more information.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Where is your End User License Agreement?',
+                'answer': '<p>Axure RP is sold as a licensed product according to the terms and conditions of the <a href="#">EULA</a>.</p>',
+            },
+        ],
+    } %}
+
+{% endblock %}

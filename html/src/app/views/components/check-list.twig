@@ -1,0 +1,12 @@
+<ul class="check-list">
+    {% for item in list %}
+        <li
+            class="check-list__item{{ item.isDisable ? ' check-list__item_disable' }}{{ item.isHighlighted ? ' check-list__item_highlight' }}"
+        >
+            {% include 'svg_inline.twig' with {
+                'name': 'check',
+            } %}
+            {{ item.text }}
+        </li>
+    {% endfor %}
+</ul>

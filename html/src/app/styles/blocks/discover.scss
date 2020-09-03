@@ -1,0 +1,128 @@
+.b-discover {
+  margin-bottom: 90px;
+
+  &__container {
+    padding: 5px 65px 5px 31px;
+    box-shadow: 0 5px 41px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5b6b82;
+    background: none;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-right: 24px;
+
+      &::after {
+        content: "";
+        background: transparent;
+        width: 8px;
+        height: 8px;
+        right: 0;
+        position: absolute;
+        display: inline-block;
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        transition: transform 0.3s ease-out;
+        transform: rotate(135deg) translateY(0);
+        top: 0%;
+      }
+
+      &--expanded {
+        display: none;
+      }
+    }
+
+    &--bottom {
+      display: none;
+      margin-bottom: 5px;
+
+      &.isVisible {
+        display: flex;
+      }
+    }
+
+    &--bottom &-text {
+      &::after {
+        transform: rotate(-45deg) translateY(-50%);
+        top: 50%;
+      }
+
+      &--expanded {
+        display: flex;
+      }
+
+      &--collapsed {
+        display: none;
+      }
+    }
+
+    &.isRotated &-text {
+      &::after {
+        transform: rotate(-45deg) translateY(-50%);
+        top: 50%;
+      }
+
+      &--expanded {
+        display: flex;
+      }
+
+      &--collapsed {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    margin-top: 28px;
+    margin-bottom: 36px;
+  }
+
+  &__title {
+    max-width: 703px;
+    margin: 0 auto 7px;
+    text-align: center;
+    color: $dark;
+    font-family: $decFF;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: bold;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__container {
+      padding-left: $mainGapTab;
+      padding-right: $mainGapTab;
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    display: none;
+  }
+}

@@ -1,0 +1,74 @@
+{#
+    reverse: boolean,
+    customClass: string ( css class name ),
+    title: string ( text ),
+    text: string ( text ),
+    label: string ( text ),
+    list_style: string ( icon || square || table )
+    list: [
+        {
+            icon: {
+                src: image ( url ),
+            },
+            text: string ( text ),
+            title: string ( text ),
+        },
+    ],
+    img: {
+        src: image ( url ),
+        src2x: retina image ( url ),
+        alt: string ( text ),
+    },
+#}
+{% set modifierClass = '' %}
+{% if refreshStyle %}
+    {% set modifierClass = ' s-features--refresh ' ~ modifierClass %}
+{% endif %}
+
+{% if paddingBig %}
+    {% set modifierClass = ' s-features--offsets-big ' ~ modifierClass %}
+{% endif %}
+{% if paddingMedium %}
+    {% set modifierClass = ' s-features--offsets-medium ' ~ modifierClass %}
+{% endif %}
+{% if paddingSmall %}
+    {% set modifierClass = ' s-features--offsets-small ' ~ modifierClass %}
+{% endif %}
+{% if paddingNone %}
+    {% set modifierClass = ' s-features--offsets-none ' ~ modifierClass %}
+{% endif %}
+
+{% if reverse %}
+    {% set modifierClass = ' s-features--reverse ' ~ modifierClass %}
+{% endif %}
+
+{% if background %}
+    {% set modifierClass = ' s-features--background ' ~ modifierClass %}
+{% endif %}
+
+<section class="section s-features {{ modifierClass }} {{ customClass }}">
+    <div class="s-features__container">
+        <div class="s-features__content">
+            <h2 class="s-features__content-title el-title ">{{ title }}</h2>
+            {% if text %}
+            <div class="s-features__content-text el-description ">
+                <p>{{ text }}</p>      
+            </div>
+            {% endif %}
+            {% if list|length > 0 %}
+            <div class="s-features__content-list">
+            </div>
+            {% endif %}
+            {% if link %}
+                <a href="{{ link.href }}" class="s-features__content-btn btn-flat">
+                    {{ link.text }}
+                </a>
+            {% endif %}
+        </div>
+        <div class="s-features__media">
+            <img class="s-features__media-img" src="{{ img.src }}" {{ img.src2x ? ('srcset="' ~ img.src2x ~ ' 2x"') }}
+                alt="{{ img.alt }}">
+        </div>
+      
+    </div>
+</section>

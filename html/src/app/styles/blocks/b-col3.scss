@@ -1,0 +1,125 @@
+.b-col3 {
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1.1em;
+    font-family: $secFF;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.28;
+    color: $c-greyish-brown;
+  }
+
+  &__text {
+    font-family: $mainFF;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    color: $mainTextCol;
+  }
+
+  &__pic {
+    overflow: hidden;
+    height: 222px;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // desktop
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    &__item {
+      padding: 0 30px;
+      width: 33.333%;
+      margin-bottom: 23px;
+      border-right: 1px solid $c-gainsboro-white;
+      &:nth-child(3n+1) {
+        padding-left: 0;
+      }
+      &:nth-child(3n) {
+        padding-right: 0;
+        border-right-color: transparent;
+      }
+    }
+
+    &__title {
+      font-size: calc(24px + 12 * ((100vw - 960px) / 480));
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__pic {
+      margin-bottom: 58px;
+      img {
+        width: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+
+  // special for title font-size
+  @media (min-width: 1440px) {
+    &__title {
+      font-size: 36px;
+    }
+  }
+
+  // mobile + tablet
+  @include media-breakpoint-down(md) {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $c-gainsboro-white;
+      text-align: center;
+      &:last-child {
+        //border-bottom-color: transparent;
+        //margin-bottom: 0;
+        //padding-bottom: 0;
+      }
+    }
+
+    &__text {
+      max-width: 800px;
+      @include marginLRA;
+    }
+
+    &__pic {
+      order: -1;
+      min-height: 222px;
+      margin:0 (-$mainGapTab) 30px;
+      img {
+        min-height: 100%;
+      }
+    }
+  }
+
+  // mobile
+  @include media-breakpoint-down(xs) {
+    &__item {
+      text-align: left;
+
+      .announce_var2 & {
+        text-align: center;
+      }
+    }
+  }
+
+  // tablet
+  @include media-breakpoint-between(md, md) {
+
+    &__text {
+      max-width: 800px;
+      @include marginLRA;
+      font-size: 16px;
+    }
+  }
+}

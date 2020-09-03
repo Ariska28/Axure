@@ -1,0 +1,61 @@
+{#
+    name: string,
+    price: {
+        currency: string,
+        monthly: integer,
+        perpetual: integer,
+    },
+    features: [
+        {
+            text: string,
+            isChecked: boolean,
+            isHighlighted: boolean,
+        },
+    ],
+    period: {
+        monthly: {
+            name: string,
+            value: string,
+        },
+        perpetual: {
+            name: string,
+            value: string,
+        },
+    },
+#}
+
+<div class="plan-card" data-plan> {# add class .plan-card_perpetual #}
+    <h2 class="plan-card__title">Axure RP {{ name }}</h2>
+    {% if features|length > 0 %}
+        <div class="plan-card__features">
+            {% include 'check-list.twig' with {
+                'list': features
+            } %}
+        </div>
+    {% endif %}
+    <div class="plan-card__price-box">
+        <div class="price" data-price-monthly="{{ price.monthly }}" data-price-perpetual="{{ price.perpetual }}">
+            <span class="price__currency" data-currency>{{ price.currency ?: '$' }}</span>
+            <span class="price__value" data-value>{{ price.monthly }}</span>
+            <div class="price__detail">
+                <div class="price__quant">per user,</div>
+                <div
+                    class="price__period"
+                    data-period
+                    data-period-monthly="{{ period.monthly.value }}"
+                    data-period-perpetual="{{ period.perpetual.value }}"
+                >
+                    {{ period.monthly.value }}
+                </div>
+            </div>
+        </div>
+        <div class="plan-card__period-toggle toggle" data-toggle> {# add class .toggle_switched #}
+            <div class="toggle__l">{{ period.monthly.name }}</div>
+            <div class="toggle__visual"></div>
+            <div class="toggle__r">{{ period.perpetual.name }}</div>
+        </div>
+    </div>
+    <div class="plan-card__btn-box">
+        <a href="#monthly" class="btn plan-card__btn" data-href-perpetual="#perp" data-href-monthly="#monthly">Choose {{ name }}</a>
+    </div>
+</div>

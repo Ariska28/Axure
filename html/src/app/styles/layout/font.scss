@@ -1,0 +1,73 @@
+@mixin secFontFace($name, $weight, $style) {
+  @font-face {
+    font-family: $secFontName;
+    src: url('#{$fontPath}#{$secFontPrefix}#{$name}#{$secFontPostfix}.woff2') format('woff2'),
+      url('#{$fontPath}#{$secFontPrefix}#{$name}#{$secFontPostfix}.woff') format('woff');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@include secFontFace($name:'thin', $weight:100, $style:'normal');
+@include secFontFace($name:'thinitalic', $weight:100, $style:'italic');
+
+@include secFontFace($name:'ultralight', $weight:200, $style:'normal');
+@include secFontFace($name:'ultralightitalic', $weight:200, $style:'italic');
+
+@include secFontFace($name:'light', $weight:300, $style:'normal');
+@include secFontFace($name:'lightitalic', $weight:300, $style:'italic');
+
+@include secFontFace($name:'book', $weight:400, $style:'normal'); // usually named regular
+@include secFontFace($name:'bookitalic', $weight:400, $style:'italic');
+
+@include secFontFace($name:'regular', $weight:500, $style:'normal'); // usually named medium
+@include secFontFace($name:'italic', $weight:500, $style:'italic');
+
+@include secFontFace($name:'medium', $weight:600, $style:'normal'); // usually named Semi Bold
+@include secFontFace($name:'mediumitalic', $weight:600, $style:'italic');
+
+@include secFontFace($name:'bold', $weight:700, $style:'normal');
+@include secFontFace($name:'bolditalic', $weight:700, $style:'italic');
+
+@include secFontFace($name:'black', $weight:800, $style:'normal'); // usually named extra bold
+@include secFontFace($name:'blackitalic', $weight:800, $style:'italic');
+
+@include secFontFace($name:'ultra', $weight:900, $style:'normal'); // usually black
+@include secFontFace($name:'ultraitalic', $weight:900, $style:'italic');
+
+@font-face {
+  font-family: $addFontName1;
+  src:
+    url('#{$fontPath}daniel.woff2') format('woff2'),
+    url('#{$fontPath}daniel.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: $decFontName;
+  src:
+    url('#{$fontPath}montserrat-regular.woff2') format('woff2'),
+    url('#{$fontPath}montserrat-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $decFontName;
+  src:
+    url('#{$fontPath}montserrat-italic.woff2') format('woff2'),
+    url('#{$fontPath}montserrat-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: $decFontName;
+  src:
+    url('#{$fontPath}montserrat-bold.woff2') format('woff2'),
+    url('#{$fontPath}montserrat-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,329 @@
+.b-plans {
+  position: relative;
+  min-height: 990px;
+  $botIntersect: 45px;
+  //background-image: linear-gradient(to bottom, $almost-black 20%, $col2 52%, $vivid-purple 100%);
+  background-image: linear-gradient(to bottom, $almost-black 20%, $c-blue-cerulean 74%, $c-purple-vivid);
+  background-repeat: no-repeat;
+  margin-top: -$header-height;
+  padding-top: (48px + $header-height);
+  padding-bottom: $botIntersect;
+  //   padding-bottom: 150px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $botIntersect;
+    background-color: $light;
+  }
+
+  .container {
+    margin-bottom: -($botIntersect - 8px);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.333em;
+    max-width: 9.403em;
+    @include marginLRA;
+    text-align: center;
+    @include heroTitleFont;
+    color: $light;
+    transition: font-size $ttime1;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 2em;
+    max-width: 41.667em;
+    @include marginLRA;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    text-align: center;
+    color: $light;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__switcher {
+    display: inline-flex;
+    align-self: center;
+    // text-align: center;
+    min-width: 490px;
+    max-width: 490px;
+    margin: 0 auto 41px;
+    padding: 4px;
+    border-radius: 6px;
+    border: solid 2px #5a6366;
+
+    &-btn {
+      max-width: 50%;
+      flex: 0 0 50%;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.4;
+      font-family: inherit;
+      text-decoration: none;
+      background: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: #a0a0a0;
+      padding: 3px 20px;
+      margin: 0;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.isActive {
+        background-color: #6f7c80;
+        color: $light;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 0 26px;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 31.5%;
+    flex: 0 0 31.5%;
+    padding: 20px 30px 25px;
+    z-index: 1;
+    background-color: $light;
+    box-shadow: 0 5px 41px 0 rgba(0, 0, 0, 0.1);
+
+    &-title,
+    &-price,
+    &-contact,
+    &-desc,
+    &-link,
+    &-small {
+      text-align: center;
+    }
+
+    &-price,
+    &-contact,
+    &-list,
+    &-desc {
+      font-family: $decFF;
+    }
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 9px;
+      font-family: $secFF;
+      font-size: 34px;
+      line-height: 1.4;
+      color: $c-greyish-brown;
+      font-weight: 500;
+    }
+
+    &-price {
+      //   font-size: 0;
+      margin-bottom: 16px;
+      color: #242f40;
+    }
+
+    &-exchange {
+      display: inline-block;
+      font-size: 35px;
+      vertical-align: top;
+      margin-top: 8px;
+    }
+
+    &-value {
+      display: inline-block;
+      font-size: 80px;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    &-period {
+      display: block;
+      font-family: $mainFF;
+      font-size: 14px;
+      color: #5b6b82;
+    }
+
+    &-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-style: italic;
+      color: #5b6b82;
+    }
+
+    &-desc {
+      width: 100%;
+      max-width: 205px;
+      margin: 0 auto;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #5b6b82;
+    }
+
+    &-list {
+      padding-left: 0;
+      font-size: 18px;
+      list-style: none;
+      color: #5b6b82;
+    }
+
+    &-benefit {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      svg {
+        margin-right: 12px;
+        fill: #3ccf8e;
+      }
+    }
+
+    &-link {
+      display: block;
+      max-width: 100%;
+      margin: auto 26px 26px;
+      padding: 16px 20px;
+      text-decoration: none;
+      font-size: 28px;
+      font-family: $secFF;
+      font-weight: 400;
+      color: $light;
+      border-radius: 7px;
+      background-color: $mainCol;
+      transition: background-color 0.3s;
+      border: 1px solid transparent;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: #cd0165;
+      }
+
+      &.white {
+        background-color: $light;
+        color: #5b6b82;
+        border-color: #5b6b82;
+
+        &:hover,
+        &:focus {
+          background-color: $light;
+        }
+      }
+    }
+
+    &-small {
+      display: block;
+      margin: 0 auto;
+      font-size: 10px;
+      min-height: 14px;
+      line-height: 1.4;
+      color: #1e1e1e;
+    }
+  }
+
+  &__mask {
+    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: $botIntersect - 0.5;
+    transform: translateX(-50%);
+    fill: $light;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      max-width: 47%;
+      flex: 0 0 47%;
+      margin-bottom: 35px;
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xsm) {
+    &__switcher {
+      flex-direction: column;
+      min-width: 270px;
+
+      &-btn {
+        font-size: 16px;
+        max-width: 100%;
+        flex: none;
+      }
+    }
+
+    &__item {
+      max-width: 100%;
+      flex: 0 0 100%;
+
+      &-title {
+        font-size: 27px;
+      }
+
+      &-contact {
+        font-size: 18px;
+      }
+
+      &-exchange {
+        font-size: 27px;
+      }
+
+      &-value {
+        font-size: 60px;
+      }
+
+      &-period {
+        font-size: 11px;
+      }
+
+      &-desc {
+        font-size: 14px;
+      }
+
+      &-list {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      &-benefit {
+        margin-bottom: 14px;
+      }
+
+      &-link {
+        font-size: 22px;
+        margin-bottom: 18px;
+      }
+    }
+  }
+}

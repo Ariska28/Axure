@@ -1,0 +1,23 @@
+.template-embed-app {
+  .wiw-page {
+    background-color: transparent;
+  }
+
+  .hero-base {
+    display: none;
+  }
+
+  .header_lv2-presence + .page-content,
+  .page-content {
+    padding-top: 0;
+  }
+
+  .wiw ul,
+  .wiw ol {
+    font-weight: normal;
+  }
+
+  .b-sidebar-box {
+    padding-top: 0;
+  }
+}

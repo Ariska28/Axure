@@ -1,0 +1,29 @@
+<div class="form-download-box">
+    <div class="form-download-box__title">
+        {% include 'svg_inline.twig' with {'name': 'download'} %}
+        Free 30-day-Trial</div>
+    <form action="/" class="form-download form-download_vert">
+        <div class="form-download__field form-download__field_select">
+            {% include 'select-el.twig' with {
+                'list': [
+                    {
+                        'value': 'mac',
+                        'title': 'Mac OS',
+                    },
+                    {
+                        'value': 'pc',
+                        'title': 'Windows',
+                    },
+                ],
+            } %}
+        </div>
+        <div class="form-download__field">
+            <input type="text" name="email" placeholder="Email Addresss (optional)">
+        </div>
+        <div class="form-download__info">
+            <p>* If you enter an email address, you will receive Axure tutorials and news via email. You can <a
+                        href="#">unsubscribe</a> at any time.</p>
+        </div>
+        <button class="btn btn_download" type="submit">Download Now</button>
+    </form>
+</div>

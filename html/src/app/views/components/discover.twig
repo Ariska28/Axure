@@ -1,0 +1,98 @@
+<section class="b-discover js-section-table">
+    <div class="container b-discover__container">
+        <button class="b-discover__btn js-discover-btn">
+            <span class="b-discover__btn-text b-discover__btn-text--collapsed">
+                {{ btnCollapsed }}
+            </span>
+
+            <span class="b-discover__btn-text b-discover__btn-text--expanded">
+                {{ btnExpanded }}
+            </span>
+        </button>
+
+        <div class="b-discover__content js-discover-content">
+            <h2 class="b-discover__title">{{ title }}</h2>
+
+            <table class="b-discover__table b-table js-discover-table">
+                <thead class="b-table__belt js-table-belt" role="rowgroup">
+                    <tr role="row">
+                        <th class="b-table__belt-cell" aria-hidden="true"></th>
+                        {% for row in table_head %}
+                        <th class="b-table__belt-cell" role="columnheader">
+                            <h3 class="b-table__belt-title">
+                                {{ row.table_title }}
+                            </h3>
+                            <div class="b-table__belt-desc">
+                                {% if row.exchange_subscriptions %}
+                                <span class="js-plan-item" data-subscriptions="{{ row.exchange_subscriptions }}"
+                                    data-perpetual="{{ row.exchange_perpetual }}">{{ row.exchange_subscriptions }}</span>
+                                <span class="js-plan-item" data-subscriptions="{{ row.value_subscriptions }}"
+                                    data-perpetual="{{ row.value_perpetual }}">{{ row.value_subscriptions }}</span>
+                                <span class="js-plan-item" data-subscriptions="{{ row.period_subscriptions }}"
+                                    data-perpetual="{{ row.period_perpetual }}">{{ row.period_subscriptions }}</span>
+                                {% else %}
+                                <span>
+                                    {{ row.table_desc }}
+                                </span>
+                                {% endif %}
+                            </div>
+                            {% if row.table_attr == '' %}
+                            <a class="b-table__belt-link js-plan-link {{ row.table_mod }}" data-subscriptions="{{ row.table_href }}" data-perpetual="{{ row.table_href_perpetual }}" href="{{ row.table_href }}">
+                                {{ row.table_link }}
+                            </a>
+                            {% else %}
+                            <button class="b-table__belt-link {{ row.table_mod }}" data-btn="form" type="button">
+                                {{ row.table_link }}
+                            </button>
+                            {% endif %}
+                        </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+
+                <tbody class="b-table__body">
+                    {% for card in table_body %}
+                    <tr class="b-table__row">
+                        <td class="b-table__cell" colspan="4">
+                            <h3 class="b-table__cell-title">
+                                {{ card.title }}
+                            </h3>
+                        </td>
+                    </tr>
+                    {% for row in card.rows %}
+                    <tr class="b-table__row">
+                        {% for item in row %}
+                        {% if item == 'yes' %}
+                        <td class="b-table__cell">
+                            <div class="visually-hidden">
+                                Yes
+                            </div>
+                            <span aria-hidden="true">
+                                {% include 'svg_inline.twig' with {'name': 'checkmark'} %}
+                            </span>
+                        </td>
+                        {% else %}
+                        <td class="b-table__cell">
+                            {{ item }}
+                        </td>
+                        {% endif %}
+
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <button class="b-discover__btn b-discover__btn--bottom js-discover-btn">
+            <span class="b-discover__btn-text b-discover__btn-text--collapsed">
+                {{ btnCollapsed }}
+            </span>
+
+            <span class="b-discover__btn-text b-discover__btn-text--expanded">
+                {{ btnExpanded }}
+            </span>
+        </button>
+    </div>
+</section>

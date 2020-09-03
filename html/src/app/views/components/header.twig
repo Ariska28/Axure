@@ -1,0 +1,36 @@
+{#
+    isSec: boolean, precence of submenu-subheader
+    isLight: boolean, does header has light background
+    extraClass: string, some additional class for specific styles. E.g. used on landing page
+#}
+<header class="header js-header{{ isSec ? ' header_lv2-presence' }}{{ extraClass ? ' '~extraClass }}"> {# add .menu-open class #}
+    <div class="header__inner {{ isLight ? 'header_light' }}">
+        <div class="header__lv1 js-header-lv1">
+            <div class="container">
+                <div class="logo-box">
+                    <a href="/" class="logo-link">
+                        <img src="images/logo-black.svg" alt="Axure" class="logo logo_dark">
+                        <img src="images/logo-reverse.svg" alt="Axure" class="logo logo_light">
+                        {# .logo_dark | .logo_light #}
+                        {#<span class="logo"></span>#}
+                    </a>
+                </div>
+
+                {# main menu #}
+                {% include 'menu-main.twig' with isSec %} {# currently hardcoded 1 item for exapmle #}
+
+                {# menu open/close button #}
+                {% include 'menu-toggle.twig' %}
+            </div>
+        </div>
+
+        {% if isSec %}
+            <div class="header__lv2 js-header-lv2">
+                <div class="container">
+                    {# submenu #}
+                    {% include 'menu-sec.twig' %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</header>

@@ -1,0 +1,33 @@
+<section class="s-tiles">
+    <div class="s-tiles__container">
+        {% if title %}
+        <h2 class="s-tiles__title el-title">
+            {{ title }}
+        </h2>
+        {% endif %}
+        <ul class="s-tiles__list">
+            {% for item in list %}
+            <li class="s-tiles__item">
+                {% if item.imgSrc %}
+                <div class="s-tiles__item-picture">
+                    <img src="{{ item.imgSrc }}" class="s-tiles__item-img" aria-hidden="true">
+                </div>
+                {% endif %}
+                <h3 class="s-tiles__item-title">
+                    {{ item.title }}
+                </h3>
+                <div class="s-tiles__item-text el-description">
+                    {{ item.text }}
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% if link %}
+        <footer class="s-tiles__footer">
+            <a href="{{ link.href }}" class="s-tiles__btn btn-flat">
+                {{ link.text }}
+            </a>
+        </footer>
+        {% endif %}
+    </div>
+</section>

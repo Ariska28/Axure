@@ -1,0 +1,384 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+	Axure
+{% endblock %}
+{% block header %}
+	{% include 'components/header.twig' with {
+        'isLight': false
+    } %}
+{% endblock %}
+
+{% block body %}
+
+	{% include 'components/plans.twig' with {
+    'title': 'Purchase Axure RP',
+    'text': 'A powerful & flexible all-in-one UX platform',
+    'plans_list': [
+        {
+            'title': 'Axure RP 9 Pro',
+            'price_exchange': '$',
+            'price_monthly': '29',
+            'price_perpetual': '495',
+            'period_monthly': 'per user, per month',
+            'period_perpetual': 'per user',
+            'period_perpetual': 'perpetual',
+            'advantages_list': [
+                'Unlimited prototypes',
+                'Unlimited reviewers',
+                '1,000 projects on Cloud', 
+                'Advanced Prototyping',
+                'Wireframes, Diagrams 
+                & Documentation',
+            ],
+            'link_text': 'Choose Pro',
+            'link_url': '#',
+            'link_url_perpetual': '#another',
+            'link_mod': '',
+            'link_attr': '',
+            'small': 'Annual and monthly terms available at checkout',
+        },
+        {
+            'title': 'Axure RP 9 Team',
+            'price_exchange': '$',
+            'price_monthly': '49',
+            'price_perpetual': '895',
+            'period_monthly': 'per user, per month',
+            'period_perpetual': 'per user',
+            'period_perpetual': 'perpetual',
+            'desc': 'Everything included in RP 9 Pro, plus:',
+            'advantages_list': [
+                'Co-Authoring',
+                'Revision History',
+                'Team Project hosting on Cloud', 
+            ],
+            'link_text': 'Choose Team',
+            'link_url': '#',
+            'link_url_perpetual': '#another',
+            'link_mod': '',
+            'link_attr': '',
+            'small': 'Annual and monthly terms available at checkout',
+        },
+        {
+            'title': 'Axure for Enterprise',
+            'desc': 'Everything included in RP 9 Team, plus:',
+            'advantages_list': [
+                'Unlimited Projects',
+                'Custom Domain',
+                'Team Project hosting on Cloud', 
+                'Private or On-Prem Security'
+            ],
+            'link_text': 'Contact Us',
+            'link_url': '#',
+            'link_url_perpetual': '#another',
+            'link_mod': 'white js-pricing-btn',
+            'link_attr': 'data-btn="form"',
+            'small': '',
+        },
+    ]
+ }
+%}
+
+	{% include 'components/discover.twig' with {
+        'btnCollapsed': 'see all features',
+        'btnExpanded': 'hide',
+        'title': 'Discover why Axure RP is the most powerful UX tool available today',
+
+        'table_head': [
+            {
+                'table_title': 'Axure RP 9 Pro',
+                'exchange_subscriptions': '$',
+                'exchange_perpetual': '$',
+                'value_subscriptions': '29',
+                'value_perpetual': '495',
+                'period_subscriptions': 'per user per month',
+                'period_perpetual': 'per user',
+                'table_href': '#',
+                'table_href_perpetual': '#another',
+                'table_mod': '',
+                'table_attr': '',
+                'table_link': 'Buy Pro',
+            },
+            {
+                'table_title': 'Axure RP 9 Team',
+                'exchange_subscriptions': '$',
+                'exchange_perpetual': '$',
+                'value_subscriptions': '49',
+                'value_perpetual': '895',
+                'period_subscriptions': 'per user per month',
+                'period_perpetual': 'per user',
+                'table_href': '#',
+                'table_href_perpetual': '#another',
+                'table_mod': '',
+                'table_attr': '',
+                'table_link': 'Buy Team',
+            },
+            {
+                'table_title': 'Axure Enterprise',
+                'table_desc': 'Contact us for pricing',
+                'table_href': '#',
+                'table_href_perpetual': '#another',
+                'table_mod': 'white js-pricing-btn',
+                'table_attr': 'data-btn="form"',
+                'table_link': 'Contact Us',
+            }
+        ],
+
+        'table_body': [
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'Support',
+                'rows': [
+                    {
+                        'name': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et inventore iure doloremque totam minus sunt beatae recusandae minima a aspernatur.',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi!',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'Support',
+                'rows': [
+                    {
+                        'name': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et inventore iure doloremque totam minus sunt beatae recusandae minima a aspernatur.',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi!',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'Support',
+                'rows': [
+                    {
+                        'name': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et inventore iure doloremque totam minus sunt beatae recusandae minima a aspernatur.',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, modi!',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+            {
+                'title': 'UX Planning',
+                'rows': [
+                    {
+                        'name': 'Flexible',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                    {
+                        'name': 'Simple',
+                        'pro': 'yes',
+                        'team': 'yes',
+                        'enterprise': 'yes',
+                    },
+                ]
+            },
+        ]
+    } %}
+
+	{% include 'components/trust-block.twig' with {
+        'title': 'Trusted by:',
+        'trust_list': [
+            {
+                'src': 'images/trust_amazon.png',
+                'src2x': 'images/trust_amazon@2x.png',
+                'alt': 'Amazon'
+            },
+            {
+                'src': 'images/trust_epicgames.png',
+                'src2x': 'images/trust_epicgames@2x.png',
+                'alt': 'Epic Games'
+            },
+            {
+                'src': 'images/trust_slack.png',
+                'src2x': 'images/trust_slack@2x.png',
+                'alt': 'Slack'
+            },
+            {
+                'src': 'images/trust_saleforce.png',
+                'src2x': 'images/trust_saleforce@2x.png',
+                'alt': 'SaleForce'
+            },
+            {
+                'src': 'images/trust_verizon.png',
+                'src2x': 'images/trust_verizon@2x.png',
+                'alt': 'Verizon'
+            },
+            {
+                'src': 'images/trust_target.png',
+                'src2x': 'images/trust_target@2x.png',
+                'alt': 'Target'
+            },
+            {
+                'src': 'images/trust_ms.png',
+                'src2x': 'images/trust_ms@2x.png',
+                'alt': 'Microsoft'
+            },
+        ],
+    } %}
+
+
+	{# {% include 'components/education-discounts.twig' %} #}
+
+	{% include 'components/support.twig' %}
+
+	{% include 'components/faqs.twig' with {
+        'title': 'License FAQs',
+        'mod': 'no-icons',
+        'list': [
+            {
+                'question': 'What is Perpetual vs. Subscription?',
+                'answer': '<p>Axure RP 8 perpetual licenses allow you to use Axure RP 8.0 and all 8.x updates for as long as you like without additional fees.</p><p>Axure RP subscription licenses allow you to use the latest version of Axure RP while you are subscribed. Subscriptions are available for monthly and yearly terms.</p>',
+            },
+            {
+                'question': 'How can I upgrade?',
+                'answer': '<p>For perpetual licenses, you can upgrade from Pro to Team through the customer portal for $400.</p><p>For subscription licenses, you can upgrade to Team and Enterprise at any time. The remaining value of your subscription will be applied to the upgrade cost.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Can I use Axure RP on more than one computer?',
+                'answer': '<p>Each license can be used by the named user on any number of computers including across PCs and Macs.</p>',
+            },
+            {
+                'right': true,
+                'question': '      Can I use earlier software versions?',
+                'answer': '<p>You can activate RP Pro 7 with RP Team 8 perpetual licenses and RP Standard 7 with RP Pro 8 licenses. Subscriptions only work with RP 8+.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Do you offer volume pricing?',
+                'answer': '<p>Site licenses are available for purchases of 20+ perpetual licenses. Please contact sales@axure.com for more information.</p>',
+            },
+            {
+                'right': true,
+                'question': 'Where is your End User License Agreement?',
+                'answer': '<p>Axure RP is sold as a licensed product according to the terms and conditions of the <a href="#">EULA</a>.</p>',
+            },
+        ],
+    } %}
+
+	<section class="b-popup js-pricing-popup styled-form" data-popup-form role="alert">
+		<button type="button" class="b-popup__close js-popup-close">
+			<div class="visually-hidden">close dialog</div>
+			<img src="images/pop-close.svg" alt="" role="presentation">
+		</button>
+
+		<h2 class="b-popup__title">
+			Request information about Axure for Enterprise
+		</h2>
+
+		<div class="el-wysiwyg">
+			<p>
+				See why the most successful companies in the world use Axure to accelerate modern software projects and deliver amazing experinece.
+			</p>
+		</div>
+
+		{# ADD FORM HERE #}
+	</section>
+
+{% endblock %}

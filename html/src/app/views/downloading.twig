@@ -1,0 +1,38 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+	Axure
+{% endblock %}
+
+{% block header %}
+	{% include 'components/header.twig' with {
+        'isLight': true,
+    } %}
+{% endblock %}
+
+{% block body %}
+	<section class="section downloading-page">
+		<div class="container">
+			<div class="downloading-page__title">Axure RP 9 is downloading</div>
+			<div class="downloading-page__sub-title">
+				You're on your way to creating rich, functional prototypes.<br>
+				Watch the video below for help getting started.
+			</div>
+			<div class="downloading-page__tip">If your download didn't start,
+				<a href="#">try again</a>
+				or email support@axure.com.</div>
+			<div class="b-video b-video_no-js b-video--downloading-page" data-video>
+				<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/cmTfNUrvLnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+
+			<div class="b-video b-video--downloading-page b-video--youtube">
+				<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/cmTfNUrvLnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="downloading-page__tip">Looking for more resources? Explore our
+					<a href="#">tutorials</a>
+					and
+					<a href="#">docs.</a>
+				</div>
+			</div>
+		</section>
+
+	{% endblock %}

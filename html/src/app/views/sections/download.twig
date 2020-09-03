@@ -1,0 +1,21 @@
+<section class="s-download s-download--{{ customClass }}" style="background-image: url('{{ imgUrl }}');">
+    <div class="s-download__container">
+        {% if title %}
+        <h2 class="s-download__title el-title">
+            {{ title }}
+        </h2>
+        {% endif %}
+        {% if text %}
+        <div class="s-download__text el-description">
+            {{ text }}
+        </div>
+        {% endif %}
+        {% if link %}
+        <footer class="s-download__footer">
+            <a href="{{ link.href }}" class="s-download__btn btn-flat">
+                {{ link.text }}
+            </a>
+        </footer>
+        {% endif %}
+    </div>
+</section>

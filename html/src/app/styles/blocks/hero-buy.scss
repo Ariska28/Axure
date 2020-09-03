@@ -1,0 +1,106 @@
+.hero-buy {
+  $botIntersect: 45px;
+  //background-image: linear-gradient(to bottom, $almost-black 20%, $col2 52%, $vivid-purple 100%);
+  background-image: linear-gradient(to bottom, $almost-black 20%, $c-blue-cerulean 74%, $c-purple-vivid);
+  background-repeat: no-repeat;
+  margin-top: - $header-height;
+  padding-top: (48px + $header-height);
+  padding-bottom: $botIntersect;
+  position: relative;
+
+  .container {
+    margin-bottom: - ($botIntersect - 8px);
+  }
+  &__mask {
+    min-width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: $botIntersect - 0.5;
+    transform: translateX(-50%);
+    fill: $light;
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $botIntersect;
+    background-color: $light;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.333em;
+    max-width: 9.403em;
+    @include marginLRA;
+    text-align: center;
+    @include heroTitleFont;
+    color: $light;
+    transition: font-size $ttime1;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 3.278em;
+    max-width: 41.667em;
+    @include marginLRA;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.78;
+    text-align: center;
+    color: $light;
+  }
+
+  // tablet + desktop
+  @media (min-width: ($mobUpLim + 1)) {
+    &-cards {
+      display: flex;
+      justify-content: center;
+      &__item {
+        //flex: 1;
+        width: 100%;
+        max-width: 457.2px;
+        &:nth-child(1) {
+          margin-right: 4.83%;
+        }
+        &:nth-child(2) {
+          margin-left: 4.83%;
+        }
+      }
+    }
+
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  // mobile
+  @media (max-width: $mobUpLim) {
+    &__text {
+      font-size: 14px;
+    }
+    &-cards {
+      &__item {
+        margin-bottom: 35px;
+        display: flex;
+        justify-content: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}

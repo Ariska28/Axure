@@ -1,0 +1,71 @@
+.hero-home {
+  @include splitterWidthChange(44.3%);
+  background-image: url('../images/hero-bg.svg'), linear-gradient(to bottom, $almost-black 20%, $col2 52%, $vivid-purple 100%);
+  background-size: auto auto, auto 1217px;
+  background-position: 0 0, 0 0;
+  background-repeat: no-repeat, no-repeat;
+  margin-top: - $header-height;
+
+  &__label {
+    @include label($col: $mainCol2, $bgCol: $pea-green, $skew: -35deg);
+    @include label_right-corner;
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0.417em;
+    max-width: 6.94em;
+    @include heroTitleFont;
+    color: $light;
+    transition: font-size $ttime1;
+  }
+  &__text {
+    margin-top: 0;
+    margin-bottom: 3em;
+    max-width: 20.25em;
+    font-family: $mainFF;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: $light;
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    background-size: auto auto, auto;
+    .splitter__main {
+      order: 5;
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+    .splitter__sec {
+      order: 10;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  // mobile
+  @media (max-width: $mobUpLim) {
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  // desktop
+  @media (min-width: ($tabletUpLim + 1)) {
+    .splitter__main {
+      padding-top: 145px;
+      padding-bottom: 100px;
+      padding-right: 54px;
+    }
+    .splitter__pic {
+      //padding-top: 192px;
+      padding-top: 201px;
+    }
+  }
+}

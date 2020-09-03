@@ -1,0 +1,23 @@
+<div class="toggle-block" data-b-toggle>
+    <div class="toggle-block__controls">
+        {% for item in blocks %}
+            <div
+                class="toggle-block__btn{{ loop.index == 1 ? ' toggle-block__btn_active' }}"
+                data-b-toggle-switcher="{{ item.name }}"
+            >
+                {{ item.title }}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% for item in blocks %}
+        <div class="toggle-block__info" data-b-toggle-info="{{ item.name }}">
+            <div class="toggle-block__col1">
+                {{ item.text }}
+            </div>
+            <div class="toggle-block__col2">
+                {% include 'form-'~item.name~'.twig' ignore missing %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

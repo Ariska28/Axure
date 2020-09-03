@@ -1,0 +1,39 @@
+.b-mark {
+  position: absolute;
+  overflow: hidden;
+  width: 132px;
+  height: 134px;
+  left: -3px;
+  top: -3px;
+
+
+  &__inner {
+    position: absolute;
+    left: -(100% * 1.42 - 100%)*0.5;
+    bottom: 50%;
+    width: 100% * 1.42;
+    text-align: center;
+
+    padding: 2px 0;
+    background-color: $c-light-mustard;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transform-origin: 50% 100%;
+    transform: rotate(-45deg);
+    font-family: $mainFF;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $mainTextCol;
+  }
+
+  @include media-breakpoint-down(xsm) {
+    width: 100px;
+    height: 100px;
+    &__inner {
+      font-size: 8px;
+    }
+  }
+}

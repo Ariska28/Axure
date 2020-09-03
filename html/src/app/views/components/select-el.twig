@@ -1,0 +1,13 @@
+{#
+    list: [
+        {
+            value: string,
+            title: string
+        }
+    ]
+#}
+<select name="os" class="js-os-select" width="100%">
+    {% for opt in list %}
+        <option value="{{ opt.value }}">{{ opt.title }}</option>
+    {% endfor %}
+</select>

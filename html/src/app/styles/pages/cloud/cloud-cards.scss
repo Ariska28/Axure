@@ -1,0 +1,75 @@
+.cloud-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  &__item {
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  .plan-card {
+    max-width: 100%;
+    width: 490px;
+    padding-top: 20px;
+    padding-bottom: 65px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &__title {
+      @include fontSizeResponsive((
+        xs: 28px,
+        md: 32px,
+        lg: 36px
+      ));
+    }
+
+    &__features {
+      margin-bottom: auto;
+      padding-bottom: 45px;
+    }
+
+    &__price-box {
+      margin-bottom: 31px;
+    }
+
+    &__extra {
+      bottom: (65px/2);
+      transform: translateY(50%);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &__item {
+      margin-left: 2%;
+      margin-right: 2%;
+      flex-grow: 1;
+    }
+
+    .plan-card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-wrap: nowrap;
+
+    &__item {
+      margin-bottom: 0;
+
+      &:nth-child(2n+1) {
+        margin-left: 0;
+        margin-right: 6.13%;
+      }
+      &:nth-child(2n) {
+        margin-left: 6.13%;
+        margin-right: 0;
+      }
+    }
+  }
+}

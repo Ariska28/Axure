@@ -1,0 +1,70 @@
+.prototype-hero {
+  background: linear-gradient(to bottom, #075887, #05c2ff);
+  color: $light;
+  text-align: center;
+  font-size: 18px;
+  padding-top: (62px + $header-height);
+  font-family: $secFF;
+  font-weight: bold;
+  margin-top: -$header-height;
+
+  h1 {
+    @include fontSizeResponsive($fs-super-hero);
+    font-family: $secFF;
+    font-style: normal;
+    line-height: 1;
+    font-weight: bold;
+    max-width: 1125px;
+    margin: 0.12em auto 0.38em;
+  }
+  &__info {
+    max-width: 580px;
+    margin: 0 auto 40px;
+    font-weight: normal;
+
+    p {
+      padding-left: 61px;
+      padding-right: 61px;
+      @include fontSizeResponsive(
+        (
+          xs: 16px,
+          md: 18px,
+          lg: 20px
+        )
+      );
+      line-height: (32/20);
+    }
+  }
+
+  &__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 590px;
+  }
+
+  @media (max-width: $tabletUpLim) {
+    position: relative;
+    padding-bottom: 400px;
+    &__image {
+      position: absolute;
+      left: 0;
+      background-position-x: -30px;
+      height: 400px;
+      width: 100%;
+      background-size: unset;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: -$header-height-mobile;
+    padding-top: (30px + $header-height-mobile);
+  }
+
+  @include media-breakpoint-down(xsm) {
+    &__info {
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

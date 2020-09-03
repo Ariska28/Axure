@@ -1,0 +1,20 @@
+.search {
+  &-form {
+    display: flex;
+    align-items: center;
+  }
+  &-input {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: none;
+  }
+  &-submit {
+    @include sprite(search);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    font-size: 0;
+  }
+}

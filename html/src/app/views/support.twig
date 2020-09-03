@@ -1,0 +1,154 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isLight': true,
+        'isSec': true,
+    } %}
+{% endblock %}
+
+{% block body %}
+    <section class="section hero-support">
+        <div class="container">
+            <div class="b-video b-video_no-js" data-video>
+                <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/cmTfNUrvLnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-resources">
+        <div class="container">
+            {% include 'components/preview-list.twig' with {
+                'title': 'Tutorials & Reference',
+                'list': [
+                    {
+                        'href': '#',
+                        'title': 'Installation and Licensing',
+                        'text': 'Eaque blanditiis numquam. Dolorem vitae eligendi qui nihil reiciendis consequatur error. Odit et vitae. Est dolorum ipsum magnam voluptatem veritatis voluptas. Ipsam cumque distinctio tempora.',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Start building your first Protoype',
+                        'text': 'Unde voluptates eligendi doloribus. Et doloremque velit est architecto enim. Ipsum in quidem reiciendis. Sint amet rerum velit est sunt excepturi numquam perspiciatis. Et sint vel facere.Read more',
+                        'img': {
+                            'src': 'images/temp_preview_support2.jpg',
+                            'src2x': 'images/temp_preview_support2@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Reference Materials',
+                        'text': 'Consectetur repudiandae distinctio reiciendis est unde doloremque asperiores. Vitae molestiae voluptatum rerum eum at incidunt harum voluptatem in. Ut error placeat consequatur.',
+                        'img': {
+                            'src': 'images/temp_preview_support3.jpg',
+                            'src2x': 'images/temp_preview_support3@2x.jpg',
+                        },
+                    },
+                ],
+            } %}
+            {% include 'components/preview-list.twig' with {
+                'title': 'Resources',
+                'list': [
+                    {
+                        'href': '#',
+                        'title': 'Widget Libraries',
+                        'text': 'A collection of widget libraries and templates (free and paid) to load into your copy of Axure RP and get a jump on your next project.',
+                        'img': {
+                            'src': 'images/temp_preview_support4.jpg',
+                            'src2x': 'images/temp_preview_support4@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Axure Trainers',
+                        'text': 'A list of Axure trainers from around that world that  provide a variety of Axure RP training services.',
+                        'img': {
+                            'src': 'images/temp_preview_support5.jpg',
+                            'src2x': 'images/temp_preview_support5@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Axure Meetups',
+                        'text': 'Meetups are a great way to meet other Axure professionals, recruit for you team, and learn new skills. Here is a list of some Axure meetups around the world.',
+                        'img': {
+                            'src': 'images/temp_preview_support6.jpg',
+                            'src2x': 'images/temp_preview_support6@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Books and Videos',
+                        'text': 'Consectetur repudiandae distinctio reiciendis est unde doloremque asperiores. Vitae molestiae voluptatum rerum eum at incidunt harum voluptatem in. Ut error placeat consequatur.',
+                        'img': {
+                            'src': 'images/temp_preview_support7.jpg',
+                            'src2x': 'images/temp_preview_support7@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Events and Conferences',
+                        'text': 'We\'re proud to support the user experience, business analysis, product management, and software development communities. Here are a few of the events and organizations that we have sponsored recently.',
+                        'img': {
+                            'src': 'images/temp_preview_support8.jpg',
+                            'src2x': 'images/temp_preview_support8@2x.jpg',
+                        },
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Axure Forum',
+                        'text': 'Eaque blanditiis numquam. Dolorem vitae eligendi qui nihil reiciendis consequatur error. Odit et vitae. Est dolorum ipsum magnam voluptatem veritatis voluptas. Ipsam cumque distinctio tempora. ',
+                        'img': {
+                            'src': 'images/temp_preview_support9.jpg',
+                            'src2x': 'images/temp_preview_support9@2x.jpg',
+                        },
+                    },
+                ],
+            } %}
+        </div>
+    </section>
+
+    <section class="support-info">
+        <div class="container">
+            <h2 class="support-info__title">We’re here to help</h2>
+            <div class="support-info__inner">
+                <div class="support-info__content wiw">
+                    <p>When you send an email to <a href="#">support@axure.com</a>, your case is assigned to a product specialist who will work with you until the case is resolved.</p>
+
+                    <p>Specialists are here from 9am to 6pm Pacific. Please email first so we can review your file, send back examples or links, and work with our team to provide a more thorough answer. Then, we can schedule a call if needed.</p>
+
+                    <p>To make things faster:</p>
+
+                    <ul>
+                        <li>Submit any bug reports that pop up within Axure RP with your email</li>
+                        <li>Attach a copy of the RP file you're working on</li>
+                        <li>Include the name of the relevant page and widget</li>
+                        <li>Provide an example or description of what you're trying to build</li>
+                        <li>Tell us which version of Axure RP is installed</li>
+                        <li>Tell us which operating system you are running</li>
+                        <li>Describe what happened before the error or how to repeat it</li>
+                        <li>Attach screenshots or videos; Jing is good for quick videos or screenshots</li>
+                        <li>For Team Projects, describe the setup of the project repository (Axure Share, SVN, Unfuddle, network) and whether you are behind a firewall or proxy, or using VPN</li>
+                    </ul>
+
+                    <p>Sometimes it's urgent! If it is, please use the word "urgent" in the subject line.</p>
+                </div>
+
+                <div class="support-info__pic-box mail-pics">
+                    <div class="mail-pics__text">Contact our support team: <a href="#">support@axure.com</a></div>
+                    <div class="mail-pics__pic">
+                        <img src="images/temp_support_contact.jpg" srcset="images/temp_support_contact@2x.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,115 @@
+.b-img-txt {
+  $parent: &;
+
+  // specific blocks, modificators
+  &_tool-set {
+    @include splitterWidthChange(61.68%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 13.2em;
+    }
+
+    #{$parent}__text {
+      max-width: 25.7em;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 68px;
+        padding-bottom: 111px;
+        padding-left: 8.56%;
+      }
+      .splitter__sec {
+        padding-top: 94px;
+      }
+    }
+
+    @include media-breakpoint-down(xsm) {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &_handoff-ideas {
+    //@include splitterWidthChange(54.16%);
+    @include splitterWidthChange(50.96%);
+    #{$parent}__title {
+      max-width: 11em;
+    }
+
+    #{$parent}__text {
+      max-width: 25.7em;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .splitter__main {
+        padding-left: 46px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 109px;
+        padding-bottom: 61px;
+        padding-right: 6.16%;
+      }
+      .splitter__sec {
+        padding-top: 89px;
+      }
+    }
+  }
+
+  &_fast-proto {
+    @include splitterWidthChange(56.8%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 9em;
+    }
+
+    #{$parent}__text {
+      max-width: 25.7em;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 91px;
+        padding-bottom: 82px;
+        padding-left: 8.08%;
+      }
+      .splitter__sec {
+        padding-top: 91px;
+      }
+    }
+  }
+
+  &_gather-feedback {
+    //@include splitterWidthChange(51.2%);
+    @include splitterWidthChange(48%);
+    #{$parent}__title {
+      max-width: 11em;
+    }
+
+    #{$parent}__text {
+      max-width: 24.2em;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .splitter__main {
+        padding-left: 51px; // 91px
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 135px;
+        padding-bottom: 95px;
+        padding-right: 5.2%;
+      }
+      .splitter__sec {
+        padding-top: 10px;
+        padding-bottom: 85px;
+      }
+    }
+  }
+}

@@ -1,0 +1,598 @@
+.b-img-txt {
+  $parent: &;
+  background-image: linear-gradient(to bottom, $light, $c-white-smoke);
+
+  &__label {
+    margin-bottom: 1em;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 32px;
+    @include title-section();
+    color: $c-greyish-brown;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-family: $mainFF;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: $mainTextCol;
+    @include text-section();
+  }
+
+  a {
+    @include linkColor("inherit", $mainCol);
+  }
+
+  // mobile + tablet
+  @media (max-width: $tabletUpLim) {
+    @include splitterMobTabPaddings;
+
+    &__title {
+      @include marginLRA;
+      text-align: center;
+    }
+
+    &__text {
+      @include marginLRA;
+      text-align: center;
+    }
+
+    &__features {
+      text-align: center;
+      .icon-list {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  }
+
+  &_feedback {
+    @include splitterWidthChange(44.88%);
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 514px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 111px;
+        padding-bottom: 30px;
+        padding-right: 3.52%;
+      }
+      .splitter__sec {
+        padding-top: 50px;
+      }
+      #{$parent}__text {
+        margin-bottom: 44px;
+      }
+    }
+  }
+
+  &_low-high {
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      #{$parent}__title {
+        max-width: 455px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #{$parent}__text {
+        max-width: 465px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .splitter {
+        padding: 50px 30px 30px;
+        align-items: center;
+        justify-content: space-between;
+        &__main {
+          margin-left: 40px;
+          order: 2;
+        }
+        &__sec {
+          max-width: 462px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &_wireframe-quick {
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      #{$parent}__title {
+        max-width: 455px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #{$parent}__text {
+        max-width: 465px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .splitter {
+        padding: 50px 30px 0;
+        align-items: center;
+        justify-content: space-between;
+        &__main {
+          margin-left: 40px;
+          order: 2;
+        }
+        &__sec {
+          max-width: 585px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // specific blocks, modificators
+  &_well-defined-problems {
+    @include splitterWidthChange(54.96%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 499px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 100px;
+        padding-left: 9.5%;
+      }
+    }
+  }
+
+  &_prototyping {
+    @include splitterWidthChange(40.2%);
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 442px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 165px;
+        padding-bottom: 78px;
+        padding-right: 19px;
+      }
+      .splitter__sec {
+        padding-top: 90px;
+      }
+      #{$parent}__title {
+        margin-bottom: 46px;
+      }
+      #{$parent}__text {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  &_wireframe-take {
+    @include splitterWidthChange(40.2%);
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 442px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 165px;
+        padding-bottom: 78px;
+        padding-right: 19px;
+      }
+      .splitter__sec {
+        padding-top: 90px;
+      }
+      #{$parent}__title {
+        margin-bottom: 46px;
+      }
+      #{$parent}__text {
+        margin-bottom: 56px;
+      }
+    }
+  }
+
+  &_blend {
+    @include splitterWidthChange(60.64%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 514px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 109px;
+        padding-bottom: 30px;
+        padding-left: 7.6%;
+      }
+      .splitter__sec {
+        padding-top: 26px;
+        padding-bottom: 94px;
+      }
+      #{$parent}__title {
+        margin-bottom: 51px;
+      }
+      #{$parent}__text {
+        margin-bottom: 41px;
+      }
+    }
+  }
+
+  &_explain {
+    @include splitterWidthChange(60.64%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 514px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 130px;
+        padding-bottom: 30px;
+        padding-left: 7.6%;
+      }
+      .splitter__sec {
+        padding-top: 70px;
+        padding-bottom: 50px;
+      }
+      #{$parent}__title {
+        max-width: 300px;
+        margin-bottom: 51px;
+      }
+      #{$parent}__text {
+        margin-bottom: 41px;
+      }
+    }
+  }
+
+  &_dev-bridge {
+    @include splitterWidthChange(44.88%);
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 514px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 111px;
+        padding-bottom: 30px;
+        padding-right: 3.52%;
+      }
+      .splitter__sec {
+        padding-top: 50px;
+      }
+      #{$parent}__text {
+        margin-bottom: 44px;
+      }
+    }
+  }
+
+  &_streamline {
+    @include splitterWidthChange(57.6%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 531px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        padding-left: 2%;
+      }
+      .splitter__sec {
+        padding-top: 126px;
+        padding-bottom: 65px;
+      }
+      #{$parent}__title {
+        margin-bottom: 34px;
+      }
+    }
+
+    // mobile + tablet
+    @media (max-width: $tabletUpLim) {
+      #{$parent}__title {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      #{$parent}__features {
+        text-align: left;
+      }
+    }
+  }
+
+  &_enterprise-platform {
+    @include splitterWidthChange(70.2%);
+
+    #{$parent}__title {
+      max-width: 720px;
+    }
+
+    #{$parent}__text {
+      max-width: 569px;
+    }
+
+    .splitter__sec {
+      z-index: 10;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 71px;
+        padding-bottom: 78px;
+        padding-right: 0;
+      }
+      .splitter__sec {
+        padding-top: 96px;
+        padding-bottom: 10px;
+      }
+      #{$parent}__title {
+        margin-bottom: 23px;
+      }
+      #{$parent}__text {
+        margin-bottom: 31px;
+      }
+    }
+  }
+
+  &_enterprise-cloud {
+    @include splitterWidthChange(65%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 531px;
+    }
+    #{$parent}__text {
+      max-width: 622px;
+    }
+
+    #{$parent}__label:before {
+      background: $c-purple-cornflower;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter__main {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        padding-left: 4%;
+      }
+      .splitter__sec {
+        padding-top: 126px;
+        padding-bottom: 65px;
+      }
+      #{$parent}__title {
+        margin-bottom: 34px;
+      }
+      #{$parent}__features {
+        margin-top: 50px;
+      }
+    }
+
+    // mobile + tablet
+    @media (max-width: $tabletUpLim) {
+      #{$parent}__title {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      #{$parent}__text {
+        text-align: left;
+        margin-left: 0;
+      }
+
+      #{$parent}__features {
+        text-align: left;
+      }
+    }
+  }
+
+  &_enterprise-grade {
+    @include splitterWidthChange(48%);
+
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 484px;
+    }
+
+    // desktop
+    @media (min-width: ($tabletUpLim + 1)) {
+      .splitter {
+        align-items: center;
+      }
+      .splitter__main {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-right: 20px;
+      }
+      .splitter__sec {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      #{$parent}__title {
+        margin-bottom: 30px;
+      }
+      #{$parent}__text {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &_freedom-to-innovate {
+    @include splitterWidthChange(60.64%);
+    @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 484px;
+    }
+    #{$parent}__text {
+      max-width: 500px;
+    }
+
+    // desktop
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 142px;
+        margin-left: 20px;
+      }
+      .splitter__sec {
+        margin-left: 215px;
+        margin-top: 148px;
+      }
+      #{$parent}__title {
+        margin-bottom: 51px;
+      }
+      #{$parent}__text {
+        margin-bottom: 41px;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .splitter__sec {
+        margin-left: 0;
+        & img {
+          max-width: 98%;
+        }
+      }
+    }
+  }
+  
+  &_share {
+    #{$parent}__text {
+      max-width: 500px;
+    }
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 133px;
+        margin-left: 95px;
+        margin-right: 30px;
+      }
+      .splitter__sec {
+        padding-top: 141px;
+        padding-right: 39px;
+        max-width: 100%;
+      }
+      #{$parent}__title {
+        max-width: 296px;
+      }
+      #{$parent}__features {
+        margin-bottom: 136px;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .splitter__main {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .splitter__sec {
+        padding-right: 0;
+        & img {
+          max-width: 98%;
+        }
+      }
+    }
+  }
+    
+  &_collaboration {
+     @include splitterWidthChange(54.96%);
+     @include splitterDeskInverse;
+    #{$parent}__title {
+      max-width: 484px;
+    }
+
+    #{$parent}__text {
+      max-width: 500px;
+    }
+
+    // desktop
+    @include media-breakpoint-up(lg) {
+      .splitter__main {
+        padding-top: 100px;
+        padding-bottom: 135px;
+      }
+      .splitter__sec {
+        margin-top: 114px;
+        margin-left: 159px;
+        margin-right: 30px;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .splitter__sec {
+        margin-left: 0;
+        & img {
+          max-width: 98%;
+        }
+      }
+    }
+  }
+  &_feedback {
+    @include media-breakpoint-up(lg) {
+      .splitter__sec {
+        padding-top: 92px;
+      }
+      #{$parent}__title {
+        max-width: 373px;
+      }
+      #{$parent}__text {
+        max-width: 500px;
+      }
+      #{$parent}__features {
+        margin-bottom: 136px;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .splitter__sec {
+        & img {
+          max-width: 98%;
+        }
+      }
+    }
+  }
+}

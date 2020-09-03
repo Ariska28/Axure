@@ -1,0 +1,11 @@
+.label {
+  @include label($light, $mainCol, $skew: -35deg);
+
+  &--left-corner {
+    @include label_left-corner;
+  }
+
+  &--right-corner {
+    @include label_right-corner;
+  }
+}

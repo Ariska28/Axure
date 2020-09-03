@@ -1,0 +1,13 @@
+.cloud-plan-info {
+  background-image: linear-gradient(to bottom, $c-blurple-blue, $c-dark-blue2);
+  padding: 80px 0;
+
+  &__inner {
+    max-width: 1117px;
+    @include marginLRA;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
+  }
+}

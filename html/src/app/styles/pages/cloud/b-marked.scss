@@ -1,0 +1,90 @@
+.b-marked {
+  position: relative;
+  padding: 36px 0;
+  border-radius: 9px;
+  box-shadow: 4px 4px 4px 0 rgba($c-grey-black-2, 0.5);
+  background-color: $light;
+
+  &__title {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    text-align: center;
+    font-family: $secFF;
+    @include fontSizeResponsive((
+      xs: 24px,
+      md: 30px,
+      lg: 36px
+    ));
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    color: $mainCol2;
+  }
+
+  &__col-left {
+    margin-bottom: 25px;
+  }
+
+  &__col-right {
+    //margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    max-width: 483px;
+    font-family: $mainFF;
+    @include fontSizeResponsive((
+      xs: 14px,
+      md: 16.2px
+    ));
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.22;
+    color: $mainTextCol;
+  }
+
+  .btn {
+    width: 100%;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    color: $c-grey-black-2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__col-left {
+      width: 48.7%;
+      padding-left: 7.46%;
+      padding-right: 2%;
+      margin-bottom: 0;
+    }
+
+    &__col-right {
+      width: 51.3%;
+      padding-right: 5.1%;
+
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        margin-top: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include media-breakpoint-down(xsm) {
+    &__title {
+      padding: 0 30px;
+    }
+  }
+}

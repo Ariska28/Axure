@@ -1,0 +1,58 @@
+.hero-cloud-download {
+  background-image: linear-gradient(to bottom, $c-blueberry-two, $c-dark-blue);
+  text-align: center;
+
+  &__icon {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__form {
+    margin-bottom: 81px;
+
+    &-btn {
+      @include btn;
+      @include fontSizeResponsive($fs-subtitle);
+      border-radius: 10px;
+      min-height: 76px;
+      min-width: 34.48%;
+    }
+  }
+
+  &__info {
+    max-width: 710px;
+    margin: 0 auto;
+
+    p {
+      color: $warm-grey-two;
+      line-height: #{(28 / 18)};
+      font-weight: normal;
+      @include fontSizeResponsive($fs-text-regular);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: - $header-height-mobile;
+    padding: 50px 0;
+
+    &__form {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: - $header-height;
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+}

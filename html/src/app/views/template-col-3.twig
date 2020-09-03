@@ -1,0 +1,156 @@
+{% extends 'layout/base.twig' %}
+
+{% block title %}
+    Axure
+{% endblock %}
+{% block header %}
+    {% include 'components/header.twig' with {
+        'isSec': true,
+        'isLight': true,
+    } %}
+{% endblock %}
+{% block body %}
+    <section class="template-col-3">
+        <div class="container">
+            <h1 class="template-col-3__title">Axure Widget Libraries</h1>
+            <div class="template-col-3__text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto est eum exercitationem minus quod rerum. Architecto corporis doloribus dolorum in magni necessitatibus nulla quibusdam sed. At eveniet harum
+                    <a href="">quis voluptate</a>!</p>
+            </div>
+            {% include 'components/preview-list.twig' with {
+                'title': 'Complete Collections',
+                'list': [
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                            'src': 'images/temp_preview_support1.jpg',
+                            'src2x': 'images/temp_preview_support1@2x.jpg',
+                        },
+                        'button': {}
+                    },
+                ],
+            } %}
+
+            {% include 'components/preview-list.twig' with {
+                'title': 'Business App and Modeling Libraries',
+                'list': [
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                    {
+                        'href': '#',
+                        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, sapiente.',
+                        'text': 'Itaque nostrum obcaecati odio repellat voluptas. A cumque dolorem, error maiores modi, molestiae molestias officia possimus quo quod sequi?',
+                        'img': {
+                        'src': 'images/temp_preview_support1.jpg',
+                        'src2x': 'images/temp_preview_support1@2x.jpg',
+                    },
+                        'button': {}
+                    },
+                ],
+            } %}
+
+        </div>
+    </section>
+{% endblock %}
+
+

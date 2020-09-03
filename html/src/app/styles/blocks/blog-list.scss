@@ -1,0 +1,14 @@
+.blog-list {
+  margin-bottom: 20px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1.067em;
+    @include fontSizeResponsive($fs-title);
+    font-family: $secFF;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1.07;
+    color: $c-matterhorn-grey;
+  }
+}

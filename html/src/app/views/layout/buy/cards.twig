@@ -1,0 +1,104 @@
+<div class="hero-buy-cards">
+    <div class="hero-buy-cards__item">
+        {% include '../../components/plan-card.twig' with {
+            'name': 'Pro',
+            'price': {
+                'monthly': 29,
+                'perpetual': 495,
+            },
+            'features': [
+                {
+                    'text': 'Sketch &amp; Wireframe',
+                },
+                {
+                    'text': 'Flow Diagrams',
+                },
+                {
+                    'text': 'Advanced Prototyping',
+                },
+                {
+                    'text': 'Mobile Prototyping',
+                },
+                {
+                    'text': 'Notes and Documentation',
+                },
+                {
+                    'text': 'Free Hosting on Axure Cloud',
+                },
+                {
+                    'text': 'Co-authoring (Team Projects)',
+                    'isDisable': true,
+                },
+                {
+                    'text': 'Revision History',
+                    'isDisable': true,
+                },
+                {
+                    'text': 'Team Project Hosting on Axure Share',
+                    'isDisable': true,
+                },
+            ],
+            period: {
+                monthly: {
+                    name: 'Monthly1',
+                    value: 'per month1',
+                },
+                perpetual: {
+                    name: 'Perpetual2',
+                    value: 'perpetual2',
+                },
+            },
+        } %}
+    </div>
+    <div class="hero-buy-cards__item">
+        {% include '../../components/plan-card.twig' with {
+            'name': 'Team',
+            'price': {
+                'monthly': 49,
+                'perpetual': 895,
+            },
+            'features': [
+                {
+                    'text': 'Sketch & Wireframe',
+                },
+                {
+                    'text': 'Flow Diagrams',
+                },
+                {
+                    'text': 'Advanced Prototyping',
+                },
+                {
+                    'text': 'Mobile Prototyping',
+                },
+                {
+                    'text': 'Notes and Documentation',
+                },
+                {
+                    'text': 'Free Hosting on Axure Cloud',
+                },
+                {
+                    'text': 'Co-authoring (Team Projects)',
+                    'isHighlighted': true,
+                },
+                {
+                    'text': 'Revision History',
+                    'isHighlighted': true,
+                },
+                {
+                    'text': 'Team Project Hosting on Axure Share',
+                    'isHighlighted': true,
+                },
+            ],
+            period: {
+                monthly: {
+                    name: 'Monthly',
+                    value: 'per month',
+                },
+                perpetual: {
+                    name: 'Perpetual',
+                    value: 'perpetual',
+                },
+            },
+        } %}
+    </div>
+</div>
